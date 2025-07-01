@@ -1,3 +1,20 @@
+"""
+Streamlit dashboard for WRPF UK Records Database
+===============================================
+Run:
+    streamlit run records_dashboard.py
+
+Files required (same folder):
+* Records Master Sheet.csv  – data source
+* wrpf_logo.png            – logo (optional)
+
+Navigation
+----------
+* **Home** – searchable records table (default)
+
+Toolbar links (external): Memberships, Results, Events, Livestreams
+"""
+
 import pandas as pd
 import streamlit as st
 from pathlib import Path
