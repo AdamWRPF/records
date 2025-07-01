@@ -1,3 +1,9 @@
+"""
+Streamlit dashboard for WRPF UK Records Database
+===============================================
+Run with:
+    streamlit run records_dashboard.py
+
 Files expected in the same directory (or adjust paths):
 * **Records Master Sheet.csv** – data source
 * **wrpf_logo.png**            – logo for branding banner
