@@ -1,19 +1,3 @@
-"""
-Streamlit dashboard for WRPF UK Records Database
-===============================================
-
-Run with:
-    streamlit run records_dashboard.py
-
-Place **Records Master Sheet.csv** in the same directory (or adjust `CSV_PATH`).
-
-Key features
-------------
-* Sidebar filters with cleaned Division and Testing Status.
-* Friendly home prompt until filters are applied.
-* Data table now hides the index column (no more 736/737 artefacts).
-"""
-
 import pandas as pd
 import streamlit as st
 from pathlib import Path
@@ -103,7 +87,7 @@ def main():
         best = best_per_class_and_lift(filtered)
         st.dataframe(
             best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
-            .rename(columns={"Full Name": "Name", "Division_base": "Division"}),
+            .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"}),
             use_container_width=True,
             hide_index=True,
         )
