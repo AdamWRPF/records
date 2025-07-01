@@ -77,7 +77,7 @@ def sidebar_filters(df: pd.DataFrame):
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
     elif sel["discipline"] == "Single Lifts":
         mask = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift"])]
+        filt = mask & filt["Lift"].isin(["Bench", "Deadlift"])
 
     if sel["sex"]            != "All": filt = filt[filt["Sex"] == sel["sex"]]
     if sel["division"]       != "All": filt = filt[filt["Division_base"] == sel["division"]]
@@ -143,16 +143,13 @@ def main():
     if filters_applied and not filtered.empty:
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
-                        display_df = best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+
+        display_df = best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
         display_df = display_df.rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
 
-        # Strip trailing .0000 from whole‑number weights
         display_df["Weight"] = display_df["Weight"].apply(lambda w: int(w) if pd.notna(w) and w == int(w) else w)
 
-        # Hide DataFrame index in the static table
-        st.table(display_df.reset_index(drop=True).style.hide(axis="index")))
-                .reset_index(drop=True)
-        )
+        st.table(display_df.reset_index(drop=True).style.hide(axis="index"))
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
 
