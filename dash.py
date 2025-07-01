@@ -3,9 +3,32 @@ import streamlit as st
 from pathlib import Path
 
 CSV_PATH = Path(__file__).with_name("Records Master Sheet.csv")
-LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")  # add your logo file here
+LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
 
-LIFT_MAP = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
+# ----------------------------------------------------
+# Simple dark-mode override (forces dark regardless of
+# user/account settings). Adjust colours if desired.
+# ----------------------------------------------------
+
+DARK_CSS = """
+<style>
+body, .stApp {
+    background-color: #0e1117;
+    color: #f1f1f1;
+}
+/* Tables */
+[data-testid="stDataFrame"] div {
+    color: #f1f1f1 !important;
+}
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #111417;
+}
+</style>
+"""
+
+# Lift mapping
+LIFT_MAP   = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
 LIFT_ORDER = ["Squat", "Bench", "Deadlift", "Total"]
 INVALID_WEIGHT_CLASSES = {"736", "737", "738", "739", "cell"}
 
@@ -15,79 +38,91 @@ def load_data(path: Path) -> pd.DataFrame:
     df.columns = df.columns.str.strip()
     df = df[df["Full Name"].notna() & df["Weight"].notna()]
     df["Weight"] = pd.to_numeric(df["Weight"], errors="coerce")
-    df["Class"] = df["Class"].astype(str).str.strip()
+    df["Class"]  = df["Class"].astype(str).str.strip()
     df = df[~df["Class"].isin(INVALID_WEIGHT_CLASSES)]
-    df["Division_raw"] = df["Division"].str.strip()
+
+    # Division cleanup & testing flag
+    df["Division_raw"]  = df["Division"].str.strip()
     df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
-    df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
+    df["Testing"]       = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
+
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
+
     for col in ["Record Type", "Lift", "Record Name"]:
         df[col] = df[col].fillna("")
     return df
 
+# ----------------------------------------------------
+# Sidebar & filtering
+# ----------------------------------------------------
+
 def sidebar_filters(df: pd.DataFrame):
     st.sidebar.header("Filter Records")
-    selections = {}
-    selections["discipline"] = st.sidebar.selectbox("Discipline", ["All", "Full Power", "Single Lifts"])
+    sel = {}
+
+    sel["discipline"] = st.sidebar.selectbox("Discipline", ["All", "Full Power", "Single Lifts"])
+
     def box(label, opts):
-        return st.sidebar.selectbox(label, ["All"] + opts)
-    selections["sex"] = box("Sex", sorted(df["Sex"].dropna().unique()))
-    selections["division"] = box("Division", sorted(df["Division_base"].unique()))
-    selections["testing_status"] = box("Testing Status", ["Tested", "Untested"])
-    selections["equipment"] = box("Equipment", sorted(df["Equipment"].dropna().unique()))
-    weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
-    selections["weight_class"] = box("Weight Class", weight_opts)
-    selections["search"] = st.sidebar.text_input("Search by name or record")
+        return st.sidebar.selectbox(label, ["All"] + sorted(opts))
 
+    sel["sex"]            = box("Sex", df["Sex"].dropna().unique())
+    sel["division"]       = box("Division", df["Division_base"].unique())
+    sel["testing_status"] = box("Testing Status", ["Tested", "Untested"])
+    sel["equipment"]      = box("Equipment", df["Equipment"].dropna().unique())
+    weight_opts           = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
+    sel["weight_class"]   = box("Weight Class", weight_opts)
+    sel["search"]         = st.sidebar.text_input("Search by name or record")
+
+    # Filter --------------------------------------------------------------
     filt = df.copy()
-    if selections["discipline"] == "Full Power":
+    if sel["discipline"] == "Full Power":
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
-    elif selections["discipline"] == "Single Lifts":
-        mask_single = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = filt[mask_single & filt["Lift"].isin(["Bench", "Deadlift"])]
+    elif sel["discipline"] == "Single Lifts":
+        m = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
+        filt = filt[m & filt["Lift"].isin(["Bench", "Deadlift"])]
 
-    if selections["sex"] != "All":
-        filt = filt[filt["Sex"] == selections["sex"]]
-    if selections["division"] != "All":
-        filt = filt[filt["Division_base"] == selections["division"]]
-    if selections["testing_status"] != "All":
-        filt = filt[filt["Testing"] == selections["testing_status"]]
-    if selections["equipment"] != "All":
-        filt = filt[filt["Equipment"] == selections["equipment"]]
-    if selections["weight_class"] != "All":
-        filt = filt[filt["Class"] == selections["weight_class"]]
+    if sel["sex"]            != "All": filt = filt[filt["Sex"] == sel["sex"]]
+    if sel["division"]       != "All": filt = filt[filt["Division_base"] == sel["division"]]
+    if sel["testing_status"] != "All": filt = filt[filt["Testing"] == sel["testing_status"]]
+    if sel["equipment"]      != "All": filt = filt[filt["Equipment"] == sel["equipment"]]
+    if sel["weight_class"]   != "All": filt = filt[filt["Class"] == sel["weight_class"]]
 
-    if selections["search"]:
-        txt = selections["search"]
-        m = filt["Full Name"].str.contains(txt, case=False, na=False) | filt["Record Name"].str.contains(txt, case=False, na=False)
-        filt = filt[m]
+    if sel["search"]:
+        txt = sel["search"]
+        filt = filt[filt["Full Name"].str.contains(txt, case=False, na=False) | filt["Record Name"].str.contains(txt, case=False, na=False)]
 
-    return filt, selections
+    return filt, sel
+
+# ----------------------------------------------------
+# Helpers
+# ----------------------------------------------------
 
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     ranked = df.sort_values("Weight", ascending=False)
-    best = ranked.drop_duplicates(subset=["Class", "Lift"])
-    best = best.copy()
+    best   = ranked.drop_duplicates(subset=["Class", "Lift"])
+    best   = best.copy()
     best["_class_num"] = pd.to_numeric(best["Class"], errors="coerce")
     best["_lift_order"] = best["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
-    best = best.sort_values(["_class_num", "Class", "_lift_order"]).drop(columns=["_class_num", "_lift_order"])
-    return best
+    return best.sort_values(["_class_num", "Class", "_lift_order"]).drop(columns=["_class_num", "_lift_order"])
+
+# ----------------------------------------------------
+# Main app
+# ----------------------------------------------------
 
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
+    st.markdown(DARK_CSS, unsafe_allow_html=True)
 
-    # Branding banner ------------------------------------------------------
-    cols = st.columns([1,3,1])
-    with cols[1]:
-        if LOGO_PATH.exists():
-            st.image(str(LOGO_PATH), width=200)
-        st.markdown("## **WRPF UK Records Database**", unsafe_allow_html=True)
-        st.caption("Where Strength Meets Opportunity")
-
-    st.caption("Use the filters on the left to browse federation records.")
+    # Branding: left-aligned logo + title
+    if LOGO_PATH.exists():
+        st.image(str(LOGO_PATH), width=140)
+    st.markdown("## **WRPF UK Records Database**")
+    st.caption("Where Strength Meets Opportunity")
 
     df = load_data(CSV_PATH)
     filtered, sel = sidebar_filters(df)
+
+    # Show prompt vs table
     defaults = {k: "All" for k in ["discipline", "sex", "division", "testing_status", "equipment", "weight_class"]}
     defaults["search"] = ""
     filters_applied = any(sel[k] != defaults[k] for k in defaults)
