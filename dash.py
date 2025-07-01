@@ -13,7 +13,6 @@ What’s inside
 * Sidebar filters (Division, Testing Status, Discipline, etc.)
 * Landing screen shows left-aligned logo + title; table appears only after filters are applied
 * Index column hidden; “Location” renamed to “Event”
-* Streamlit theme forced to dark mode via inline CSS (works on Cloud too)
 """
 
 import pandas as pd
@@ -22,35 +21,6 @@ from pathlib import Path
 
 CSV_PATH = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
-
-# ----------------------------------------------------
-# Simple dark-mode override + text styling
-# ----------------------------------------------------
-
-DARK_CSS = """
-<style>
-body, .stApp, .block-container {
-    background-color: #0e1117;
-    color: #ffffff !important;
-}
-
-/* Force black for key headings */
-h1, h2, h3, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stCaption {
-    color: #000000 !important;
-}
-
-/* Table text */
-[data-testid="stDataFrame"] div {
-    color: #ffffff !important;
-}
-
-/* Sidebar */
-section[data-testid="stSidebar"] {
-    background-color: #111417;
-    color: #ffffff !important;
-}
-</style>
-"""
 
 # Lift mapping
 LIFT_MAP   = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
@@ -77,10 +47,6 @@ def load_data(path: Path) -> pd.DataFrame:
         df[col] = df[col].fillna("")
     return df
 
-# ----------------------------------------------------
-# Sidebar & filtering
-# ----------------------------------------------------
-
 def sidebar_filters(df: pd.DataFrame):
     st.sidebar.header("Filter Records")
     sel = {}
@@ -98,7 +64,6 @@ def sidebar_filters(df: pd.DataFrame):
     sel["weight_class"]   = box("Weight Class", weight_opts)
     sel["search"]         = st.sidebar.text_input("Search by name or record")
 
-    # Filter --------------------------------------------------------------
     filt = df.copy()
     if sel["discipline"] == "Full Power":
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
@@ -118,10 +83,6 @@ def sidebar_filters(df: pd.DataFrame):
 
     return filt, sel
 
-# ----------------------------------------------------
-# Helpers
-# ----------------------------------------------------
-
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     ranked = df.sort_values("Weight", ascending=False)
     best   = ranked.drop_duplicates(subset=["Class", "Lift"])
@@ -130,15 +91,9 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     best["_lift_order"] = best["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
     return best.sort_values(["_class_num", "Class", "_lift_order"]).drop(columns=["_class_num", "_lift_order"])
 
-# ----------------------------------------------------
-# Main app
-# ----------------------------------------------------
-
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
-    st.markdown(DARK_CSS, unsafe_allow_html=True)
 
-    # Branding: left-aligned logo + title
     if LOGO_PATH.exists():
         st.image(str(LOGO_PATH), width=140)
     st.markdown("## **WRPF UK Records Database**")
@@ -147,7 +102,6 @@ def main():
     df = load_data(CSV_PATH)
     filtered, sel = sidebar_filters(df)
 
-    # Show prompt vs table
     defaults = {k: "All" for k in ["discipline", "sex", "division", "testing_status", "equipment", "weight_class"]}
     defaults["search"] = ""
     filters_applied = any(sel[k] != defaults[k] for k in defaults)
