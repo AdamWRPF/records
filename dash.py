@@ -1,3 +1,15 @@
+Files expected in the same directory (or adjust paths):
+* **Records Master Sheet.csv** – data source
+* **wrpf_logo.png**            – logo for branding banner
+
+What’s inside
+-------------
+* Sidebar filters (Division, Testing Status, Discipline, etc.)
+* Landing screen shows left-aligned logo + title; table appears only after filters are applied
+* Index column hidden; “Location” renamed to “Event”
+* Streamlit theme forced to dark mode via inline CSS (works on Cloud too)
+"""
+
 import pandas as pd
 import streamlit as st
 from pathlib import Path
@@ -12,17 +24,15 @@ LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
 
 DARK_CSS = """
 <style>
-body, .stApp {
-    background-color: #0e1117;
-    color: #f1f1f1;
+body, .stApp, .block-container, .stMarkdown, .stCaption, .stDataFrame div, .stSelectbox label, .stTextInput label {
+    color: #ffffff !important;
 }
-/* Tables */
 [data-testid="stDataFrame"] div {
-    color: #f1f1f1 !important;
+    color: #ffffff !important;
 }
-/* Sidebar */
 section[data-testid="stSidebar"] {
     background-color: #111417;
+    color: #ffffff !important;
 }
 </style>
 """
