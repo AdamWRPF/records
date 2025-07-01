@@ -1,20 +1,3 @@
-"""
-Streamlit dashboard for WRPF UK Records Database
-===============================================
-Run:
-    streamlit run records_dashboard.py
-
-Files required (same folder):
-* Records Master Sheet.csv  – data source
-* wrpf_logo.png            – logo (optional)
-
-Navigation
-----------
-* **Home** – searchable records table (default)
-
-Toolbar links (external): Memberships, Results, Events, Livestreams
-"""
-
 import pandas as pd
 import streamlit as st
 from pathlib import Path
@@ -160,9 +143,12 @@ def main():
     if filters_applied and not filtered.empty:
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
-        st.dataframe(
+        st.table(
             best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
-                .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"}),
+                .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
+                .reset_index(drop=True)
+                .style.hide(axis="index"),
+        ),
             use_container_width=True,
             hide_index=True,
         )
