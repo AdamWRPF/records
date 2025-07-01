@@ -160,9 +160,14 @@ def main():
     if filters_applied and not filtered.empty:
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
-        st.table(
+                display_df = (
             best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
                 .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
+        )
+        # Strip trailing .0000 from whole‑number weights
+        display_df["Weight"] = display_df["Weight"].apply(lambda w: int(w) if pd.notna(w) and w == int(w) else w)
+
+        st.table(display_df.reset_index(drop=True))
                 .reset_index(drop=True)
         )
     else:
