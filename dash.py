@@ -158,7 +158,7 @@ def main():
     defaults["search"] = ""
     filters_applied = any(sel[k] != defaults[k] for k in defaults)
 
-    if filters_applied and not filtered.empty():
+    if filters_applied and not filtered.empty:
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
         st.dataframe(
