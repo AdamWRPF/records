@@ -144,12 +144,19 @@ def main():
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
 
-        display_df = best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+                display_df = best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
         display_df = display_df.rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
 
-        display_df["Weight"] = display_df["Weight"].apply(lambda w: int(w) if pd.notna(w) and w == int(w) else w)
+                # Strip trailing .0000 from numeric columns (e.g., Weight)
+        num_cols = ["Weight"]
+        for col in num_cols:
+            display_df[col] = display_df[col].apply(
+                lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
+            )
 
-        st.table(display_df.reset_index(drop=True).style.hide(axis="index"))
+        # Render static HTML table without index
+        html_table = display_df.to_html(index=False, border=0, classes="records-table")
+        st.markdown(html_table, unsafe_allow_html=True)(html_table, unsafe_allow_html=True).style.hide(axis="index"))
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
 
