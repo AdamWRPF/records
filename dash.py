@@ -143,7 +143,7 @@ def main():
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
         st.dataframe(
-            best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+            best[["Class", "Lift", "Weight", "Full Name", "Division_base", "DT/UT", "Date", "Event"]]
             .rename(columns={"Full Name": "Name", "Division_base": "Division"}),
             use_container_width=True,
         )
