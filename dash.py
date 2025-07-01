@@ -160,11 +160,11 @@ def main():
     if filters_applied and not filtered.empty:
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
-st.table(
-    best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
-        .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
-        .reset_index(drop=True)
-)
+        st.table(
+            best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+                .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
+                .reset_index(drop=True)
+        )
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
 
