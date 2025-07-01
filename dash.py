@@ -1,28 +1,7 @@
-"""
-Streamlit dashboard for WRPF UK Records Database
-===============================================
-Run:
-    streamlit run records_dashboard.py
-
-Files required (same folder):
-* Records Master Sheet.csv  – data source
-* wrpf_logo.png            – logo (optional)
-
-Navigation
-----------
-* **Home** – searchable records table (default)
-
-Toolbar links (external): Memberships, Results, Events, Livestreams
-"""
-
 import pandas as pd
 import streamlit as st
 from pathlib import Path
 from datetime import datetime
-
-# ------------------------------------------------------------------
-# Paths & constants
-# ------------------------------------------------------------------
 
 CSV_PATH  = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
@@ -37,9 +16,6 @@ DIVISION_ORDER = [
     "M40-49", "M50-59", "M60-69", "M70-79",
 ]
 
-# ------------------------------------------------------------------
-# Data loading & caching
-# ------------------------------------------------------------------
 @st.cache_data
 def load_data(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
@@ -49,23 +25,16 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Class"]  = df["Class"].astype(str).str.strip()
     df = df[~df["Class"].isin(INVALID_WEIGHT_CLASSES)]
 
-    # Division cleanup & testing flag
     df["Division_raw"]  = df["Division"].str.strip()
     df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
     df["Testing"]       = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
 
-    # Lift labels
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
-
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
 
     for col in ["Record Type", "Lift", "Record Name"]:
         df[col] = df[col].fillna("")
     return df
-
-# ------------------------------------------------------------------
-# Sidebar filters
-# ------------------------------------------------------------------
 
 def sidebar_filters(df: pd.DataFrame):
     st.sidebar.header("Filter Records")
@@ -79,7 +48,7 @@ def sidebar_filters(df: pd.DataFrame):
     sel["sex"] = box("Sex", sorted(df["Sex"].dropna().unique()))
 
     available_divs = list(dict.fromkeys(df["Division_base"].unique()))
-    ordered_divs   = [d for d in DIVISION_ORDER if d in available_divs] + [d for d in available_divs if d not in DIVISION_ORDER]
+    ordered_divs = [d for d in DIVISION_ORDER if d in available_divs] + [d for d in available_divs if d not in DIVISION_ORDER]
     sel["division"] = box("Division", ordered_divs)
 
     sel["testing_status"] = box("Testing Status", ["Tested", "Untested"])
@@ -88,19 +57,24 @@ def sidebar_filters(df: pd.DataFrame):
     sel["weight_class"]   = box("Weight Class", weight_opts)
     sel["search"]         = st.sidebar.text_input("Search by name or record")
 
-    # Filtering -----------------------------------------------------------
     filt = df.copy()
     if sel["discipline"] == "Full Power":
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
     elif sel["discipline"] == "Single Lifts":
         mask = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift"])]
+        filt = mask & filt["Lift"].isin(["Bench", "Deadlift"])
+        filt = df[mask]
 
-    if sel["sex"]            != "All": filt = filt[filt["Sex"] == sel["sex"]]
-    if sel["division"]       != "All": filt = filt[filt["Division_base"] == sel["division"]]
-    if sel["testing_status"] != "All": filt = filt[filt["Testing"] == sel["testing_status"]]
-    if sel["equipment"]      != "All": filt = filt[filt["Equipment"] == sel["equipment"]]
-    if sel["weight_class"]   != "All": filt = filt[filt["Class"] == sel["weight_class"]]
+    if sel["sex"] != "All":
+        filt = filt[filt["Sex"] == sel["sex"]]
+    if sel["division"] != "All":
+        filt = filt[filt["Division_base"] == sel["division"]]
+    if sel["testing_status"] != "All":
+        filt = filt[filt["Testing"] == sel["testing_status"]]
+    if sel["equipment"] != "All":
+        filt = filt[filt["Equipment"] == sel["equipment"]]
+    if sel["weight_class"] != "All":
+        filt = filt[filt["Class"] == sel["weight_class"]]
 
     if sel["search"]:
         txt = sel["search"]
@@ -108,10 +82,6 @@ def sidebar_filters(df: pd.DataFrame):
                     filt["Record Name"].str.contains(txt, case=False, na=False)]
 
     return filt, sel
-
-# ------------------------------------------------------------------
-# Best record selector
-# ------------------------------------------------------------------
 
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     best = (
@@ -126,14 +96,9 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     )
     return best
 
-# ------------------------------------------------------------------
-# Main
-# ------------------------------------------------------------------
-
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
 
-    # Toolbar (external links)
     toolbar_links = {
         "Memberships": "https://www.wrpf.uk/memberships",
         "Results":     "https://www.wrpf.uk/results",
@@ -144,7 +109,6 @@ def main():
     for col, (label, url) in zip(cols, toolbar_links.items()):
         col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
 
-    # Branding banner
     if LOGO_PATH.exists():
         st.image(str(LOGO_PATH), width=140)
     st.markdown("## **WRPF UK Records Database**")
@@ -160,16 +124,14 @@ def main():
     if filters_applied and not filtered.empty:
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
-                display_df = (
+
+        display_df = (
             best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
                 .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
         )
-        # Strip trailing .0000 from whole‑number weights
         display_df["Weight"] = display_df["Weight"].apply(lambda w: int(w) if pd.notna(w) and w == int(w) else w)
 
         st.table(display_df.reset_index(drop=True))
-                .reset_index(drop=True)
-        )
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
 
