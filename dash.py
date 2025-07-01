@@ -6,45 +6,40 @@ Run:
 
 Files required (same folder):
 * Records Master Sheet.csv  – data source
-* wrpf_logo.png            – logo (optional but recommended)
+* wrpf_logo.png            – logo (optional)
 
 Navigation
 ----------
 * **Home** – searchable records table (default)
-* **Insights** – quick federation analytics:
-    1. Records Growth
-    3. Age-division vs. Performance
-    4. Gender Split
-    5. Recent Record Turnover (last 6 months)
 
-Toolbar links (top): Memberships, Results, Events, Livestreams, Insights
+Toolbar links (external): Memberships, Results, Events, Livestreams
 """
 
 import pandas as pd
-import altair as alt
 import streamlit as st
 from pathlib import Path
-from datetime import datetime, timedelta
-from urllib.parse import urlencode
+from datetime import datetime
+
+# ------------------------------------------------------------------
+# Paths & constants
+# ------------------------------------------------------------------
 
 CSV_PATH  = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
 
-# Lift mapping & display order ------------------------------------------------
 LIFT_MAP   = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
 LIFT_ORDER = ["Squat", "Bench", "Deadlift", "Total"]
 INVALID_WEIGHT_CLASSES = {"736", "737", "738", "739", "cell"}
 
-# Desired division dropdown order --------------------------------------------
 DIVISION_ORDER = [
     "T14-15", "T16-17", "T18-19",
     "Junior", "Opens",
     "M40-49", "M50-59", "M60-69", "M70-79",
 ]
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 # Data loading & caching
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
 @st.cache_data
 def load_data(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
@@ -54,7 +49,7 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Class"]  = df["Class"].astype(str).str.strip()
     df = df[~df["Class"].isin(INVALID_WEIGHT_CLASSES)]
 
-    # Division & testing
+    # Division cleanup & testing flag
     df["Division_raw"]  = df["Division"].str.strip()
     df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
     df["Testing"]       = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
@@ -62,16 +57,15 @@ def load_data(path: Path) -> pd.DataFrame:
     # Lift labels
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
 
-    # Parse dates
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
 
     for col in ["Record Type", "Lift", "Record Name"]:
         df[col] = df[col].fillna("")
     return df
 
-# -----------------------------------------------------------------------------
-# Sidebar filters (home page only)
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
+# Sidebar filters
+# ------------------------------------------------------------------
 
 def sidebar_filters(df: pd.DataFrame):
     st.sidebar.header("Filter Records")
@@ -115,9 +109,9 @@ def sidebar_filters(df: pd.DataFrame):
 
     return filt, sel
 
-# -----------------------------------------------------------------------------
-# Helpers
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
+# Best record selector
+# ------------------------------------------------------------------
 
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     best = (
@@ -132,91 +126,33 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     )
     return best
 
-# -----------------------------------------------------------------------------
-# Insights page visuals
-# -----------------------------------------------------------------------------
-
-def render_insights(df: pd.DataFrame):
-    st.header("Federation Insights")
-
-    # 1. Records Growth ----------------------------------------------------
-    st.subheader("Records Growth by Year")
-    growth = df.dropna(subset=["Date_parsed"]).copy()
-    growth["Year"] = growth["Date_parsed"].dt.year
-    annual = growth.groupby("Year").size().reset_index(name="Records")
-    chart1 = alt.Chart(annual).mark_line(point=True).encode(
-        x="Year:O", y="Records:Q", tooltip=["Year", "Records"]
-    )
-    st.altair_chart(chart1, use_container_width=True)
-
-    # 3. Age vs Performance -----------------------------------------------
-    st.subheader("Age Division vs. Record Weight")
-    age_perf = df[df["Division_base"].isin(DIVISION_ORDER)].copy()
-    chart2 = alt.Chart(age_perf).mark_circle(size=60, opacity=0.5).encode(
-        x=alt.X("Division_base:N", sort=DIVISION_ORDER, title="Division"),
-        y=alt.Y("Weight:Q", title="Record Weight (kg)"),
-        color="Lift:N",
-        tooltip=["Full Name", "Lift", "Weight", "Division_base", "Date"]
-    )
-    st.altair_chart(chart2, use_container_width=True)
-
-    # 4. Gender Split ------------------------------------------------------
-    st.subheader("Gender Split of Records")
-    gender_counts = df.groupby("Sex").size().reset_index(name="Count")
-    chart3 = alt.Chart(gender_counts).mark_bar().encode(
-        x="Sex:N", y="Count:Q", tooltip=["Sex", "Count"], color="Sex:N"
-    )
-    st.altair_chart(chart3, use_container_width=True)
-
-    # 5. Recent Record Turnover -------------------------------------------
-    st.subheader("Records Broken in the Last 6 Months")
-    cutoff = datetime.utcnow() - timedelta(days=182)
-    recent = df[df["Date_parsed"] >= cutoff]
-    if recent.empty:
-        st.write("No records broken in the last 6 months.")
-    else:
-        st.dataframe(
-            recent[["Date", "Full Name", "Division_base", "Class", "Lift", "Weight"]]
-                .rename(columns={"Full Name": "Name", "Division_base": "Division"})
-                .sort_values("Date_parsed", ascending=False),
-            use_container_width=True,
-            hide_index=True,
-        )
-
-# -----------------------------------------------------------------------------
-# Main entrypoint
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------
+# Main
+# ------------------------------------------------------------------
 
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
-    page = st.query_params.get("page", "home")
 
-    # Toolbar --------------------------------------------------------------
+    # Toolbar (external links)
     toolbar_links = {
         "Memberships": "https://www.wrpf.uk/memberships",
         "Results":     "https://www.wrpf.uk/results",
         "Events":      "https://www.wrpf.uk/events",
         "Livestreams": "https://www.wrpf.uk/live",
-        "Insights":    "?page=insights",
     }
     cols = st.columns(len(toolbar_links))
     for col, (label, url) in zip(cols, toolbar_links.items()):
         col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
 
-    # Branding
+    # Branding banner
     if LOGO_PATH.exists():
         st.image(str(LOGO_PATH), width=140)
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
 
     df = load_data(CSV_PATH)
-
-    if page == "insights":
-        render_insights(df)
-        return
-
-    # Default = home view --------------------------------------------------
     filtered, sel = sidebar_filters(df)
+
     defaults = {k: "All" for k in ["discipline", "sex", "division", "testing_status", "equipment", "weight_class"]}
     defaults["search"] = ""
     filters_applied = any(sel[k] != defaults[k] for k in defaults)
