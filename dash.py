@@ -12,7 +12,7 @@ What’s inside
 -------------
 * Top toolbar links: Memberships, Results, Events, Livestreams
 * Sidebar filters (Division, Testing Status, Discipline, etc.)
-* Landing screen shows left-aligned logo + title; table appears only after filters are applied
+* Landing screen shows left‑aligned logo + title; table appears only after filters are applied
 * Index column hidden; “Location” renamed to “Event”
 """
 
@@ -85,4 +85,72 @@ def sidebar_filters(df: pd.DataFrame):
 
     if sel["sex"]            != "All": filt = filt[filt["Sex"] == sel["sex"]]
     if sel["division"]       != "All": filt = filt[filt["Division_base"] == sel["division"]]
-    if sel["testing_status"] != "All": filt = filt[f
+    if sel["testing_status"] != "All": filt = filt[filt["Testing"] == sel["testing_status"]]
+    if sel["equipment"]      != "All": filt = filt[filt["Equipment"] == sel["equipment"]]
+    if sel["weight_class"]   != "All": filt = filt[filt["Class"] == sel["weight_class"]]
+
+    if sel["search"]:
+        txt = sel["search"]
+        filt = filt[filt["Full Name"].str.contains(txt, case=False, na=False) |
+                    filt["Record Name"].str.contains(txt, case=False, na=False)]
+
+    return filt, sel
+
+# -------------------------------------------------------------------------
+# Helper: best record per (class, lift)
+# -------------------------------------------------------------------------
+
+def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
+    ranked = df.sort_values("Weight", ascending=False)
+    best   = ranked.drop_duplicates(subset=["Class", "Lift"])
+    best   = best.copy()
+    best["_class_num"] = pd.to_numeric(best["Class"], errors="coerce")
+    best["_lift_order"] = best["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
+    return best.sort_values(["_class_num", "Class", "_lift_order"]).drop(columns=["_class_num", "_lift_order"])
+
+# -------------------------------------------------------------------------
+# Main app
+# -------------------------------------------------------------------------
+
+def main():
+    st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
+
+    # Branding banner (left‑aligned)
+    if LOGO_PATH.exists():
+        st.image(str(LOGO_PATH), width=140)
+    st.markdown("## **WRPF UK Records Database**")
+    st.caption("Where Strength Meets Opportunity")
+
+    # Top toolbar ---------------------------------------------------------
+    toolbar_links = {
+        "Memberships": "https://www.wrpf.uk/memberships",
+        "Results":     "https://www.wrpf.uk/results",
+        "Events":      "https://www.wrpf.uk/events",
+        "Livestreams": "https://www.wrpf.uk/live",
+    }
+    cols = st.columns(len(toolbar_links))
+    for col, (label, url) in zip(cols, toolbar_links.items()):
+        col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
+
+    df = load_data(CSV_PATH)
+    filtered, sel = sidebar_filters(df)
+
+    # Determine if filters applied
+    defaults = {k: "All" for k in ["discipline", "sex", "division", "testing_status", "equipment", "weight_class"]}
+    defaults["search"] = ""
+    filters_applied = any(sel[k] != defaults[k] for k in defaults)
+
+    if filters_applied and not filtered.empty:
+        st.subheader("Top Record in Each Weight Class & Lift")
+        best = best_per_class_and_lift(filtered)
+        st.dataframe(
+            best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+            .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"}),
+            use_container_width=True,
+            hide_index=True,
+        )
+    else:
+        st.info("👈 Use the menu on the left to pick filters and see records.")
+
+if __name__ == "__main__":
+    main()
