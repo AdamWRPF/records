@@ -151,11 +151,9 @@ def render_insights(df: pd.DataFrame):
 
     # 3. Age vs Performance -----------------------------------------------
     st.subheader("Age Division vs. Record Weight")
-    age_perf = df.copy()
-    age_perf = age_perf[age_perf["Division_base"].isin(DIVISION_ORDER)]
-    order_age = DIVISION_ORDER
+    age_perf = df[df["Division_base"].isin(DIVISION_ORDER)].copy()
     chart2 = alt.Chart(age_perf).mark_circle(size=60, opacity=0.5).encode(
-        x=alt.X("Division_base:N", sort=order_age, title="Division"),
+        x=alt.X("Division_base:N", sort=DIVISION_ORDER, title="Division"),
         y=alt.Y("Weight:Q", title="Record Weight (kg)"),
         color="Lift:N",
         tooltip=["Full Name", "Lift", "Weight", "Division_base", "Date"]
@@ -186,20 +184,54 @@ def render_insights(df: pd.DataFrame):
         )
 
 # -----------------------------------------------------------------------------
-# Main
+# Main entrypoint
 # -----------------------------------------------------------------------------
 
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
-
-    # Query param routing --------------------------------------------------
-    page = st.experimental_get_query_params().get("page", ["home"])[0]
+    page = st.query_params.get("page", "home")
 
     # Toolbar --------------------------------------------------------------
-    def nav_link(label, target):
-        qs = "" if target == "home" else "?" + urlencode({"page": target})
-        return f"[**{label}**]({qs})"
+    toolbar_links = {
+        "Memberships": "https://www.wrpf.uk/memberships",
+        "Results":     "https://www.wrpf.uk/results",
+        "Events":      "https://www.wrpf.uk/events",
+        "Livestreams": "https://www.wrpf.uk/live",
+        "Insights":    "?page=insights",
+    }
+    cols = st.columns(len(toolbar_links))
+    for col, (label, url) in zip(cols, toolbar_links.items()):
+        col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
 
-    toolbar_cols = st.columns(5)
-    toolbar_items = [
-        ("Memberships", "https://www.wrpf.uk/memberships").
+    # Branding
+    if LOGO_PATH.exists():
+        st.image(str(LOGO_PATH), width=140)
+    st.markdown("## **WRPF UK Records Database**")
+    st.caption("Where Strength Meets Opportunity")
+
+    df = load_data(CSV_PATH)
+
+    if page == "insights":
+        render_insights(df)
+        return
+
+    # Default = home view --------------------------------------------------
+    filtered, sel = sidebar_filters(df)
+    defaults = {k: "All" for k in ["discipline", "sex", "division", "testing_status", "equipment", "weight_class"]}
+    defaults["search"] = ""
+    filters_applied = any(sel[k] != defaults[k] for k in defaults)
+
+    if filters_applied and not filtered.empty:
+        st.subheader("Top Record in Each Weight Class & Lift")
+        best = best_per_class_and_lift(filtered)
+        st.dataframe(
+            best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+                .rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"}),
+            use_container_width=True,
+            hide_index=True,
+        )
+    else:
+        st.info("👈 Use the menu on the left to pick filters and see records.")
+
+if __name__ == "__main__":
+    main()
