@@ -3,6 +3,7 @@ import streamlit as st
 from pathlib import Path
 
 CSV_PATH = Path(__file__).with_name("Records Master Sheet.csv")
+LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")  # add your logo file here
 
 LIFT_MAP = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
 LIFT_ORDER = ["Squat", "Bench", "Deadlift", "Total"]
@@ -74,8 +75,17 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
 
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
-    st.title("WRPF UK Records Database")
+
+    # Branding banner ------------------------------------------------------
+    cols = st.columns([1,3,1])
+    with cols[1]:
+        if LOGO_PATH.exists():
+            st.image(str(LOGO_PATH), width=200)
+        st.markdown("## **WRPF UK Records Database**", unsafe_allow_html=True)
+        st.caption("Where Strength Meets Opportunity")
+
     st.caption("Use the filters on the left to browse federation records.")
+
     df = load_data(CSV_PATH)
     filtered, sel = sidebar_filters(df)
     defaults = {k: "All" for k in ["discipline", "sex", "division", "testing_status", "equipment", "weight_class"]}
