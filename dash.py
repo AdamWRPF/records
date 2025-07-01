@@ -7,16 +7,14 @@ Run with:
 
 Place **Records Master Sheet.csv** in the same directory (or adjust `CSV_PATH`).
 
-Key points
-----------
-* **Discipline** controls which lifts appear:
-  * **Full Power** – shows Squat, Bench, Deadlift and Total records (rows whose Record Type does *not* mention single-lift events).
-  * **Single Lifts** – shows Bench & Deadlift rows tagged as single-lift (Record Type contains "Single", "Bench Only", or "Deadlift Only").
-  * **All** – no additional discipline filtering.
-* Other sidebar filters: Sex, Division, Equipment, Weight Class, free-text search.
-* Table lists the heaviest record for every **(weight class, lift)** that survives the filters.
-* No separate “Lift” filter; the Discipline setting suffices.
-* Obvious spreadsheet artefacts in the Class column (736–739, "cell") are ignored.
+Key features
+------------
+* **Discipline** filter – All, Full Power, Single Lifts.
+* **Division** filter now shows *clean* categories (e.g. Junior, Open, Masters). Variants ending in **DT** are merged with their non‑DT counterpart.
+* **Testing Status** filter – All, Tested (divisions ending with **DT**), Untested (all others).
+* Additional filters: Sex, Equipment, Weight Class, free‑text search.
+* Table lists the heaviest record for every (weight class, lift) combination that survives filters.
+* Rows with obvious artefacts in the Weight Class column (736–739, "cell") are removed.
 """
 
 import pandas as pd
@@ -25,7 +23,7 @@ from pathlib import Path
 
 CSV_PATH = Path(__file__).with_name("Records Master Sheet.csv")
 
-# Mapping from dataset codes → human-readable labels
+# Human‑readable lift names
 LIFT_MAP = {
     "S": "Squat",
     "B": "Bench",
@@ -37,32 +35,36 @@ LIFT_ORDER = ["Squat", "Bench", "Deadlift", "Total"]
 
 INVALID_WEIGHT_CLASSES = {"736", "737", "738", "739", "cell"}
 
-
 # -------------------------------------------------------------------------
-# Data loading & cleaning
+# Data loading & normalisation
 # -------------------------------------------------------------------------
 
+@st.cache_data
 def load_data(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
     df.columns = df.columns.str.strip()
 
-    # Basic sanity checks
+    # Basic cleaning
     df = df[df["Full Name"].notna() & df["Weight"].notna()]
     df["Weight"] = pd.to_numeric(df["Weight"], errors="coerce")
     df["Class"] = df["Class"].astype(str).str.strip()
 
-    # Remove artefacts
+    # Remove artefact rows
     df = df[~df["Class"].isin(INVALID_WEIGHT_CLASSES)]
 
-    # Map lift codes to labels
+    # Normalise division
+    df["Division_raw"] = df["Division"].str.strip()
+    df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
+    df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
+
+    # Map lifts to labels
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
 
-    # Prevent NaN issues in string searches
+    # Ensure string columns safe for .str.contains
     for col in ["Record Type", "Lift", "Record Name"]:
         df[col] = df[col].fillna("")
 
     return df
-
 
 # -------------------------------------------------------------------------
 # Sidebar filters
@@ -73,65 +75,70 @@ def sidebar_filters(df: pd.DataFrame) -> pd.DataFrame:
 
     discipline = st.sidebar.selectbox("Discipline", ["All", "Full Power", "Single Lifts"])
 
-    def selectbox(label: str, column: str):
-        options = ["All"] + sorted(df[column].dropna().unique())
-        return st.sidebar.selectbox(label, options)
+    def selectbox(label: str, options: list):
+        return st.sidebar.selectbox(label, ["All"] + options)
 
-    sex = selectbox("Sex", "Sex")
-    division = selectbox("Division", "Division")
-    equipment = selectbox("Equipment", "Equipment")
-    weight_class = selectbox("Weight Class", "Class")
+    # Build options lists
+    division_opts = sorted(df["Division_base"].unique())
+    sex_opts = sorted(df["Sex"].dropna().unique())
+    equip_opts = sorted(df["Equipment"].dropna().unique())
+    weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
+    testing_opts = ["Tested", "Untested"]
+
+    sex = selectbox("Sex", sex_opts)
+    division = selectbox("Division", division_opts)
+    testing_status = selectbox("Testing Status", testing_opts)
+    equipment = selectbox("Equipment", equip_opts)
+    weight_class = selectbox("Weight Class", weight_opts)
     search = st.sidebar.text_input("Search by name or record")
 
     filt = df.copy()
 
-    # --- Discipline logic -------------------------------------------------
+    # Discipline filtering
     if discipline == "Full Power":
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
-        # Keeps Squat, Bench, Deadlift, Total
     elif discipline == "Single Lifts":
-        single_mask = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = filt[single_mask & filt["Lift"].isin(["Bench", "Deadlift"])]
+        mask_single = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
+        filt = filt[mask_single & filt["Lift"].isin(["Bench", "Deadlift"])]
 
-    # --- Attribute filters ------------------------------------------------
+    # Attribute filters
     if sex != "All":
         filt = filt[filt["Sex"] == sex]
     if division != "All":
-        filt = filt[filt["Division"] == division]
+        filt = filt[filt["Division_base"] == division]
+    if testing_status != "All":
+        filt = filt[filt["Testing"] == testing_status]
     if equipment != "All":
         filt = filt[filt["Equipment"] == equipment]
     if weight_class != "All":
         filt = filt[filt["Class"] == weight_class]
 
-    # --- Text search ------------------------------------------------------
+    # Free‑text search
     if search:
-        mask = (
+        search_mask = (
             filt["Full Name"].str.contains(search, case=False, na=False) |
             filt["Record Name"].str.contains(search, case=False, na=False)
         )
-        filt = filt[mask]
+        filt = filt[search_mask]
 
     return filt
 
-
 # -------------------------------------------------------------------------
-# Record selection helpers
+# Helpers: choose best record per (class, lift)
 # -------------------------------------------------------------------------
 
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     ranked = df.sort_values("Weight", ascending=False)
     best = ranked.drop_duplicates(subset=["Class", "Lift"])
 
-    # Order weight classes numerically when possible, then lift order
     best = best.copy()
     best["_class_num"] = pd.to_numeric(best["Class"], errors="coerce")
     best["_lift_order"] = best["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
     best = best.sort_values(["_class_num", "Class", "_lift_order"]).drop(columns=["_class_num", "_lift_order"])
     return best
 
-
 # -------------------------------------------------------------------------
-# App
+# Main app
 # -------------------------------------------------------------------------
 
 def main():
@@ -149,8 +156,8 @@ def main():
         st.info("No records match the current filters.")
     else:
         st.dataframe(
-            best[["Class", "Lift", "Weight", "Full Name", "Division", "Date", "Location"]]
-            .rename(columns={"Full Name": "Name"}),
+            best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+            .rename(columns={"Full Name": "Name", "Division_base": "Division"}),
             use_container_width=True,
         )
 
