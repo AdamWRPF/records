@@ -77,7 +77,7 @@ def sidebar_filters(df: pd.DataFrame):
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
     elif sel["discipline"] == "Single Lifts":
         mask = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = mask & filt["Lift"].isin(["Bench", "Deadlift"])
+        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift"])]
 
     if sel["sex"]            != "All": filt = filt[filt["Sex"] == sel["sex"]]
     if sel["division"]       != "All": filt = filt[filt["Division_base"] == sel["division"]]
@@ -144,10 +144,10 @@ def main():
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
 
-                display_df = best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
+        display_df = best[["Class", "Lift", "Weight", "Full Name", "Division_base", "Testing", "Date", "Location"]]
         display_df = display_df.rename(columns={"Full Name": "Name", "Division_base": "Division", "Location": "Event"})
 
-                # Strip trailing .0000 from numeric columns (e.g., Weight)
+        # Strip trailing .0000 from numeric columns
         num_cols = ["Weight"]
         for col in num_cols:
             display_df[col] = display_df[col].apply(
@@ -156,7 +156,7 @@ def main():
 
         # Render static HTML table without index
         html_table = display_df.to_html(index=False, border=0, classes="records-table")
-        st.markdown(html_table, unsafe_allow_html=True)(html_table, unsafe_allow_html=True).style.hide(axis="index"))
+        st.markdown(html_table, unsafe_allow_html=True)
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
 
