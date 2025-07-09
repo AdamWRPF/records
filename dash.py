@@ -188,7 +188,6 @@ def main():
         html_table = display_df[[
             "Class", "Lift", "Weight", "Name", "Gender", "Division", "Testing", "Lift Type", "Date", "Event"
         ]].to_html(index=False, border=0, classes="records-table")
-        st.markdown(html_table, unsafe_allow_html=True)index=False, border=0, classes="records-table")
         st.markdown(html_table, unsafe_allow_html=True)
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
