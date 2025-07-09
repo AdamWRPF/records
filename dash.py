@@ -7,7 +7,7 @@ from PIL import Image, UnidentifiedImageError
 # ------------------------------------------------------------------
 # Paths & constants
 # ------------------------------------------------------------------
-CSV_PATH  = Path(__file__).with_name("Records Master Sheet.csv")
+CSV_PATH = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
 
 LIFT_MAP = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
@@ -108,7 +108,7 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
 # ------------------------------------------------------------------
 # Render table
 # ------------------------------------------------------------------
-def render_table(filtered, sel):
+def render_table(filtered, sel, key=""):
     st.subheader(
         f"Top Records – {sel['division'] if sel['division'] != 'All' else 'All Divisions'} – "
         f"{sel['weight_class'] if sel['weight_class'] != 'All' else 'All Weight Classes'} – "
@@ -134,7 +134,12 @@ def render_table(filtered, sel):
         lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
     )
 
-    st.download_button("📥 Download CSV", data=display_df.to_csv(index=False), file_name="filtered_records.csv")
+    st.download_button(
+        "📥 Download CSV",
+        data=display_df.to_csv(index=False),
+        file_name="filtered_records.csv",
+        key=f"download_{key}"
+    )
 
     html_table = display_df.to_html(index=False, border=0, classes="records-table")
 
@@ -202,16 +207,16 @@ def main():
     tabs = st.tabs(["All Records", "Full Power", "Single Lifts"])
 
     with tabs[0]:
-        render_table(filtered, sel)
+        render_table(filtered, sel, key="all")
 
     with tabs[1]:
         full_power = filtered[~filtered["Record Type"].str.contains("Single", case=False, na=False)]
-        render_table(full_power, sel)
+        render_table(full_power, sel, key="full")
 
     with tabs[2]:
         mask = filtered["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
         single_lifts = filtered[mask & filtered["Lift"].isin(["Bench", "Deadlift"])]
-        render_table(single_lifts, sel)
+        render_table(single_lifts, sel, key="single")
 
 if __name__ == "__main__":
     main()
