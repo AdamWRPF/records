@@ -112,8 +112,12 @@ def render_table(filtered, sel, key=""):
         f"{sel['equipment'] if sel['equipment'] != 'All' else 'All Equipment'}"
     )
 
-    best = best_per_class_and_lift(filtered)
-    display_df = best[[
+    if sel["search"]:
+        table_data = filtered
+    else:
+        table_data = best_per_class_and_lift(filtered)
+
+    display_df = table_data[[
         "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Equipment",
         "Testing", "Record Type", "Date", "Location"
     ]].copy()
