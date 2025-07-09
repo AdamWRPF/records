@@ -74,7 +74,7 @@ def sidebar_filters(df: pd.DataFrame):
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
     elif sel["discipline"] == "Single Lifts":
         mask = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift")])
+        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift"])]
 
     if sel["sex"]            != "All": filt = filt[filt["Sex"] == sel["sex"]]
     if sel["division"]       != "All": filt = filt[filt["Division_base"] == sel["division"]]
@@ -105,9 +105,6 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     )
     return best
 
-# ------------------------------------------------------------------
-# Main
-# ------------------------------------------------------------------
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="centered")
 
@@ -117,7 +114,7 @@ def main():
             padding: 1rem;
         }
         </style>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
     toolbar_links = {
         "Memberships": "https://www.wrpf.uk/memberships",
@@ -144,7 +141,7 @@ def main():
                 <button style='font-size:16px;padding:0.5em 1em;'>🏠 Back to WRPF.uk</button>
             </a>
         </div><br>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
     df = load_data(CSV_PATH)
     filtered, sel = sidebar_filters(df)
