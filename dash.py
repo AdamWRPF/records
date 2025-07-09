@@ -41,7 +41,7 @@ def load_data(path: Path) -> pd.DataFrame:
     return df
 
 # ------------------------------------------------------------------
-# Filter Layout (Responsive)
+# Filter Layout with Smart Search
 # ------------------------------------------------------------------
 def render_filters(df: pd.DataFrame):
     divs = list(dict.fromkeys(df["Division_base"].unique()))
@@ -56,7 +56,7 @@ def render_filters(df: pd.DataFrame):
             "testing_status": cols[2].selectbox("Testing", ["All", "Tested", "Untested"]),
             "equipment": cols[3].selectbox("Equipment", ["All"] + sorted(df["Equipment"].dropna().unique())),
             "weight_class": cols[4].selectbox("Weight", ["All"] + weight_opts),
-            "search": cols[5].text_input("Search")
+            "search": cols[5].text_input("Search e.g. '110 junior wraps'")
         }
 
     filtered = df.copy()
@@ -70,11 +70,19 @@ def render_filters(df: pd.DataFrame):
         filtered = filtered[filtered["Equipment"] == sel["equipment"]]
     if sel["weight_class"] != "All":
         filtered = filtered[filtered["Class"] == sel["weight_class"]]
+
     if sel["search"]:
-        filtered = filtered[
-            filtered["Full Name"].str.contains(sel["search"], case=False, na=False)
-            | filtered["Record Name"].str.contains(sel["search"], case=False, na=False)
-        ]
+        terms = sel["search"].lower().split()
+        for term in terms:
+            filtered = filtered[
+                filtered["Full Name"].str.lower().str.contains(term, na=False)
+                | filtered["Record Name"].str.lower().str.contains(term, na=False)
+                | filtered["Class"].str.lower().str.contains(term, na=False)
+                | filtered["Division_base"].str.lower().str.contains(term, na=False)
+                | filtered["Equipment"].str.lower().str.contains(term, na=False)
+                | filtered["Testing"].str.lower().str.contains(term, na=False)
+            ]
+
     return filtered, sel
 
 # ------------------------------------------------------------------
