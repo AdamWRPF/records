@@ -41,53 +41,55 @@ def load_data(path: Path) -> pd.DataFrame:
     return df
 
 # ------------------------------------------------------------------
-# Sidebar filters
+# Inline filters
 # ------------------------------------------------------------------
-def sidebar_filters(df: pd.DataFrame):
-    st.sidebar.header("Filter Records")
-    sel = {}
+def inline_filters(df: pd.DataFrame):
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-    params = st.query_params
+    with col1:
+        sex = st.selectbox("Sex", ["All"] + sorted(df["Sex"].dropna().unique()))
+    with col2:
+        divs = list(dict.fromkeys(df["Division_base"].unique()))
+        ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
+        division = st.selectbox("Division", ["All"] + ordered_divs)
+    with col3:
+        testing = st.selectbox("Testing", ["All", "Tested", "Untested"])
+    with col4:
+        equipment = st.selectbox("Equipment", ["All"] + sorted(df["Equipment"].dropna().unique()))
+    with col5:
+        weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
+        weight_class = st.selectbox("Weight", ["All"] + weight_opts)
+    with col6:
+        search = st.text_input("Search")
 
-    def get_param(name, fallback="All"):
-        return params.get(name, fallback)
+    # Apply filters
+    filtered = df.copy()
+    if sex != "All":
+        filtered = filtered[filtered["Sex"] == sex]
+    if division != "All":
+        filtered = filtered[filtered["Division_base"] == division]
+    if testing != "All":
+        filtered = filtered[filtered["Testing"] == testing]
+    if equipment != "All":
+        filtered = filtered[filtered["Equipment"] == equipment]
+    if weight_class != "All":
+        filtered = filtered[filtered["Class"] == weight_class]
+    if search:
+        filtered = filtered[
+            filtered["Full Name"].str.contains(search, case=False, na=False)
+            | filtered["Record Name"].str.contains(search, case=False, na=False)
+        ]
 
-    def box(label, options, param_name):
-        default = get_param(param_name)
-        value = st.sidebar.selectbox(label, ["All"] + options, index=(["All"] + options).index(default) if default in options or default == "All" else 0)
-        st.query_params[param_name] = value
-        return value
+    sel = {
+        "sex": sex,
+        "division": division,
+        "testing_status": testing,
+        "equipment": equipment,
+        "weight_class": weight_class,
+        "search": search,
+    }
 
-    sel["sex"] = box("Sex", sorted(df["Sex"].dropna().unique()), "sex")
-
-    divs = list(dict.fromkeys(df["Division_base"].unique()))
-    ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
-    sel["division"] = box("Division", ordered_divs, "division")
-
-    sel["testing_status"] = box("Testing Status", ["Tested", "Untested"], "testing")
-    sel["equipment"] = box("Equipment", sorted(df["Equipment"].dropna().unique()), "equipment")
-
-    weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
-    sel["weight_class"] = box("Weight Class", weight_opts, "weight")
-
-    sel["search"] = st.sidebar.text_input("Search by name or record", value=get_param("search", ""))
-
-    filt = df.copy()
-    if sel["sex"] != "All":
-        filt = filt[filt["Sex"] == sel["sex"]]
-    if sel["division"] != "All":
-        filt = filt[filt["Division_base"] == sel["division"]]
-    if sel["testing_status"] != "All":
-        filt = filt[filt["Testing"] == sel["testing_status"]]
-    if sel["equipment"] != "All":
-        filt = filt[filt["Equipment"] == sel["equipment"]]
-    if sel["weight_class"] != "All":
-        filt = filt[filt["Class"] == sel["weight_class"]]
-    if sel["search"]:
-        filt = filt[filt["Full Name"].str.contains(sel["search"], case=False, na=False) |
-                    filt["Record Name"].str.contains(sel["search"], case=False, na=False)]
-
-    return filt, sel
+    return filtered, sel
 
 # ------------------------------------------------------------------
 # Best record selector
@@ -183,7 +185,7 @@ def render_table(filtered, sel, key=""):
 # Main
 # ------------------------------------------------------------------
 def main():
-    st.set_page_config("WRPF UK Records", layout="centered")
+    st.set_page_config("WRPF UK Records", layout="wide")
 
     st.markdown("""
     <div style='display: flex; gap: 1em; margin-bottom: 1em; flex-wrap: wrap'>
@@ -205,7 +207,7 @@ def main():
     st.caption("Where Strength Meets Opportunity")
 
     df = load_data(CSV_PATH)
-    filtered, sel = sidebar_filters(df)
+    filtered, sel = inline_filters(df)
 
     tabs = st.tabs(["All Records", "Full Power", "Single Lifts"])
 
