@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 from datetime import datetime
-from PIL import UnidentifiedImageError
+from PIL import Image, UnidentifiedImageError
 
 # ------------------------------------------------------------------
 # Paths & constants
@@ -187,11 +187,13 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
+    # Logo
     try:
         if LOGO_PATH.exists():
-            st.image(str(LOGO_PATH), width=140)
-    except UnidentifiedImageError:
-        st.warning("⚠️ Could not load logo image.")
+            with Image.open(LOGO_PATH) as img:
+                st.image(img, width=140)
+    except (UnidentifiedImageError, OSError):
+        st.warning("⚠️ Logo could not be displayed. Please check the file format.")
 
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
