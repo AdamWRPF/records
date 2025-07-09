@@ -164,6 +164,12 @@ def render_table(filtered, sel, key=""):
             top: 0;
             z-index: 2;
         }
+        .records-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .records-table tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
         .records-table td:nth-child(4) {
             white-space: normal;
             max-width: none;
