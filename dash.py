@@ -150,6 +150,7 @@ def render_table(filtered, sel, key=""):
             border-collapse: collapse;
             width: 100%;
             table-layout: auto;
+            color: #000;
         }
         .records-table th, .records-table td {
             border: 1px solid #ddd;
