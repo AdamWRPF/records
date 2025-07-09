@@ -214,6 +214,12 @@ def main():
                 color: white;
                 text-align: left;
             }
+            .records-table td:nth-child(4) {
+                white-space: nowrap;
+                max-width: 180px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
             </style>
         """, unsafe_allow_html=True)
 
