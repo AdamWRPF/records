@@ -194,7 +194,16 @@ def main():
                 font-size: 14px;
                 border-collapse: collapse;
                 width: 100%;
-                min-width: 800px;
+                table-layout: auto;
+            }
+            @media screen and (max-width: 768px) {
+                .records-table {
+                    min-width: 800px;
+                }
+                .records-table th, .records-table td {
+                    padding: 10px 6px;
+                    font-size: 13px;
+                }
             }
             .records-table th, .records-table td {
                 border: 1px solid #ddd;
