@@ -139,6 +139,7 @@ def main():
         "Results":     "https://www.wrpf.uk/results",
         "Events":      "https://www.wrpf.uk/events",
         "Livestreams": "https://www.wrpf.uk/live",
+        "Certificates": "https://www.wrpf.uk/records",
     }
     cols = st.columns(len(toolbar_links))
     for col, (label, url) in zip(cols, toolbar_links.items()):
