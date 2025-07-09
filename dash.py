@@ -158,11 +158,15 @@ def main():
     filters_applied = any(sel[k] != defaults[k] for k in defaults)
 
     if filters_applied and not filtered.empty:
-# Create dynamic labels for Division and Weight Class
+        # -------------------------------------------------------
+        # Dynamic sub-header: Division • Weight • Testing • Equipment
+        # -------------------------------------------------------
         division_label = sel["division"]       if sel["division"]       != "All" else "All Divisions"
         weight_label   = sel["weight_class"]   if sel["weight_class"]   != "All" else "All Weight Classes"
         testing_label  = sel["testing_status"] if sel["testing_status"] != "All" else "Tested & Untested"
-        st.subheader(f"Top Records – {division_label} – {weight_label} – {testing_label}")
+        equipment_label= sel["equipment"]      if sel["equipment"]      != "All" else "All Equipment"
+        st.subheader(f"Top Records – {division_label} – {weight_label} – {testing_label} – {equipment_label}")
+
         best = best_per_class_and_lift(filtered)
 
         display_df = best[[
