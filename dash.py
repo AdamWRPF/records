@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 from datetime import datetime
+from PIL import UnidentifiedImageError
 
 # ------------------------------------------------------------------
 # Paths & constants
@@ -73,7 +74,7 @@ def sidebar_filters(df: pd.DataFrame):
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
     elif sel["discipline"] == "Single Lifts":
         mask = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift"])]
+        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift")])
 
     if sel["sex"]            != "All": filt = filt[filt["Sex"] == sel["sex"]]
     if sel["division"]       != "All": filt = filt[filt["Division_base"] == sel["division"]]
@@ -128,8 +129,12 @@ def main():
     for col, (label, url) in zip(cols, toolbar_links.items()):
         col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
 
-    if LOGO_PATH.exists():
-        st.image(str(LOGO_PATH), width=140)
+    try:
+        if LOGO_PATH.exists():
+            st.image(str(LOGO_PATH), width=140)
+    except UnidentifiedImageError:
+        st.warning("⚠️ Logo file found but could not be opened. Please check the file format.")
+
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
 
