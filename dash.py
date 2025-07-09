@@ -1,18 +1,8 @@
 """
-Streamlit dashboard for WRPF UK Records Database
-===============================================
+Streamlit dashboard for WRPF UK Records Database – mobile friendly
+==================================================================
 Run:
     streamlit run records_dashboard.py
-
-Files required (same folder):
-* Records Master Sheet.csv  – data source
-* wrpf_logo.png            – logo (optional)
-
-Navigation
-----------
-* **Home** – searchable records table (default)
-
-Toolbar links (external): Memberships, Results, Events, Livestreams
 """
 
 import pandas as pd
@@ -54,9 +44,7 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
     df["Testing"]       = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
 
-    # Lift labels
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
-
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
 
     for col in ["Record Type", "Lift", "Record Name"]:
@@ -131,25 +119,41 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
 # ------------------------------------------------------------------
 
 def main():
-    st.set_page_config(page_title="WRPF UK Records Database", layout="wide")
+    st.set_page_config(page_title="WRPF UK Records Database", layout="centered")
 
-    # Toolbar (external links)
+    # Style: sidebar spacing
+    st.sidebar.markdown(
+        """
+        <style>
+        section[data-testid="stSidebar"] {
+            padding: 1rem;
+        }
+        </style>
+        """, unsafe_allow_html=True
+    )
+
+    # Toolbar links
     toolbar_links = {
         "Memberships": "https://www.wrpf.uk/memberships",
         "Results":     "https://www.wrpf.uk/results",
         "Events":      "https://www.wrpf.uk/events",
         "Livestreams": "https://www.wrpf.uk/live",
-        "Certificates": "https://www.wrpf.uk/records",
     }
     cols = st.columns(len(toolbar_links))
     for col, (label, url) in zip(cols, toolbar_links.items()):
         col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
 
-    # Branding banner
+    # Logo + Heading
     if LOGO_PATH.exists():
         st.image(str(LOGO_PATH), width=140)
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
+
+    # Optional: Homepage button
+    st.markdown(
+        "<div style='text-align:center'><a href='https://www.wrpf.uk'><button style='font-size:16px;padding:0.5em 1em;'>🏠 Back to WRPF.uk</button></a></div><br>",
+        unsafe_allow_html=True
+    )
 
     df = load_data(CSV_PATH)
     filtered, sel = sidebar_filters(df)
@@ -159,21 +163,17 @@ def main():
     filters_applied = any(sel[k] != defaults[k] for k in defaults)
 
     if filters_applied and not filtered.empty:
-        # -------------------------------------------------------
-        # Dynamic sub-header: Division • Weight • Testing • Equipment
-        # -------------------------------------------------------
-        division_label = sel["division"]       if sel["division"]       != "All" else "All Divisions"
-        weight_label   = sel["weight_class"]   if sel["weight_class"]   != "All" else "All Weight Classes"
-        testing_label  = sel["testing_status"] if sel["testing_status"] != "All" else "Tested & Untested"
-        equipment_label= sel["equipment"]      if sel["equipment"]      != "All" else "All Equipment"
-        st.subheader(f"Top Records – {division_label} – {weight_label} – {testing_label} – {equipment_label}")
+        st.subheader(
+            f"Top Records – {sel['division'] if sel['division'] != 'All' else 'All Divisions'} – "
+            f"{sel['weight_class'] if sel['weight_class'] != 'All' else 'All Weight Classes'} – "
+            f"{sel['testing_status'] if sel['testing_status'] != 'All' else 'Tested & Untested'} – "
+            f"{sel['equipment'] if sel['equipment'] != 'All' else 'All Equipment'}"
+        )
 
         best = best_per_class_and_lift(filtered)
-
         display_df = best[[
-            "Class", "Lift", "Weight", "Full Name", "Sex",
-            "Division_base", "Equipment", "Testing",
-            "Record Type", "Date", "Location"
+            "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Equipment",
+            "Testing", "Record Type", "Date", "Location"
         ]].copy()
 
         display_df = display_df.rename(columns={
@@ -181,8 +181,7 @@ def main():
             "Sex":           "Gender",
             "Division_base": "Division",
             "Record Type":   "Lift Type",
-            "Location":      "Event",
-            "Equipment":     "Equipment"
+            "Location":      "Event"
         })
 
         display_df["Lift Type"] = display_df["Lift Type"].apply(
@@ -198,8 +197,32 @@ def main():
             "Division", "Equipment", "Testing",
             "Lift Type", "Date", "Event"
         ]].to_html(index=False, border=0, classes="records-table")
-        
-        st.markdown(html_table, unsafe_allow_html=True)
+
+        st.markdown("""
+            <style>
+            .table-wrapper {
+                overflow-x: auto;
+                width: 100%;
+            }
+            .records-table {
+                font-size: 14px;
+                border-collapse: collapse;
+                width: 100%;
+                min-width: 800px;
+            }
+            .records-table th, .records-table td {
+                border: 1px solid #ddd;
+                padding: 6px;
+            }
+            .records-table th {
+                background-color: #cf1b2b;
+                color: white;
+                text-align: left;
+            }
+            </style>
+        """, unsafe_allow_html=True)
+
+        st.markdown(f'<div class="table-wrapper">{html_table}</div>', unsafe_allow_html=True)
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
 
