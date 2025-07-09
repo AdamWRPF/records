@@ -45,18 +45,13 @@ def load_data(path: Path) -> pd.DataFrame:
 # Mobile detection
 # ------------------------------------------------------------------
 def detect_mobile():
-    components.html("""
-    <script>
-    const isMobile = window.innerWidth < 768;
-    const streamlitDoc = window.parent.document;
-    streamlitDoc.dispatchEvent(new CustomEvent("streamlit:setComponentValue", {
-        detail: {key: "is_mobile", value: isMobile}
-    }));
-    </script>
+    result = components.html("""
+        <script>
+        const isMobile = window.innerWidth < 768;
+        document.write(isMobile);
+        </script>
     """, height=0)
-
-    if "is_mobile" not in st.session_state:
-        st.session_state["is_mobile"] = False  # fallback default
+    st.session_state["is_mobile"] = "true" in str(result).lower()
 
 # ------------------------------------------------------------------
 # Inline filters for desktop
