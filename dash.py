@@ -159,9 +159,10 @@ def main():
 
     if filters_applied and not filtered.empty:
 # Create dynamic labels for Division and Weight Class
-        division_label = sel["division"] if sel["division"] != "All" else "All Divisions"
-        weight_label   = sel["weight_class"] if sel["weight_class"] != "All" else "All Weight Classes"
-        st.subheader(f"Top Records – {division_label} – {weight_label}")
+        division_label = sel["division"]       if sel["division"]       != "All" else "All Divisions"
+        weight_label   = sel["weight_class"]   if sel["weight_class"]   != "All" else "All Weight Classes"
+        testing_label  = sel["testing_status"] if sel["testing_status"] != "All" else "Tested & Untested"
+        st.subheader(f"Top Records – {division_label} – {weight_label} – {testing_label}")
         best = best_per_class_and_lift(filtered)
 
         display_df = best[[
