@@ -158,7 +158,10 @@ def main():
     filters_applied = any(sel[k] != defaults[k] for k in defaults)
 
     if filters_applied and not filtered.empty:
-        st.subheader("Top Record in Each Weight Class & Lift")
+        # Build a label that shows the chosen division (or “All Divisions” if none picked)
+        division_label = sel["division"] if sel["division"] != "All" else "All Divisions"
+        st.subheader(f"Top Records – {division_label} – Each Weight Class & Lift")
+
         best = best_per_class_and_lift(filtered)
 
         display_df = best[[
