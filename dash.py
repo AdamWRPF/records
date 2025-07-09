@@ -10,7 +10,7 @@ from PIL import Image, UnidentifiedImageError
 CSV_PATH  = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
 
-LIFT_MAP   = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
+LIFT_MAP = {"S": "Squat", "B": "Bench", "D": "Deadlift", "T": "Total", "Total": "Total"}
 LIFT_ORDER = ["Squat", "Bench", "Deadlift", "Total"]
 INVALID_WEIGHT_CLASSES = {"736", "737", "738", "739", "cell"}
 
@@ -28,9 +28,9 @@ def load_data(path: Path) -> pd.DataFrame:
     df.columns = df.columns.str.strip()
     df = df[df["Full Name"].notna() & df["Weight"].notna()]
     df["Weight"] = pd.to_numeric(df["Weight"], errors="coerce")
-    df["Class"]  = df["Class"].astype(str).str.strip()
+    df["Class"] = df["Class"].astype(str).str.strip()
     df = df[~df["Class"].isin(INVALID_WEIGHT_CLASSES)]
-    df["Division_raw"]  = df["Division"].str.strip()
+    df["Division_raw"] = df["Division"].str.strip()
     df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
     df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
@@ -47,15 +47,15 @@ def sidebar_filters(df: pd.DataFrame):
     st.sidebar.header("Filter Records")
     sel = {}
 
-    params = st.experimental_get_query_params()
+    params = st.query_params
 
     def get_param(name, fallback="All"):
-        return params.get(name, [fallback])[0]
+        return params.get(name, fallback)
 
     def box(label, options, param_name):
         default = get_param(param_name)
-        value = st.sidebar.selectbox(label, ["All"] + options, index=(["All"] + options).index(default))
-        st.experimental_set_query_params(**{**st.experimental_get_query_params(), param_name: value})
+        value = st.sidebar.selectbox(label, ["All"] + options, index=(["All"] + options).index(default) if default in options or default == "All" else 0)
+        st.query_params[param_name] = value
         return value
 
     sel["sex"] = box("Sex", sorted(df["Sex"].dropna().unique()), "sex")
@@ -95,13 +95,13 @@ def sidebar_filters(df: pd.DataFrame):
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     best = (
         df.sort_values("Weight", ascending=False)
-          .drop_duplicates(subset=["Class", "Lift"])
-          .assign(
-              _class_num=lambda d: pd.to_numeric(d["Class"], errors="coerce"),
-              _lift_order=lambda d: d["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
-          )
-          .sort_values(["_class_num", "Class", "_lift_order"])
-          .drop(columns=["_class_num", "_lift_order"])
+        .drop_duplicates(subset=["Class", "Lift"])
+        .assign(
+            _class_num=lambda d: pd.to_numeric(d["Class"], errors="coerce"),
+            _lift_order=lambda d: d["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
+        )
+        .sort_values(["_class_num", "Class", "_lift_order"])
+        .drop(columns=["_class_num", "_lift_order"])
     )
     return best
 
@@ -177,7 +177,6 @@ def render_table(filtered, sel):
 def main():
     st.set_page_config("WRPF UK Records", layout="centered")
 
-    # Toolbar
     st.markdown("""
     <div style='display: flex; gap: 1em; margin-bottom: 1em; flex-wrap: wrap'>
         <a href='https://www.wrpf.uk/memberships'><button>Memberships</button></a>
@@ -187,7 +186,6 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-    # Logo
     try:
         if LOGO_PATH.exists():
             with Image.open(LOGO_PATH) as img:
