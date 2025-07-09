@@ -3,6 +3,7 @@ import streamlit as st
 from pathlib import Path
 from datetime import datetime
 from PIL import Image, UnidentifiedImageError
+import streamlit.components.v1 as components
 
 # ------------------------------------------------------------------
 # Paths & constants
@@ -41,7 +42,24 @@ def load_data(path: Path) -> pd.DataFrame:
     return df
 
 # ------------------------------------------------------------------
-# Inline filters
+# Mobile detection
+# ------------------------------------------------------------------
+def detect_mobile():
+    components.html("""
+    <script>
+    const isMobile = window.innerWidth < 768;
+    const streamlitDoc = window.parent.document;
+    streamlitDoc.dispatchEvent(new CustomEvent("streamlit:setComponentValue", {
+        detail: {key: "is_mobile", value: isMobile}
+    }));
+    </script>
+    """, height=0)
+
+    if "is_mobile" not in st.session_state:
+        st.session_state["is_mobile"] = False  # fallback default
+
+# ------------------------------------------------------------------
+# Inline filters for desktop
 # ------------------------------------------------------------------
 def inline_filters(df: pd.DataFrame):
     col1, col2, col3, col4, col5, col6 = st.columns(6)
@@ -62,34 +80,56 @@ def inline_filters(df: pd.DataFrame):
     with col6:
         search = st.text_input("Search")
 
-    # Apply filters
-    filtered = df.copy()
-    if sex != "All":
-        filtered = filtered[filtered["Sex"] == sex]
-    if division != "All":
-        filtered = filtered[filtered["Division_base"] == division]
-    if testing != "All":
-        filtered = filtered[filtered["Testing"] == testing]
-    if equipment != "All":
-        filtered = filtered[filtered["Equipment"] == equipment]
-    if weight_class != "All":
-        filtered = filtered[filtered["Class"] == weight_class]
-    if search:
-        filtered = filtered[
-            filtered["Full Name"].str.contains(search, case=False, na=False)
-            | filtered["Record Name"].str.contains(search, case=False, na=False)
-        ]
-
     sel = {
-        "sex": sex,
-        "division": division,
-        "testing_status": testing,
-        "equipment": equipment,
-        "weight_class": weight_class,
-        "search": search,
+        "sex": sex, "division": division, "testing_status": testing,
+        "equipment": equipment, "weight_class": weight_class, "search": search
     }
 
-    return filtered, sel
+    return apply_filters(df, sel), sel
+
+# ------------------------------------------------------------------
+# Sidebar filters for mobile
+# ------------------------------------------------------------------
+def sidebar_filters(df: pd.DataFrame):
+    st.sidebar.header("Filters")
+    sex = st.sidebar.selectbox("Sex", ["All"] + sorted(df["Sex"].dropna().unique()))
+    divs = list(dict.fromkeys(df["Division_base"].unique()))
+    ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
+    division = st.sidebar.selectbox("Division", ["All"] + ordered_divs)
+    testing = st.sidebar.selectbox("Testing", ["All", "Tested", "Untested"])
+    equipment = st.sidebar.selectbox("Equipment", ["All"] + sorted(df["Equipment"].dropna().unique()))
+    weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
+    weight_class = st.sidebar.selectbox("Weight", ["All"] + weight_opts)
+    search = st.sidebar.text_input("Search")
+
+    sel = {
+        "sex": sex, "division": division, "testing_status": testing,
+        "equipment": equipment, "weight_class": weight_class, "search": search
+    }
+
+    return apply_filters(df, sel), sel
+
+# ------------------------------------------------------------------
+# Apply filters
+# ------------------------------------------------------------------
+def apply_filters(df: pd.DataFrame, sel):
+    filtered = df.copy()
+    if sel["sex"] != "All":
+        filtered = filtered[filtered["Sex"] == sel["sex"]]
+    if sel["division"] != "All":
+        filtered = filtered[filtered["Division_base"] == sel["division"]]
+    if sel["testing_status"] != "All":
+        filtered = filtered[filtered["Testing"] == sel["testing_status"]]
+    if sel["equipment"] != "All":
+        filtered = filtered[filtered["Equipment"] == sel["equipment"]]
+    if sel["weight_class"] != "All":
+        filtered = filtered[filtered["Class"] == sel["weight_class"]]
+    if sel["search"]:
+        filtered = filtered[
+            filtered["Full Name"].str.contains(sel["search"], case=False, na=False)
+            | filtered["Record Name"].str.contains(sel["search"], case=False, na=False)
+        ]
+    return filtered
 
 # ------------------------------------------------------------------
 # Best record selector
@@ -186,6 +226,7 @@ def render_table(filtered, sel, key=""):
 # ------------------------------------------------------------------
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
+    detect_mobile()
 
     st.markdown("""
     <div style='display: flex; gap: 1em; margin-bottom: 1em; flex-wrap: wrap'>
@@ -207,7 +248,11 @@ def main():
     st.caption("Where Strength Meets Opportunity")
 
     df = load_data(CSV_PATH)
-    filtered, sel = inline_filters(df)
+
+    if st.session_state.get("is_mobile"):
+        filtered, sel = sidebar_filters(df)
+    else:
+        filtered, sel = inline_filters(df)
 
     tabs = st.tabs(["All Records", "Full Power", "Single Lifts"])
 
