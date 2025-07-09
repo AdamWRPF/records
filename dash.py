@@ -149,7 +149,7 @@ def render_table(filtered, sel, key=""):
             font-size: 14px;
             border-collapse: collapse;
             width: 100%;
-            table-layout: fixed;
+            table-layout: auto;
         }
         .records-table th, .records-table td {
             border: 1px solid #ddd;
@@ -160,12 +160,15 @@ def render_table(filtered, sel, key=""):
             background-color: #cf1b2b;
             color: white;
             text-align: left;
+            position: sticky;
+            top: 0;
+            z-index: 2;
         }
         .records-table td:nth-child(4) {
-            white-space: nowrap;
-            max-width: 180px;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            white-space: normal;
+            max-width: none;
+            overflow: visible;
+            text-overflow: unset;
         }
         @media screen and (max-width: 768px) {
             .records-table {
