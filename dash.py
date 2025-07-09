@@ -1,10 +1,3 @@
-"""
-Streamlit dashboard for WRPF UK Records Database – mobile friendly
-==================================================================
-Run:
-    streamlit run records_dashboard.py
-"""
-
 import pandas as pd
 import streamlit as st
 from pathlib import Path
@@ -13,7 +6,6 @@ from datetime import datetime
 # ------------------------------------------------------------------
 # Paths & constants
 # ------------------------------------------------------------------
-
 CSV_PATH  = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
 
@@ -54,7 +46,6 @@ def load_data(path: Path) -> pd.DataFrame:
 # ------------------------------------------------------------------
 # Sidebar filters
 # ------------------------------------------------------------------
-
 def sidebar_filters(df: pd.DataFrame):
     st.sidebar.header("Filter Records")
     sel = {}
@@ -76,7 +67,7 @@ def sidebar_filters(df: pd.DataFrame):
     sel["weight_class"]   = box("Weight Class", weight_opts)
     sel["search"]         = st.sidebar.text_input("Search by name or record")
 
-    # Filtering -----------------------------------------------------------
+    # Filtering
     filt = df.copy()
     if sel["discipline"] == "Full Power":
         filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
@@ -100,7 +91,6 @@ def sidebar_filters(df: pd.DataFrame):
 # ------------------------------------------------------------------
 # Best record selector
 # ------------------------------------------------------------------
-
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     best = (
         df.sort_values("Weight", ascending=False)
@@ -117,22 +107,17 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
 # ------------------------------------------------------------------
 # Main
 # ------------------------------------------------------------------
-
 def main():
     st.set_page_config(page_title="WRPF UK Records Database", layout="centered")
 
-    # Style: sidebar spacing
-    st.sidebar.markdown(
-        """
+    st.sidebar.markdown("""
         <style>
         section[data-testid="stSidebar"] {
             padding: 1rem;
         }
         </style>
-        """, unsafe_allow_html=True
-    )
+        """, unsafe_allow_html=True)
 
-    # Toolbar links
     toolbar_links = {
         "Memberships": "https://www.wrpf.uk/memberships",
         "Results":     "https://www.wrpf.uk/results",
@@ -143,17 +128,18 @@ def main():
     for col, (label, url) in zip(cols, toolbar_links.items()):
         col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
 
-    # Logo + Heading
     if LOGO_PATH.exists():
         st.image(str(LOGO_PATH), width=140)
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
 
-    # Optional: Homepage button
-    st.markdown(
-        "<div style='text-align:center'><a href='https://www.wrpf.uk'><button style='font-size:16px;padding:0.5em 1em;'>🏠 Back to WRPF.uk</button></a></div><br>",
-        unsafe_allow_html=True
-    )
+    st.markdown("""
+        <div style='text-align:center'>
+            <a href='https://www.wrpf.uk'>
+                <button style='font-size:16px;padding:0.5em 1em;'>🏠 Back to WRPF.uk</button>
+            </a>
+        </div><br>
+        """, unsafe_allow_html=True)
 
     df = load_data(CSV_PATH)
     filtered, sel = sidebar_filters(df)
