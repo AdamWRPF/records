@@ -1,20 +1,3 @@
-"""
-Streamlit dashboard for WRPF UK Records Database
-===============================================
-Run:
-    streamlit run records_dashboard.py
-
-Files required (same folder):
-* Records Master Sheet.csv  – data source
-* wrpf_logo.png            – logo (optional)
-
-Navigation
-----------
-* **Home** – searchable records table (default)
-
-Toolbar links (external): Memberships, Results, Events, Livestreams
-"""
-
 import pandas as pd
 import streamlit as st
 from pathlib import Path
@@ -161,33 +144,35 @@ def main():
         st.subheader("Top Record in Each Weight Class & Lift")
         best = best_per_class_and_lift(filtered)
 
-                # Build display DataFrame with Gender and Lift Type columns
         display_df = best[[
-            "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Testing", "Record Type", "Date", "Location"
+            "Class", "Lift", "Weight", "Full Name", "Sex",
+            "Division_base", "Equipment", "Testing",
+            "Record Type", "Date", "Location"
         ]].copy()
 
         display_df = display_df.rename(columns={
-            "Full Name": "Name",
-            "Sex": "Gender",
+            "Full Name":     "Name",
+            "Sex":           "Gender",
             "Division_base": "Division",
-            "Record Type": "Lift Type",
-            "Location": "Event"
+            "Record Type":   "Lift Type",
+            "Location":      "Event",
+            "Equipment":     "Equipment"
         })
 
-        # Map Lift Type to simple labels
         display_df["Lift Type"] = display_df["Lift Type"].apply(
             lambda x: "Single Lift" if str(x).lower().startswith("single") or "bench only" in str(x).lower() or "deadlift only" in str(x).lower() else "Full Power"
         )
 
-        # Strip trailing .0000 from numeric columns
         display_df["Weight"] = display_df["Weight"].apply(
             lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
         )
 
-        # Static HTML table without index
         html_table = display_df[[
-            "Class", "Lift", "Weight", "Name", "Gender", "Division", "Testing", "Lift Type", "Date", "Event"
+            "Class", "Lift", "Weight", "Name", "Gender",
+            "Division", "Equipment", "Testing",
+            "Lift Type", "Date", "Event"
         ]].to_html(index=False, border=0, classes="records-table")
+        
         st.markdown(html_table, unsafe_allow_html=True)
     else:
         st.info("👈 Use the menu on the left to pick filters and see records.")
