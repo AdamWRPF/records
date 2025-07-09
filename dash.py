@@ -15,13 +15,12 @@ LIFT_ORDER = ["Squat", "Bench", "Deadlift", "Total"]
 INVALID_WEIGHT_CLASSES = {"736", "737", "738", "739", "cell"}
 
 DIVISION_ORDER = [
-    "T14-15", "T16-17", "T18-19",
-    "Junior", "Opens",
+    "T14-15", "T16-17", "T18-19", "Junior", "Opens",
     "M40-49", "M50-59", "M60-69", "M70-79",
 ]
 
 # ------------------------------------------------------------------
-# Data loading & caching
+# Load Data
 # ------------------------------------------------------------------
 @st.cache_data
 def load_data(path: Path) -> pd.DataFrame:
@@ -31,11 +30,9 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Weight"] = pd.to_numeric(df["Weight"], errors="coerce")
     df["Class"]  = df["Class"].astype(str).str.strip()
     df = df[~df["Class"].isin(INVALID_WEIGHT_CLASSES)]
-
     df["Division_raw"]  = df["Division"].str.strip()
     df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
-    df["Testing"]       = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
-
+    df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
 
@@ -50,29 +47,32 @@ def sidebar_filters(df: pd.DataFrame):
     st.sidebar.header("Filter Records")
     sel = {}
 
-    sel["discipline"] = st.sidebar.selectbox("Discipline", ["All", "Full Power", "Single Lifts"])
+    params = st.experimental_get_query_params()
 
-    def box(label, opts):
-        return st.sidebar.selectbox(label, ["All"] + opts)
+    def get_param(name, fallback="All"):
+        return params.get(name, [fallback])[0]
 
-    sel["sex"] = box("Sex", sorted(df["Sex"].dropna().unique()))
-    available_divs = list(dict.fromkeys(df["Division_base"].unique()))
-    ordered_divs = [d for d in DIVISION_ORDER if d in available_divs] + [d for d in available_divs if d not in DIVISION_ORDER]
-    sel["division"] = box("Division", ordered_divs)
+    def box(label, options, param_name):
+        default = get_param(param_name)
+        value = st.sidebar.selectbox(label, ["All"] + options, index=(["All"] + options).index(default))
+        st.experimental_set_query_params(**{**st.experimental_get_query_params(), param_name: value})
+        return value
 
-    sel["testing_status"] = box("Testing Status", ["Tested", "Untested"])
-    sel["equipment"] = box("Equipment", sorted(df["Equipment"].dropna().unique()))
+    sel["sex"] = box("Sex", sorted(df["Sex"].dropna().unique()), "sex")
+
+    divs = list(dict.fromkeys(df["Division_base"].unique()))
+    ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
+    sel["division"] = box("Division", ordered_divs, "division")
+
+    sel["testing_status"] = box("Testing Status", ["Tested", "Untested"], "testing")
+    sel["equipment"] = box("Equipment", sorted(df["Equipment"].dropna().unique()), "equipment")
+
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
-    sel["weight_class"] = box("Weight Class", weight_opts)
-    sel["search"] = st.sidebar.text_input("Search by name or record")
+    sel["weight_class"] = box("Weight Class", weight_opts, "weight")
+
+    sel["search"] = st.sidebar.text_input("Search by name or record", value=get_param("search", ""))
 
     filt = df.copy()
-    if sel["discipline"] == "Full Power":
-        filt = filt[~filt["Record Type"].str.contains("Single", case=False, na=False)]
-    elif sel["discipline"] == "Single Lifts":
-        mask = filt["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
-        filt = filt[mask & filt["Lift"].isin(["Bench", "Deadlift"])]
-
     if sel["sex"] != "All":
         filt = filt[filt["Sex"] == sel["sex"]]
     if sel["division"] != "All":
@@ -83,11 +83,9 @@ def sidebar_filters(df: pd.DataFrame):
         filt = filt[filt["Equipment"] == sel["equipment"]]
     if sel["weight_class"] != "All":
         filt = filt[filt["Class"] == sel["weight_class"]]
-
     if sel["search"]:
-        txt = sel["search"]
-        filt = filt[filt["Full Name"].str.contains(txt, case=False, na=False) |
-                    filt["Record Name"].str.contains(txt, case=False, na=False)]
+        filt = filt[filt["Full Name"].str.contains(sel["search"], case=False, na=False) |
+                    filt["Record Name"].str.contains(sel["search"], case=False, na=False)]
 
     return filt, sel
 
@@ -108,131 +106,112 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     return best
 
 # ------------------------------------------------------------------
-# Main
+# Render table
 # ------------------------------------------------------------------
-def main():
-    st.set_page_config(page_title="WRPF UK Records Database", layout="centered")
+def render_table(filtered, sel):
+    st.subheader(
+        f"Top Records – {sel['division'] if sel['division'] != 'All' else 'All Divisions'} – "
+        f"{sel['weight_class'] if sel['weight_class'] != 'All' else 'All Weight Classes'} – "
+        f"{sel['testing_status'] if sel['testing_status'] != 'All' else 'Tested & Untested'} – "
+        f"{sel['equipment'] if sel['equipment'] != 'All' else 'All Equipment'}"
+    )
 
-    st.sidebar.markdown("""
+    best = best_per_class_and_lift(filtered)
+    display_df = best[[
+        "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Equipment",
+        "Testing", "Record Type", "Date", "Location"
+    ]].copy()
+
+    display_df = display_df.rename(columns={
+        "Full Name": "Name", "Sex": "Gender", "Division_base": "Division",
+        "Record Type": "Lift Type", "Location": "Event"
+    })
+
+    display_df["Lift Type"] = display_df["Lift Type"].apply(
+        lambda x: "Single Lift" if "single" in x.lower() or "bench only" in x.lower() or "deadlift only" in x.lower() else "Full Power"
+    )
+    display_df["Weight"] = display_df["Weight"].apply(
+        lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
+    )
+
+    st.download_button("📥 Download CSV", data=display_df.to_csv(index=False), file_name="filtered_records.csv")
+
+    html_table = display_df.to_html(index=False, border=0, classes="records-table")
+
+    st.markdown("""
         <style>
-        section[data-testid="stSidebar"] {
-            padding: 1rem;
+        .records-table {
+            font-size: 14px;
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        .records-table th, .records-table td {
+            border: 1px solid #ddd;
+            padding: 6px;
+            word-wrap: break-word;
+        }
+        .records-table th {
+            background-color: #cf1b2b;
+            color: white;
+            text-align: left;
+        }
+        .records-table td:nth-child(4) {
+            white-space: nowrap;
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media screen and (max-width: 768px) {
+            .records-table {
+                min-width: 800px;
+            }
         }
         </style>
     """, unsafe_allow_html=True)
+    st.markdown(f"<div>{html_table}</div>", unsafe_allow_html=True)
 
-    toolbar_links = {
-        "Memberships": "https://www.wrpf.uk/memberships",
-        "Results":     "https://www.wrpf.uk/results",
-        "Events":      "https://www.wrpf.uk/events",
-        "Livestreams": "https://www.wrpf.uk/live",
-    }
-    cols = st.columns(len(toolbar_links))
-    for col, (label, url) in zip(cols, toolbar_links.items()):
-        col.markdown(f"[**{label}**]({url})", unsafe_allow_html=True)
+# ------------------------------------------------------------------
+# Main
+# ------------------------------------------------------------------
+def main():
+    st.set_page_config("WRPF UK Records", layout="centered")
+
+    # Toolbar
+    st.markdown("""
+    <div style='display: flex; gap: 1em; margin-bottom: 1em; flex-wrap: wrap'>
+        <a href='https://www.wrpf.uk/memberships'><button>Memberships</button></a>
+        <a href='https://www.wrpf.uk/results'><button>Results</button></a>
+        <a href='https://www.wrpf.uk/events'><button>Events</button></a>
+        <a href='https://www.wrpf.uk/live'><button>Livestreams</button></a>
+    </div>
+    """, unsafe_allow_html=True)
 
     try:
         if LOGO_PATH.exists():
             st.image(str(LOGO_PATH), width=140)
     except UnidentifiedImageError:
-        st.warning("⚠️ Logo file found but could not be opened. Please check the file format.")
+        st.warning("⚠️ Could not load logo image.")
 
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
 
-    st.markdown("""
-        <div style='text-align:center'>
-            <a href='https://www.wrpf.uk'>
-                <button style='font-size:16px;padding:0.5em 1em;'>🏠 Back to WRPF.uk</button>
-            </a>
-        </div><br>
-    """, unsafe_allow_html=True)
-
     df = load_data(CSV_PATH)
     filtered, sel = sidebar_filters(df)
 
-    defaults = {k: "All" for k in ["discipline", "sex", "division", "testing_status", "equipment", "weight_class"]}
-    defaults["search"] = ""
-    filters_applied = any(sel[k] != defaults[k] for k in defaults)
+    tabs = st.tabs(["All Records", "Full Power", "Single Lifts"])
 
-    if filters_applied and not filtered.empty:
-        st.subheader(
-            f"Top Records – {sel['division'] if sel['division'] != 'All' else 'All Divisions'} – "
-            f"{sel['weight_class'] if sel['weight_class'] != 'All' else 'All Weight Classes'} – "
-            f"{sel['testing_status'] if sel['testing_status'] != 'All' else 'Tested & Untested'} – "
-            f"{sel['equipment'] if sel['equipment'] != 'All' else 'All Equipment'}"
-        )
+    with tabs[0]:
+        render_table(filtered, sel)
 
-        best = best_per_class_and_lift(filtered)
-        display_df = best[[
-            "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Equipment",
-            "Testing", "Record Type", "Date", "Location"
-        ]].copy()
+    with tabs[1]:
+        full_power = filtered[~filtered["Record Type"].str.contains("Single", case=False, na=False)]
+        render_table(full_power, sel)
 
-        display_df = display_df.rename(columns={
-            "Full Name": "Name",
-            "Sex": "Gender",
-            "Division_base": "Division",
-            "Record Type": "Lift Type",
-            "Location": "Event"
-        })
-
-        display_df["Lift Type"] = display_df["Lift Type"].apply(
-            lambda x: "Single Lift" if str(x).lower().startswith("single") or "bench only" in str(x).lower() or "deadlift only" in str(x).lower() else "Full Power"
-        )
-
-        display_df["Weight"] = display_df["Weight"].apply(
-            lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
-        )
-
-        st.download_button(
-            label="Download filtered records as CSV",
-            data=display_df.to_csv(index=False),
-            file_name="filtered_wrpf_records.csv",
-            mime="text/csv"
-        )
-
-        html_table = display_df[[
-            "Class", "Lift", "Weight", "Name", "Gender",
-            "Division", "Equipment", "Testing", "Lift Type", "Date", "Event"
-        ]].to_html(index=False, border=0, classes="records-table")
-
-        st.markdown("""
-            <style>
-            .records-table {
-                font-size: 14px;
-                border-collapse: collapse;
-                width: 100%;
-                table-layout: fixed;
-            }
-            .records-table th, .records-table td {
-                border: 1px solid #ddd;
-                padding: 6px;
-                word-wrap: break-word;
-            }
-            .records-table th {
-                background-color: #cf1b2b;
-                color: white;
-                text-align: left;
-            }
-            .records-table td:nth-child(4) {
-                white-space: nowrap;
-                max-width: 180px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            @media screen and (max-width: 768px) {
-                .records-table {
-                    min-width: 800px;
-                }
-            }
-            </style>
-        """, unsafe_allow_html=True)
-
-        st.markdown(f'<div>{html_table}</div>', unsafe_allow_html=True)
-
-    else:
-        st.info("👈 Use the menu on the left to pick filters and see records.")
+    with tabs[2]:
+        mask = filtered["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
+        single_lifts = filtered[mask & filtered["Lift"].isin(["Bench", "Deadlift"])]
+        render_table(single_lifts, sel)
 
 if __name__ == "__main__":
     main()
