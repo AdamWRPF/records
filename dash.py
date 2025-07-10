@@ -48,13 +48,20 @@ def render_filters(df: pd.DataFrame):
     ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
 
+    equipment_options = sorted(df["Equipment"].dropna().unique())
+    equipment_display = ["Equipped" if eq == "Multi-ply" else eq for eq in equipment_options]
+    equipment_map = dict(zip(equipment_display, equipment_options))
+
+    testing_display = {"All": "All", "Tested": "Drug Tested", "Untested": "Untested"}
+    testing_reverse = {v: k for k, v in testing_display.items()}
+
     with st.expander("Filters", expanded=True):
         cols = st.columns(6)
         sel = {
             "sex": cols[0].selectbox("Sex", ["All"] + sorted(df["Sex"].dropna().unique())),
             "division": cols[1].selectbox("Division", ["All"] + ordered_divs),
-            "testing_status": cols[2].selectbox("Testing", ["All", "Tested", "Untested"]),
-            "equipment": cols[3].selectbox("Equipment", ["All"] + sorted(df["Equipment"].dropna().unique())),
+            "testing_status": cols[2].selectbox("Testing", list(testing_display.values())),
+            "equipment": cols[3].selectbox("Equipment", ["All"] + equipment_display),
             "weight_class": cols[4].selectbox("Weight", ["All"] + weight_opts),
             "search": cols[5].text_input("Search e.g. '110 junior wraps'")
         }
@@ -65,9 +72,9 @@ def render_filters(df: pd.DataFrame):
     if sel["division"] != "All":
         filtered = filtered[filtered["Division_base"] == sel["division"]]
     if sel["testing_status"] != "All":
-        filtered = filtered[filtered["Testing"] == sel["testing_status"]]
+        filtered = filtered[filtered["Testing"] == testing_reverse[sel["testing_status"]]]
     if sel["equipment"] != "All":
-        filtered = filtered[filtered["Equipment"] == sel["equipment"]]
+        filtered = filtered[filtered["Equipment"] == equipment_map[sel["equipment"]]]
     if sel["weight_class"] != "All":
         filtered = filtered[filtered["Class"] == sel["weight_class"]]
 
@@ -89,17 +96,16 @@ def render_filters(df: pd.DataFrame):
 # Best record selector
 # ------------------------------------------------------------------
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
-    best = (
+    return (
         df.sort_values("Weight", ascending=False)
-        .drop_duplicates(subset=["Class", "Lift"])
-        .assign(
-            _class_num=lambda d: pd.to_numeric(d["Class"], errors="coerce"),
-            _lift_order=lambda d: d["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
-        )
-        .sort_values(["_class_num", "Class", "_lift_order"])
-        .drop(columns=["_class_num", "_lift_order"])
+          .drop_duplicates(subset=["Class", "Lift"])
+          .assign(
+              _class_num=lambda d: pd.to_numeric(d["Class"], errors="coerce"),
+              _lift_order=lambda d: d["Lift"].apply(lambda x: LIFT_ORDER.index(x) if x in LIFT_ORDER else 99)
+          )
+          .sort_values(["_class_num", "Class", "_lift_order"])
+          .drop(columns=["_class_num", "_lift_order"])
     )
-    return best
 
 # ------------------------------------------------------------------
 # Render table
@@ -108,14 +114,10 @@ def render_table(filtered, sel, key=""):
     st.subheader(
         f"Top Records – {sel['division'] if sel['division'] != 'All' else 'All Divisions'} – "
         f"{sel['weight_class'] if sel['weight_class'] != 'All' else 'All Weight Classes'} – "
-        f"{sel['testing_status'] if sel['testing_status'] != 'All' else 'Tested & Untested'} – "
-        f"{sel['equipment'] if sel['equipment'] != 'All' else 'All Equipment'}"
+        f"{sel['testing_status']} – {sel['equipment'] if sel['equipment'] != 'All' else 'All Equipment'}"
     )
 
-    if sel["search"]:
-        table_data = filtered
-    else:
-        table_data = best_per_class_and_lift(filtered)
+    table_data = filtered if sel["search"] else best_per_class_and_lift(filtered)
 
     display_df = table_data[[
         "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Equipment",
@@ -179,6 +181,7 @@ def render_table(filtered, sel, key=""):
         }
         </style>
     """, unsafe_allow_html=True)
+
     st.markdown(f"<div>{html_table}</div>", unsafe_allow_html=True)
 
 # ------------------------------------------------------------------
