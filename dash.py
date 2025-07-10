@@ -32,7 +32,7 @@ def load_data(path: Path) -> pd.DataFrame:
     df = df[~df["Class"].isin(INVALID_WEIGHT_CLASSES)]
     df["Division_raw"] = df["Division"].str.strip()
     df["Division_base"] = df["Division_raw"].str.replace(r"DT$", "", regex=True)
-    df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Tested", False: "Untested"})
+    df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Drug Tested", False: "Untested"})
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
 
@@ -48,19 +48,21 @@ def render_filters(df: pd.DataFrame):
     ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
 
+    # Equipment label mapping
     equipment_options = sorted(df["Equipment"].dropna().unique())
-    equipment_display = ["Equipped" if eq == "Multi-ply" else eq for eq in equipment_options]
+    equipment_display = [
+        "Equipped" if eq == "Multi-ply" else
+        "Raw" if eq == "Bare" else eq
+        for eq in equipment_options
+    ]
     equipment_map = dict(zip(equipment_display, equipment_options))
-
-    testing_display = {"All": "All", "Tested": "Drug Tested", "Untested": "Untested"}
-    testing_reverse = {v: k for k, v in testing_display.items()}
 
     with st.expander("Filters", expanded=True):
         cols = st.columns(6)
         sel = {
             "sex": cols[0].selectbox("Sex", ["All"] + sorted(df["Sex"].dropna().unique())),
             "division": cols[1].selectbox("Division", ["All"] + ordered_divs),
-            "testing_status": cols[2].selectbox("Testing", list(testing_display.values())),
+            "testing_status": cols[2].selectbox("Testing", ["All"] + sorted(df["Testing"].unique())),
             "equipment": cols[3].selectbox("Equipment", ["All"] + equipment_display),
             "weight_class": cols[4].selectbox("Weight", ["All"] + weight_opts),
             "search": cols[5].text_input("Search e.g. '110 junior wraps'")
@@ -72,7 +74,7 @@ def render_filters(df: pd.DataFrame):
     if sel["division"] != "All":
         filtered = filtered[filtered["Division_base"] == sel["division"]]
     if sel["testing_status"] != "All":
-        filtered = filtered[filtered["Testing"] == testing_reverse[sel["testing_status"]]]
+        filtered = filtered[filtered["Testing"] == sel["testing_status"]]
     if sel["equipment"] != "All":
         filtered = filtered[filtered["Equipment"] == equipment_map[sel["equipment"]]]
     if sel["weight_class"] != "All":
@@ -135,6 +137,8 @@ def render_table(filtered, sel, key=""):
     display_df["Weight"] = display_df["Weight"].apply(
         lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
     )
+
+    display_df["Equipment"] = display_df["Equipment"].replace({"Multi-ply": "Equipped", "Bare": "Raw"})
 
     st.download_button(
         "📥 Download CSV",
