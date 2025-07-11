@@ -65,7 +65,7 @@ def render_filters(df: pd.DataFrame):
         sel["testing_status"] = cols[2].selectbox("Testing", ["All", "Drug Tested", "Untested"], index=0)
         sel["equipment"] = cols[3].selectbox("Equipment", ["All"] + equipment_display, index=0)
         sel["weight_class"] = cols[4].selectbox("Weight", ["All"] + weight_opts, index=0)
-        sel["search"] = cols[5].text_input("Search e.g. '110 junior Manchester'", value=sel["search"])
+        sel["search"] = cols[5].text_input("Search e.g. '110 junior'", value=sel["search"])
 
         if st.button("🔄 Reset Filters"):
             st.session_state.filters = default_state.copy()
@@ -147,7 +147,6 @@ def render_table(filtered, sel, key=""):
         lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
     )
 
-    # Map equipment display values
     display_df["Equipment"] = display_df["Equipment"].replace({
         "Multi-ply": "Equipped",
         "Bare": "Raw"
@@ -205,6 +204,18 @@ def render_table(filtered, sel, key=""):
 # ------------------------------------------------------------------
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
+
+    # Navigation Buttons
+    nav_cols = st.columns(4)
+    nav_links = {
+        "Memberships": "https://www.wrpf.uk/memberships",
+        "Results":     "https://www.wrpf.uk/results",
+        "Events":      "https://www.wrpf.uk/events",
+        "Livestreams": "https://www.wrpf.uk/live"
+    }
+    for (label, url), col in zip(nav_links.items(), nav_cols):
+        col.markdown(f"<a href='{url}' target='_blank'><button style='width:100%'>{label}</button></a>", unsafe_allow_html=True)
+
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
 
