@@ -71,7 +71,6 @@ def render_filters(df: pd.DataFrame):
             st.session_state.filters = default_state.copy()
             st.rerun()
 
-    # Apply search override
     if sel["search"]:
         terms = sel["search"].lower().split()
         filtered = df.copy()
@@ -88,7 +87,6 @@ def render_filters(df: pd.DataFrame):
         st.info("🔍 Search query detected — all filters ignored.")
         return filtered, sel
 
-    # Apply filters
     filtered = df.copy()
     if sel["sex"] != "All":
         filtered = filtered[filtered["Sex"] == sel["sex"]]
@@ -148,6 +146,12 @@ def render_table(filtered, sel, key=""):
     display_df["Weight"] = display_df["Weight"].apply(
         lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
     )
+
+    # Map equipment display values
+    display_df["Equipment"] = display_df["Equipment"].replace({
+        "Multi-ply": "Equipped",
+        "Bare": "Raw"
+    })
 
     st.download_button(
         "📥 Download CSV",
