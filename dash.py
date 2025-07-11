@@ -18,6 +18,18 @@ DIVISION_ORDER = [
     "M40-49", "M50-59", "M60-69", "M70-79",
 ]
 
+VENUE_MAP = {
+    "Nottingham": "Nottingham Strong",
+    "North West": "Raw Strength Gym",
+    "East Coast": "Iron Warehouse Gym",
+    "East Midlands": "Horncastle Powerlifting",
+    "South West": "349 Barbell",
+    "South Midlands": "Spartan Fitness",
+    "West Midlands": "The Unit",
+    "North East": "Stag Fitness Centre",
+    "Specialist Event": "DOTD, Strength Wars etc"
+}
+
 # ------------------------------------------------------------------
 # Load data
 # ------------------------------------------------------------------
@@ -34,7 +46,10 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Drug Tested", False: "Untested"})
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
-    df.fillna("", inplace=True)
+
+    df["Location"] = df["Location"].where(df["Location"].notna(), None)
+    df["Location"] = df["Location"].apply(lambda x: x.strip() if isinstance(x, str) else x)
+
     return df
 
 # ------------------------------------------------------------------
@@ -65,7 +80,7 @@ def render_filters(df: pd.DataFrame):
         sel["testing_status"] = cols[2].selectbox("Testing", ["All", "Drug Tested", "Untested"], index=0)
         sel["equipment"] = cols[3].selectbox("Equipment", ["All"] + equipment_display, index=0)
         sel["weight_class"] = cols[4].selectbox("Weight", ["All"] + weight_opts, index=0)
-        sel["search"] = cols[5].text_input("Search e.g. '110 junior'", value=sel["search"])
+        sel["search"] = cols[5].text_input("Search e.g. '110 junior Manchester'", value=sel["search"])
 
         if st.button("🔄 Reset Filters"):
             st.session_state.filters = default_state.copy()
@@ -121,7 +136,8 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
 # ------------------------------------------------------------------
 def render_table(filtered, sel, key=""):
     show_all = bool(sel["search"])
-    table_data = filtered if show_all else best_per_class_and_lift(filtered)
+    data_source = filtered
+    table_data = data_source if show_all else best_per_class_and_lift(data_source)
 
     st.subheader(
         f"{'All Matches' if show_all else 'Top Records'} – "
@@ -151,6 +167,8 @@ def render_table(filtered, sel, key=""):
         "Multi-ply": "Equipped",
         "Bare": "Raw"
     })
+
+    display_df = display_df.fillna("")
 
     st.download_button(
         "📥 Download CSV",
@@ -222,7 +240,7 @@ def main():
     df = load_data(CSV_PATH)
     filtered, sel = render_filters(df)
 
-    tabs = st.tabs(["All Records", "Full Power", "Single Lifts"])
+    tabs = st.tabs(["All Records", "Full Power", "Single Lifts", "Records by Region", "FAQ"])
 
     with tabs[0]:
         render_table(filtered, sel, key="all")
@@ -235,6 +253,52 @@ def main():
         mask = filtered["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
         single_lifts = filtered[mask & filtered["Lift"].isin(["Bench", "Deadlift"])]
         render_table(single_lifts, sel, key="single")
+
+    with tabs[3]:
+        st.markdown("## 📍 Records by Region")
+
+        region_df = (
+            df[df["Location"].notna() & (df["Location"].str.strip() != "")]
+            .groupby("Location")
+            .size()
+            .reset_index(name="Records")
+        )
+        region_df["Venue"] = region_df["Location"].map(VENUE_MAP)
+        region_df = region_df[region_df["Venue"].notna()]
+
+        region_df = region_df.rename(columns={"Location": "Region"})
+        spec = region_df[region_df["Region"] == "Specialist Event"]
+        region_df = region_df[region_df["Region"] != "Specialist Event"]
+        region_df = pd.concat([region_df.sort_values("Records", ascending=False), spec], ignore_index=True)
+
+        st.markdown(
+            region_df[["Region", "Venue", "Records"]]
+            .to_html(index=False, border=0, classes="records-table"),
+            unsafe_allow_html=True
+        )
+        
+
+    with tabs[4]:
+        st.markdown("## ❓ Frequently Asked Questions")
+        st.markdown("""
+**Q: How often is this database updated?**  
+A: We update the records shortly after each WRPF UK sanctioned event.
+
+**Q: What does 'Drug Tested' mean?**  
+A: It refers to divisions where athletes are subject to in-competition testing.
+
+**Q: What is the difference between Raw, Sleeves, Wraps and Equipped?**  
+A: Raw is single lifts only and means no supportive equipment other than a belt and wrist wraps were worn.  
+Sleeves is the division you fall under when wearing knee sleeves in a full power event.  
+Wraps are the same but you're wearing knee wraps and Equipped is when you're wearing fully supportive suits.
+
+**Q: How can I get a record updated or corrected?**  
+A: Please contact [events@wrpf.uk](mailto:events@wrpf.uk) with evidence or questions.
+
+**Q: What does Standard mean?**  
+A: This is just a record standard which has been selected from thousands of results data from OpenPowerlifting.
+To claim this record, you will need to break it by 0.5kg which you can do at any WRPF UK Event.
+        """)
 
 if __name__ == "__main__":
     main()
