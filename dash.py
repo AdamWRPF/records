@@ -2,10 +2,9 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 from datetime import datetime
-from PIL import Image, UnidentifiedImageError
 
 # ------------------------------------------------------------------
-# Paths & constants
+# Constants
 # ------------------------------------------------------------------
 CSV_PATH = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
@@ -20,7 +19,7 @@ DIVISION_ORDER = [
 ]
 
 # ------------------------------------------------------------------
-# Load Data
+# Load data
 # ------------------------------------------------------------------
 @st.cache_data
 def load_data(path: Path) -> pd.DataFrame:
@@ -35,47 +34,47 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Drug Tested", False: "Untested"})
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
-
-    for col in ["Record Type", "Lift", "Record Name"]:
-        df[col] = df[col].fillna("")
+    df.fillna("", inplace=True)
     return df
 
 # ------------------------------------------------------------------
-# Filter Layout with Smart Search
+# Filter UI + Smart Search
 # ------------------------------------------------------------------
 def render_filters(df: pd.DataFrame):
     divs = list(dict.fromkeys(df["Division_base"].unique()))
     ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
-
-    # Equipment label mapping
     equipment_options = sorted(df["Equipment"].dropna().unique())
-    equipment_display = [
-        "Equipped" if eq == "Multi-ply" else
-        "Raw" if eq == "Bare" else eq
-        for eq in equipment_options
-    ]
+    equipment_display = ["Equipped" if e == "Multi-ply" else "Raw" if e == "Bare" else e for e in equipment_options]
     equipment_map = dict(zip(equipment_display, equipment_options))
+
+    default_state = {
+        "sex": "All", "division": "All", "testing_status": "All",
+        "equipment": "All", "weight_class": "All", "search": ""
+    }
+
+    if "filters" not in st.session_state:
+        st.session_state.filters = default_state.copy()
 
     with st.expander("Filters", expanded=True):
         cols = st.columns(6)
-        reset = st.button("🔄 Reset Filters")
-        if reset:
+        sel = st.session_state.filters
+
+        sel["sex"] = cols[0].selectbox("Sex", ["All"] + sorted(df["Sex"].dropna().unique()), index=0)
+        sel["division"] = cols[1].selectbox("Division", ["All"] + ordered_divs, index=0)
+        sel["testing_status"] = cols[2].selectbox("Testing", ["All", "Drug Tested", "Untested"], index=0)
+        sel["equipment"] = cols[3].selectbox("Equipment", ["All"] + equipment_display, index=0)
+        sel["weight_class"] = cols[4].selectbox("Weight", ["All"] + weight_opts, index=0)
+        sel["search"] = cols[5].text_input("Search e.g. '110 junior wraps'", value=sel["search"])
+
+        if st.button("🔄 Reset Filters"):
+            st.session_state.filters = default_state.copy()
             st.experimental_rerun()
 
-        sel = {
-            "sex": cols[0].selectbox("Sex", ["All"] + sorted(df["Sex"].dropna().unique())),
-            "division": cols[1].selectbox("Division", ["All"] + ordered_divs),
-            "testing_status": cols[2].selectbox("Testing", ["All"] + sorted(df["Testing"].unique())),
-            "equipment": cols[3].selectbox("Equipment", ["All"] + equipment_display),
-            "weight_class": cols[4].selectbox("Weight", ["All"] + weight_opts),
-            "search": cols[5].text_input("Search e.g. '110 junior wraps'")
-        }
-
-    # If search query is present, ignore other filters
+    # Apply search override
     if sel["search"]:
-        filtered = df.copy()
         terms = sel["search"].lower().split()
+        filtered = df.copy()
         for term in terms:
             filtered = filtered[
                 filtered["Full Name"].str.lower().str.contains(term, na=False)
@@ -85,9 +84,10 @@ def render_filters(df: pd.DataFrame):
                 | filtered["Equipment"].str.lower().str.contains(term, na=False)
                 | filtered["Testing"].str.lower().str.contains(term, na=False)
             ]
+        st.info("🔍 Search query detected — other filters ignored.")
         return filtered, sel
 
-    # Otherwise apply standard filters
+    # Apply filters
     filtered = df.copy()
     if sel["sex"] != "All":
         filtered = filtered[filtered["Sex"] == sel["sex"]]
@@ -103,7 +103,7 @@ def render_filters(df: pd.DataFrame):
     return filtered, sel
 
 # ------------------------------------------------------------------
-# Best record selector
+# Best records by class/lift
 # ------------------------------------------------------------------
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     return (
@@ -118,7 +118,7 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 # ------------------------------------------------------------------
-# Render records table
+# Table Renderer
 # ------------------------------------------------------------------
 def render_table(filtered, sel, key=""):
     show_all = bool(sel["search"])
@@ -154,8 +154,6 @@ def render_table(filtered, sel, key=""):
         file_name="filtered_records.csv",
         key=f"download_{key}"
     )
-
-    html_table = display_df.to_html(index=False, border=0, classes="records-table")
 
     st.markdown("""
         <style>
@@ -194,6 +192,7 @@ def render_table(filtered, sel, key=""):
         </style>
     """, unsafe_allow_html=True)
 
+    html_table = display_df.to_html(index=False, border=0, classes="records-table")
     st.markdown(html_table, unsafe_allow_html=True)
 
 # ------------------------------------------------------------------
@@ -201,22 +200,6 @@ def render_table(filtered, sel, key=""):
 # ------------------------------------------------------------------
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
-
-    st.markdown("""
-    <div style='display: flex; gap: 1em; margin-bottom: 1em; flex-wrap: wrap'>
-        <a href='https://www.wrpf.uk/memberships'><button>Memberships</button></a>
-        <a href='https://www.wrpf.uk/results'><button>Results</button></a>
-        <a href='https://www.wrpf.uk/events'><button>Events</button></a>
-        <a href='https://www.wrpf.uk/live'><button>Livestreams</button></a>
-    </div>
-    """, unsafe_allow_html=True)
-
-    if LOGO_PATH.exists():
-        try:
-            with Image.open(LOGO_PATH) as img:
-                st.image(img, width=140)
-        except (UnidentifiedImageError, OSError):
-            st.warning("⚠️ Logo could not be displayed. Please check the file format.")
 
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
