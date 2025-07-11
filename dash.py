@@ -69,7 +69,7 @@ def render_filters(df: pd.DataFrame):
 
         if st.button("🔄 Reset Filters"):
             st.session_state.filters = default_state.copy()
-            st.experimental_rerun()
+            st.rerun()
 
     # Apply search override
     if sel["search"]:
@@ -83,7 +83,7 @@ def render_filters(df: pd.DataFrame):
                 | filtered["Division_base"].str.lower().str.contains(term, na=False)
                 | filtered["Equipment"].str.lower().str.contains(term, na=False)
                 | filtered["Testing"].str.lower().str.contains(term, na=False)
-                | filtered["Location"].str.lower().str.contains(term, na=False)  # Added location
+                | filtered["Location"].str.lower().str.contains(term, na=False)
             ]
         st.info("🔍 Search query detected — all filters ignored.")
         return filtered, sel
