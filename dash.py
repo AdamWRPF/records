@@ -121,8 +121,7 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
 # ------------------------------------------------------------------
 def render_table(filtered, sel, key=""):
     show_all = bool(sel["search"])
-    data_source = filtered if show_all else filtered[filtered["Location"].str.strip() != ""]
-    table_data = data_source if show_all else best_per_class_and_lift(data_source)
+    table_data = filtered if show_all else best_per_class_and_lift(filtered)
 
     st.subheader(
         f"{'All Matches' if show_all else 'Top Records'} – "
