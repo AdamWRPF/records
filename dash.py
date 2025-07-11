@@ -65,7 +65,7 @@ def render_filters(df: pd.DataFrame):
         sel["testing_status"] = cols[2].selectbox("Testing", ["All", "Drug Tested", "Untested"], index=0)
         sel["equipment"] = cols[3].selectbox("Equipment", ["All"] + equipment_display, index=0)
         sel["weight_class"] = cols[4].selectbox("Weight", ["All"] + weight_opts, index=0)
-        sel["search"] = cols[5].text_input("Search e.g. '110 junior wraps'", value=sel["search"])
+        sel["search"] = cols[5].text_input("Search e.g. '110 junior Manchester'", value=sel["search"])
 
         if st.button("🔄 Reset Filters"):
             st.session_state.filters = default_state.copy()
@@ -83,8 +83,9 @@ def render_filters(df: pd.DataFrame):
                 | filtered["Division_base"].str.lower().str.contains(term, na=False)
                 | filtered["Equipment"].str.lower().str.contains(term, na=False)
                 | filtered["Testing"].str.lower().str.contains(term, na=False)
+                | filtered["Location"].str.lower().str.contains(term, na=False)  # Added location
             ]
-        st.info("🔍 Search query detected — other filters ignored.")
+        st.info("🔍 Search query detected — all filters ignored.")
         return filtered, sel
 
     # Apply filters
@@ -200,7 +201,6 @@ def render_table(filtered, sel, key=""):
 # ------------------------------------------------------------------
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
-
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
 
