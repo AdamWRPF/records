@@ -59,6 +59,10 @@ def render_filters(df: pd.DataFrame):
 
     with st.expander("Filters", expanded=True):
         cols = st.columns(6)
+        reset = st.button("🔄 Reset Filters")
+        if reset:
+            st.experimental_rerun()
+
         sel = {
             "sex": cols[0].selectbox("Sex", ["All"] + sorted(df["Sex"].dropna().unique())),
             "division": cols[1].selectbox("Division", ["All"] + ordered_divs),
@@ -68,6 +72,22 @@ def render_filters(df: pd.DataFrame):
             "search": cols[5].text_input("Search e.g. '110 junior wraps'")
         }
 
+    # If search query is present, ignore other filters
+    if sel["search"]:
+        filtered = df.copy()
+        terms = sel["search"].lower().split()
+        for term in terms:
+            filtered = filtered[
+                filtered["Full Name"].str.lower().str.contains(term, na=False)
+                | filtered["Record Name"].str.lower().str.contains(term, na=False)
+                | filtered["Class"].str.lower().str.contains(term, na=False)
+                | filtered["Division_base"].str.lower().str.contains(term, na=False)
+                | filtered["Equipment"].str.lower().str.contains(term, na=False)
+                | filtered["Testing"].str.lower().str.contains(term, na=False)
+            ]
+        return filtered, sel
+
+    # Otherwise apply standard filters
     filtered = df.copy()
     if sel["sex"] != "All":
         filtered = filtered[filtered["Sex"] == sel["sex"]]
@@ -79,18 +99,6 @@ def render_filters(df: pd.DataFrame):
         filtered = filtered[filtered["Equipment"] == equipment_map[sel["equipment"]]]
     if sel["weight_class"] != "All":
         filtered = filtered[filtered["Class"] == sel["weight_class"]]
-
-    if sel["search"]:
-        terms = sel["search"].lower().split()
-        for term in terms:
-            filtered = filtered[
-                filtered["Full Name"].str.lower().str.contains(term, na=False)
-                | filtered["Record Name"].str.lower().str.contains(term, na=False)
-                | filtered["Class"].str.lower().str.contains(term, na=False)
-                | filtered["Division_base"].str.lower().str.contains(term, na=False)
-                | filtered["Equipment"].str.lower().str.contains(term, na=False)
-                | filtered["Testing"].str.lower().str.contains(term, na=False)
-            ]
 
     return filtered, sel
 
@@ -110,20 +118,22 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 # ------------------------------------------------------------------
-# Render table
+# Render records table
 # ------------------------------------------------------------------
 def render_table(filtered, sel, key=""):
+    show_all = bool(sel["search"])
+    table_data = filtered if show_all else best_per_class_and_lift(filtered)
+
     st.subheader(
-        f"Top Records – {sel['division'] if sel['division'] != 'All' else 'All Divisions'} – "
+        f"{'All Matches' if show_all else 'Top Records'} – "
+        f"{sel['division'] if sel['division'] != 'All' else 'All Divisions'} – "
         f"{sel['weight_class'] if sel['weight_class'] != 'All' else 'All Weight Classes'} – "
         f"{sel['testing_status']} – {sel['equipment'] if sel['equipment'] != 'All' else 'All Equipment'}"
     )
 
-    table_data = filtered if sel["search"] else best_per_class_and_lift(filtered)
-
     display_df = table_data[[
-        "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Equipment",
-        "Testing", "Record Type", "Date", "Location"
+        "Class", "Lift", "Weight", "Full Name", "Sex", "Division_base", "Testing",
+        "Equipment", "Record Type", "Date", "Location"
     ]].copy()
 
     display_df = display_df.rename(columns={
@@ -137,8 +147,6 @@ def render_table(filtered, sel, key=""):
     display_df["Weight"] = display_df["Weight"].apply(
         lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
     )
-
-    display_df["Equipment"] = display_df["Equipment"].replace({"Multi-ply": "Equipped", "Bare": "Raw"})
 
     st.download_button(
         "📥 Download CSV",
@@ -186,10 +194,10 @@ def render_table(filtered, sel, key=""):
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown(f"<div>{html_table}</div>", unsafe_allow_html=True)
+    st.markdown(html_table, unsafe_allow_html=True)
 
 # ------------------------------------------------------------------
-# Main
+# Main App
 # ------------------------------------------------------------------
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
@@ -203,12 +211,12 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-    try:
-        if LOGO_PATH.exists():
+    if LOGO_PATH.exists():
+        try:
             with Image.open(LOGO_PATH) as img:
                 st.image(img, width=140)
-    except (UnidentifiedImageError, OSError):
-        st.warning("⚠️ Logo could not be displayed. Please check the file format.")
+        except (UnidentifiedImageError, OSError):
+            st.warning("⚠️ Logo could not be displayed. Please check the file format.")
 
     st.markdown("## **WRPF UK Records Database**")
     st.caption("Where Strength Meets Opportunity")
