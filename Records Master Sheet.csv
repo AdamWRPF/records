@@ -763,7 +763,7 @@ Standard,160,,,M60-69DT,F,110+,Wraps,S,Full Power,DT 110+kg Classic
 Standard,92.5,,,M60-69DT,F,110+,Wraps,B,Full Power,DT 110+kg Classic
 Standard,170,,,M60-69DT,F,110+,Wraps,D,Full Power,DT 110+kg Classic
 Standard,410,,,M60-69DT,F,110+,Wraps,Total,Full Power,DT 110+kg Classic
-Henlee Knell,80,13/07/2025,East Coast Qualifier,T14-15DT,M,52,Bare,B,Single Lift,DT 52kg Raw
+Henlee Knell,80,13/07/2025,East Coast,T14-15DT,M,52,Bare,B,Single Lift,DT 52kg Raw
 Standard,87.5,,,T14-15DT,M,52,Bare,D,Single Lift,DT 52kg Raw
 Standard,55,,,T16-17DT,M,52,Bare,B,Single Lift,DT 52kg Raw
 Standard,102.5,,,T16-17DT,M,52,Bare,D,Single Lift,DT 52kg Raw
@@ -1031,18 +1031,18 @@ Standard,95,,,T18-19DT,F,60,Sleeves,S,Full Power,DT 60kg Raw
 Standard,50,,,T18-19DT,F,60,Sleeves,B,Full Power,DT 60kg Raw
 Standard,105,,,T18-19DT,F,60,Sleeves,D,Full Power,DT 60kg Raw
 Standard,245,,,T18-19DT,F,60,Sleeves,Total,Full Power,DT 60kg Raw
-Reegan Green,150,13/07/2025,East Coast Qualifier,JuniorDT,F,60,Sleeves,S,Full Power,DT 60kg Raw
-Reegan Green,67.5,13/07/2025,East Coast Qualifier,JuniorDT,F,60,Sleeves,B,Full Power,DT 60kg Raw
-Reegan Green,167.5,13/07/2025,East Coast Qualifier,JuniorDT,F,60,Sleeves,D,Full Power,DT 60kg Raw
-Reegan Green,385,13/07/2025,East Coast Qualifier,JuniorDT,F,60,Sleeves,Total,Full Power,DT 60kg Raw
+Reegan Green,150,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,S,Full Power,DT 60kg Raw
+Reegan Green,67.5,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,B,Full Power,DT 60kg Raw
+Reegan Green,167.5,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,D,Full Power,DT 60kg Raw
+Reegan Green,385,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,Total,Full Power,DT 60kg Raw
 Siobhan Read,150,04/05/2025,North West,OpenDT,F,60,Sleeves,S,Full Power,DT 60kg Raw
 Siobhan Read,92.5,04/05/2025,North West,OpenDT,F,60,Sleeves,B,Full Power,DT 60kg Raw
 Siobhan Read,180,04/05/2025,North West,OpenDT,F,60,Sleeves,D,Full Power,DT 60kg Raw
 Siobhan Read,422.5,04/05/2025,North West,OpenDT,F,60,Sleeves,Total,Full Power,DT 60kg Raw
-Michelle Vettese,127.5,13/07/2025,East Coast Qualifier,M40-49DT,F,60,Sleeves,S,Full Power,DT 60kg Raw
-Michelle Vettese,62.5,13/07/2025,East Coast Qualifier,M40-49DT,F,60,Sleeves,B,Full Power,DT 60kg Raw
-Michelle Vettese,142.5,13/07/2025,East Coast Qualifier,M40-49DT,F,60,Sleeves,D,Full Power,DT 60kg Raw
-Michelle Vettese,332.5,13/07/2025,East Coast Qualifier,M40-49DT,F,60,Sleeves,Total,Full Power,DT 60kg Raw
+Michelle Vettese,127.5,13/07/2025,East Coast,M40-49DT,F,60,Sleeves,S,Full Power,DT 60kg Raw
+Michelle Vettese,62.5,13/07/2025,East Coast,M40-49DT,F,60,Sleeves,B,Full Power,DT 60kg Raw
+Michelle Vettese,142.5,13/07/2025,East Coast,M40-49DT,F,60,Sleeves,D,Full Power,DT 60kg Raw
+Michelle Vettese,332.5,13/07/2025,East Coast,M40-49DT,F,60,Sleeves,Total,Full Power,DT 60kg Raw
 Standard,112.5,,,M50-59DT,F,60,Sleeves,S,Full Power,DT 60kg Raw
 Standard,65,,,M50-59DT,F,60,Sleeves,B,Full Power,DT 60kg Raw
 Standard,117.5,,,M50-59DT,F,60,Sleeves,D,Full Power,DT 60kg Raw
@@ -1132,7 +1132,7 @@ Abigail Gosling,67.5,16/02/2025,Nottingham,JuniorDT,F,67.5,Sleeves,B,Full Power,
 Juliette Appleby,140,28/07/2024,East Coast,JuniorDT,F,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
 Standard,317.5,,,JuniorDT,F,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
 Lizzie Pipe,150,04/05/2025,North West,OpenDT,F,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
-Bec Giles,90,13/07/2025,East Coast Qualifier,OpenDT,F,67.5,Sleeves,B,Full Power,DT 67.5kg Raw
+Bec Giles,90,13/07/2025,East Coast,OpenDT,F,67.5,Sleeves,B,Full Power,DT 67.5kg Raw
 Lizzie Pipe,177.5,04/05/2025,North West,OpenDT,F,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
 Lizzie Pipe,415,04/05/2025,North West,OpenDT,F,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
 Standard,125,,,M40-49DT,F,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
@@ -1471,10 +1471,10 @@ Standard,150,,,T14-15DT,M,100,Sleeves,S,Full Power,DT 100kg Raw
 Standard,87.5,,,T14-15DT,M,100,Sleeves,B,Full Power,DT 100kg Raw
 Standard,157.5,,,T14-15DT,M,100,Sleeves,D,Full Power,DT 100kg Raw
 Standard,380,,,T14-15DT,M,100,Sleeves,Total,Full Power,DT 100kg Raw
-Oliver Andrews Reeves,200,13/07/2025,East Coast Qualifier,T16-17DT,M,100,Sleeves,S,Full Power,DT 100kg Raw
-Oliver Andrews Reeves,130,13/07/2025,East Coast Qualifier,T16-17DT,M,100,Sleeves,B,Full Power,DT 100kg Raw
-Oliver Andrews Reeves,185,13/07/2025,East Coast Qualifier,T16-17DT,M,100,Sleeves,D,Full Power,DT 100kg Raw
-Oliver Andrews Reeves,515,13/07/2025,East Coast Qualifier,T16-17DT,M,100,Sleeves,Total,Full Power,DT 100kg Raw
+Oliver Andrews Reeves,200,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,S,Full Power,DT 100kg Raw
+Oliver Andrews Reeves,130,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,B,Full Power,DT 100kg Raw
+Oliver Andrews Reeves,185,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,D,Full Power,DT 100kg Raw
+Oliver Andrews Reeves,515,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,Total,Full Power,DT 100kg Raw
 Standard,205,,,T18-19DT,M,100,Sleeves,S,Full Power,DT 100kg Raw
 Standard,115,,,T18-19DT,M,100,Sleeves,B,Full Power,DT 100kg Raw
 Standard,215,,,T18-19DT,M,100,Sleeves,D,Full Power,DT 100kg Raw
@@ -4300,7 +4300,7 @@ Standard,125,,,T18-19,F,82.5,Bare,D,Single Lift,UT 82.5kg Raw
 Standard,72.5,,,Junior,F,82.5,Bare,B,Single Lift,UT 82.5kg Raw
 Standard,145,,,Junior,F,82.5,Bare,D,Single Lift,UT 82.5kg Raw
 Standard,82.5,,,Open,F,82.5,Bare,B,Single Lift,UT 82.5kg Raw
-Katie Holding,171,13/07/2025,East Coast Qualifier,Open,F,82.5,Bare,D,Single Lift,UT 82.5kg Raw
+Katie Holding,171,13/07/2025,East Coast,Open,F,82.5,Bare,D,Single Lift,UT 82.5kg Raw
 Standard,72.5,,,M40-49,F,82.5,Bare,B,Single Lift,UT 82.5kg Raw
 Standard,150,,,M40-49,F,82.5,Bare,D,Single Lift,UT 82.5kg Raw
 Standard,65,,,M50-59,F,82.5,Bare,B,Single Lift,UT 82.5kg Raw
