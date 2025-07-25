@@ -60,8 +60,8 @@ def render_filters(df: pd.DataFrame):
     ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
     equipment_options = sorted(df["Equipment"].dropna().unique())
-    equipment_display = ["Equipped" if e == "Multi-ply" else "Raw" if e == "Bare" else e for e in equipment_options]
-    equipment_map = dict(zip(equipment_display, equipment_options))
+    equipment_display = ["Raw" if e == "Bare" else e for e in equipment_options]
+    equipment_map = {("Raw" if e == "Bare" else e): e for e in equipment_options}
 
     default_state = {
         "sex": "All", "division": "All", "testing_status": "All",
@@ -164,7 +164,6 @@ def render_table(filtered, sel, key=""):
     )
 
     display_df["Equipment"] = display_df["Equipment"].replace({
-        "Multi-ply": "Equipped",
         "Bare": "Raw"
     })
 
@@ -276,7 +275,6 @@ def main():
             .to_html(index=False, border=0, classes="records-table"),
             unsafe_allow_html=True
         )
-        
 
     with tabs[4]:
         st.markdown("## ❓ Frequently Asked Questions")
@@ -287,17 +285,17 @@ A: We update the records shortly after each WRPF UK sanctioned event.
 **Q: What does 'Drug Tested' mean?**  
 A: It refers to divisions where athletes are subject to in-competition testing.
 
-**Q: What is the difference between Raw, Sleeves, Wraps and Equipped?**  
-A: Raw is single lifts only and means no supportive equipment other than a belt and wrist wraps were worn.  
-Sleeves is the division you fall under when wearing knee sleeves in a full power event.  
-Wraps are the same but you're wearing knee wraps and Equipped is when you're wearing fully supportive suits.
+**Q: What is the difference between Raw, Sleeves, Wraps, Single-ply and Multi-ply?**  
+A: Raw means no supportive equipment beyond belt and wrist wraps.  
+Sleeves = knee sleeves; Wraps = knee wraps.  
+Single-ply and Multi-ply refer to supportive suits made with one or multiple layers of material.
 
 **Q: How can I get a record updated or corrected?**  
 A: Please contact [events@wrpf.uk](mailto:events@wrpf.uk) with evidence or questions.
 
 **Q: What does Standard mean?**  
-A: This is just a record standard which has been selected from thousands of results data from OpenPowerlifting.
-To claim this record, you will need to break it by 0.5kg which you can do at any WRPF UK Event.
+A: This is just a record standard selected from OpenPowerlifting data.  
+To claim this record, you must break it by 0.5kg at any WRPF UK event.
         """)
 
 if __name__ == "__main__":
