@@ -58,7 +58,7 @@ def render_filters(df: pd.DataFrame):
     ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
     equipment_options = sorted(df["Equipment"].dropna().unique())
-    equipment_display = ["Raw" if e == "Bare" else e for e in equipment_options]
+    equipment_display = sorted(set(["Raw" if e == "Bare" else e for e in equipment_options]))
     equipment_map = {("Raw" if e == "Bare" else e): e for e in equipment_options}
 
     default_state = {
@@ -232,7 +232,7 @@ def main():
     df = load_data(CSV_PATH)
     filtered, sel = render_filters(df)
 
-    tabs = st.tabs(["All Records", "Full Power", "Single Lifts", "Records by Region", "FAQ"])
+    tabs = st.tabs(["All Records", "Full Power", "Single Lifts", "Para", "Records by Region", "FAQ"])
 
     with tabs[0]:
         render_table(filtered, sel, key="all")
@@ -242,29 +242,20 @@ def main():
         render_table(full_power, sel, key="full")
 
     with tabs[2]:
-        # Filter standard single lift records
         mask = filtered["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
         single_lifts = filtered[mask & filtered["Lift"].isin(["Bench", "Deadlift"])]
-
-        # Para Bench records only
-        para_bench = single_lifts[
-            (single_lifts["Division_raw"].str.contains("para", case=False, na=False)) &
-            (single_lifts["Lift"] == "Bench")
-        ]
-        non_para_lifts = single_lifts[~single_lifts.index.isin(para_bench.index)]
-
-        st.markdown("### 🔩 Single Lift Records (Non-Para)")
-        render_table(non_para_lifts, sel, key="single")
-
-        if not para_bench.empty:
-            st.markdown("### ♿ Para Bench Press Records")
-            render_table(para_bench, sel, key="para_bench")
-        else:
-            st.info("No Para Bench Press records found.")
+        render_table(single_lifts, sel, key="single")
 
     with tabs[3]:
-        st.markdown("## 📍 Records by Region")
+        st.markdown("### ♿ Para Records (All Lifts)")
+        para_df = filtered[filtered["Division_raw"].str.contains("para", case=False, na=False)]
+        if not para_df.empty:
+            render_table(para_df, sel, key="para_tab")
+        else:
+            st.info("No Para records found.")
 
+    with tabs[4]:
+        st.markdown("## 📍 Records by Region")
         region_df = (
             df[df["Location"].notna() & (df["Location"].str.strip() != "")]
             .groupby("Location")
@@ -277,14 +268,13 @@ def main():
         spec = region_df[region_df["Region"] == "Specialist Event"]
         region_df = region_df[region_df["Region"] != "Specialist Event"]
         region_df = pd.concat([region_df.sort_values("Records", ascending=False), spec], ignore_index=True)
-
         st.markdown(
             region_df[["Region", "Venue", "Records"]]
             .to_html(index=False, border=0, classes="records-table"),
             unsafe_allow_html=True
         )
 
-    with tabs[4]:
+    with tabs[5]:
         st.markdown("## ❓ Frequently Asked Questions")
         st.markdown("""
 **Q: How often is this database updated?**  
