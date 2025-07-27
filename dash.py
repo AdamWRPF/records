@@ -255,11 +255,12 @@ def main():
         st.markdown("""
             <div style="
                 border-left: 5px solid #cf1b2b;
-                background-color: #f9f9f9;
+                background-color: rgba(255,255,255,0.05);
                 padding: 1rem;
                 margin-bottom: 1.5rem;
                 font-size: 16px;
-                border-radius: 6px;">
+                border-radius: 6px;
+                color: #fff;">
                 <strong>Note:</strong> If there is no record for your division as a Para athlete, the weight you lift will become the new record.
             </div>
         """, unsafe_allow_html=True)
