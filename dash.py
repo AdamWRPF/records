@@ -46,10 +46,8 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Drug Tested", False: "Untested"})
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
-
     df["Location"] = df["Location"].where(df["Location"].notna(), None)
     df["Location"] = df["Location"].apply(lambda x: x.strip() if isinstance(x, str) else x)
-
     return df
 
 # ------------------------------------------------------------------
@@ -162,11 +160,7 @@ def render_table(filtered, sel, key=""):
     display_df["Weight"] = display_df["Weight"].apply(
         lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
     )
-
-    display_df["Equipment"] = display_df["Equipment"].replace({
-        "Bare": "Raw"
-    })
-
+    display_df["Equipment"] = display_df["Equipment"].replace({"Bare": "Raw"})
     display_df = display_df.fillna("")
 
     st.download_button(
@@ -222,7 +216,6 @@ def render_table(filtered, sel, key=""):
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
 
-    # Navigation Buttons
     nav_cols = st.columns(4)
     nav_links = {
         "Memberships": "https://www.wrpf.uk/memberships",
@@ -249,9 +242,25 @@ def main():
         render_table(full_power, sel, key="full")
 
     with tabs[2]:
+        # Filter standard single lift records
         mask = filtered["Record Type"].str.contains("Single|Bench Only|Deadlift Only", case=False, na=False)
         single_lifts = filtered[mask & filtered["Lift"].isin(["Bench", "Deadlift"])]
-        render_table(single_lifts, sel, key="single")
+
+        # Para Bench records only
+        para_bench = single_lifts[
+            (single_lifts["Division_raw"].str.contains("para", case=False, na=False)) &
+            (single_lifts["Lift"] == "Bench")
+        ]
+        non_para_lifts = single_lifts[~single_lifts.index.isin(para_bench.index)]
+
+        st.markdown("### 🔩 Single Lift Records (Non-Para)")
+        render_table(non_para_lifts, sel, key="single")
+
+        if not para_bench.empty:
+            st.markdown("### ♿ Para Bench Press Records")
+            render_table(para_bench, sel, key="para_bench")
+        else:
+            st.info("No Para Bench Press records found.")
 
     with tabs[3]:
         st.markdown("## 📍 Records by Region")
@@ -264,7 +273,6 @@ def main():
         )
         region_df["Venue"] = region_df["Location"].map(VENUE_MAP)
         region_df = region_df[region_df["Venue"].notna()]
-
         region_df = region_df.rename(columns={"Location": "Region"})
         spec = region_df[region_df["Region"] == "Specialist Event"]
         region_df = region_df[region_df["Region"] != "Specialist Event"]
