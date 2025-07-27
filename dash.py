@@ -55,7 +55,7 @@ def load_data(path: Path) -> pd.DataFrame:
 # ------------------------------------------------------------------
 def render_filters(df: pd.DataFrame):
     divs = list(dict.fromkeys(df["Division_base"].unique()))
-    divs = [d for d in divs if "para" not in d.lower()]  # Exclude Para from dropdown
+    divs = [d for d in divs if "para" not in d.lower()]
     ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
 
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
@@ -252,6 +252,18 @@ def main():
 
     with tabs[3]:
         st.markdown("## ♿ Para Bench Press Records")
+        st.markdown("""
+            <div style="
+                border-left: 5px solid #cf1b2b;
+                background-color: #f9f9f9;
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+                font-size: 16px;
+                border-radius: 6px;">
+                <strong>Note:</strong> If there is no record for your division as a Para athlete, the weight you lift will become the new record.
+            </div>
+        """, unsafe_allow_html=True)
+
         para_bench = filtered[
             (filtered["Lift"] == "Bench") &
             (filtered["Division_raw"].str.contains("para", case=False, na=False))
