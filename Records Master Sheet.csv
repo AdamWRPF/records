@@ -764,7 +764,7 @@ Standard,92.5,,,M60-69DT,F,110+,Wraps,B,Full Power,DT 110+kg Classic
 Standard,170,,,M60-69DT,F,110+,Wraps,D,Full Power,DT 110+kg Classic
 Standard,410,,,M60-69DT,F,110+,Wraps,Total,Full Power,DT 110+kg Classic
 Henlee Knell,80,13/07/2025,East Coast,T14-15DT,M,52,Bare,B,Single Lift,DT 52kg Raw
-Jonah Reynolds-Allen,100,27/07/2025,East Midlands,T14-15DT,M,52,Bare,D,Single Lift,DT 52kg Raw
+Jonah Reynolds Allen,100,27/07/2025,East Midlands Qualifier,T14-15DT,M,52,Bare,D,Single Lift,DT 52kg Raw
 Standard,55,,,T16-17DT,M,52,Bare,B,Single Lift,DT 52kg Raw
 Standard,102.5,,,T16-17DT,M,52,Bare,D,Single Lift,DT 52kg Raw
 Standard,65,,,T18-19DT,M,52,Bare,B,Single Lift,DT 52kg Raw
@@ -1052,7 +1052,7 @@ Standard,62.5,,,M60-69DT,F,60,Sleeves,B,Full Power,DT 60kg Raw
 Standard,112.5,,,M60-69DT,F,60,Sleeves,D,Full Power,DT 60kg Raw
 Standard,270,,,M60-69DT,F,60,Sleeves,Total,Full Power,DT 60kg Raw
 Bentley Harvey,81,27/07/2025,East Midlands Qualifier,T14-15DT,M,67.5,Bare,B,Single Lift,DT 67.5kg Raw
-Standard,125,,,T14-15DT,M,67.5,Bare,D,Single Lift,DT 67.5kg Raw
+Bentley Harvey,150,27/07/2025,East Midlands Qualifier,T14-15DT,M,67.5,Bare,D,Single Lift,DT 67.5kg Raw
 Ryan Ktorides,92.5,12-Jan,North East,T16-17DT,M,67.5,Bare,B,Single Lift,DT 67.5kg Raw
 Standard,147.5,,,T16-17DT,M,67.5,Bare,D,Single Lift,DT 67.5kg Raw
 Standard,92.5,,,T18-19DT,M,67.5,Bare,B,Single Lift,DT 67.5kg Raw
@@ -1560,7 +1560,7 @@ Standard,197.5,,,OpenDT,F,110,Bare,D,Single Lift,DT 110kg Raw
 Standard,82.5,,,M40-49DT,F,110,Bare,B,Single Lift,DT 110kg Raw
 Standard,175,,,M40-49DT,F,110,Bare,D,Single Lift,DT 110kg Raw
 Standard,72.5,,,M50-59DT,F,110,Bare,B,Single Lift,DT 110kg Raw
-Standard,152.5,,,M50-59DT,F,110,Bare,D,Single Lift,DT 110kg Raw
+Jo Lovell,152.5,27/07/2025,East Midlands Qualifier,M50-59DT,F,110,Bare,D,Single Lift,DT 110kg Raw
 Standard,65,,,M60-69DT,F,110,Bare,B,Single Lift,DT 110kg Raw
 Standard,135,,,M60-69DT,F,110,Bare,D,Single Lift,DT 110kg Raw
 Standard,152.5,,,T14-15DT,M,110,Sleeves,S,Full Power,DT 110kg Raw
@@ -6730,7 +6730,7 @@ Standard,157.5,,,JuniorDT,M,90,Single-ply,B,Full Power,DT 90kg SP
 Standard,222.5,,,JuniorDT,M,90,Single-ply,D,Full Power,DT 90kg SP
 Standard,625,,,JuniorDT,M,90,Single-ply,Total,Full Power,DT 90kg SP
 Ben Hartley,185,27/07/2025,East Midlands Qualifier,JuniorDT,M,90,Single-ply,B,Single Lift,DT 90kg SP
-Standard,222.5,,,JuniorDT,M,90,Single-ply,D,Single Lift,DT 90kg SP
+Ben Hartley,222.5,27/07/2025,East Midlands Qualifier,JuniorDT,M,90,Single-ply,D,Single Lift,DT 90kg SP
 Standard,295,,,OpenDT,M,90,Single-ply,S,Full Power,DT 90kg SP
 Standard,187.5,,,OpenDT,M,90,Single-ply,B,Full Power,DT 90kg SP
 Standard,260,,,OpenDT,M,90,Single-ply,D,Full Power,DT 90kg SP
@@ -8431,3 +8431,4 @@ Standard,97.5,,,M50-59DT,F,110+,Single-ply,B,Single Lift,DT 110kg+ SP
 Standard,172.5,,,M50-59DT,F,110+,Single-ply,D,Single Lift,DT 110kg+ SP
 Standard,87.5,,,M60-69DT,F,110+,Single-ply,B,Single Lift,DT 110kg+ SP
 Standard,150,,,M60-69DT,F,110+,Single-ply,D,Single Lift,DT 110kg+ SP
+Kestutis Olbikas,105,27/07/2025,East Midlands Qualifier,M40-49-Para,F,90,Raw,B,Single Lift,UT 90kg Raw Para
