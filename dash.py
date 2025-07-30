@@ -46,10 +46,8 @@ def load_data(path: Path) -> pd.DataFrame:
     df["Testing"] = df["Division_raw"].str.endswith("DT").map({True: "Drug Tested", False: "Untested"})
     df["Lift"] = df["Lift"].replace(LIFT_MAP).fillna(df["Lift"])
     df["Date_parsed"] = pd.to_datetime(df["Date"], errors="coerce")
-
     df["Location"] = df["Location"].where(df["Location"].notna(), None)
     df["Location"] = df["Location"].apply(lambda x: x.strip() if isinstance(x, str) else x)
-
     return df
 
 # ------------------------------------------------------------------
@@ -57,11 +55,15 @@ def load_data(path: Path) -> pd.DataFrame:
 # ------------------------------------------------------------------
 def render_filters(df: pd.DataFrame):
     divs = list(dict.fromkeys(df["Division_base"].unique()))
+    divs = [d for d in divs if "para" not in d.lower()]
     ordered_divs = [d for d in DIVISION_ORDER if d in divs] + [d for d in divs if d not in DIVISION_ORDER]
+
     weight_opts = sorted(df["Class"].unique(), key=lambda x: (pd.to_numeric(x, errors="coerce"), x))
-    equipment_options = sorted(df["Equipment"].dropna().unique())
-    equipment_display = ["Equipped" if e == "Multi-ply" else "Raw" if e == "Bare" else e for e in equipment_options]
-    equipment_map = dict(zip(equipment_display, equipment_options))
+
+    equipment_options = df["Equipment"].dropna().unique()
+    normalized = ["Raw" if e == "Bare" else e for e in equipment_options]
+    equipment_display = sorted(set(normalized))
+    equipment_map = {name: orig for name, orig in zip(normalized, equipment_options)}
 
     default_state = {
         "sex": "All", "division": "All", "testing_status": "All",
@@ -162,12 +164,7 @@ def render_table(filtered, sel, key=""):
     display_df["Weight"] = display_df["Weight"].apply(
         lambda x: int(x) if pd.notna(x) and float(x).is_integer() else x
     )
-
-    display_df["Equipment"] = display_df["Equipment"].replace({
-        "Multi-ply": "Equipped",
-        "Bare": "Raw"
-    })
-
+    display_df["Equipment"] = display_df["Equipment"].replace({"Bare": "Raw"})
     display_df = display_df.fillna("")
 
     st.download_button(
@@ -223,7 +220,6 @@ def render_table(filtered, sel, key=""):
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
 
-    # Navigation Buttons
     nav_cols = st.columns(4)
     nav_links = {
         "Memberships": "https://www.wrpf.uk/memberships",
@@ -240,7 +236,7 @@ def main():
     df = load_data(CSV_PATH)
     filtered, sel = render_filters(df)
 
-    tabs = st.tabs(["All Records", "Full Power", "Single Lifts", "Records by Region", "FAQ"])
+    tabs = st.tabs(["All Records", "Full Power", "Single Lifts", "Para", "Records by Region", "FAQ"])
 
     with tabs[0]:
         render_table(filtered, sel, key="all")
@@ -255,8 +251,31 @@ def main():
         render_table(single_lifts, sel, key="single")
 
     with tabs[3]:
-        st.markdown("## 📍 Records by Region")
+        st.markdown("## ♿ Para Bench Press Records")
+        st.markdown("""
+            <div style="
+                border-left: 5px solid #cf1b2b;
+                background-color: rgba(255,255,255,0.05);
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+                font-size: 16px;
+                border-radius: 6px;
+                color: #fff;">
+                <strong>Note:</strong> If there is no record for your division as a Para athlete, the weight you lift will become the new record.
+            </div>
+        """, unsafe_allow_html=True)
 
+        para_bench = filtered[
+            (filtered["Lift"] == "Bench") &
+            (filtered["Division_raw"].str.contains("para", case=False, na=False))
+        ]
+        if not para_bench.empty:
+            render_table(para_bench, sel, key="para")
+        else:
+            st.info("No Para Bench Press records found.")
+
+    with tabs[4]:
+        st.markdown("## 📍 Records by Region")
         region_df = (
             df[df["Location"].notna() & (df["Location"].str.strip() != "")]
             .groupby("Location")
@@ -265,20 +284,17 @@ def main():
         )
         region_df["Venue"] = region_df["Location"].map(VENUE_MAP)
         region_df = region_df[region_df["Venue"].notna()]
-
         region_df = region_df.rename(columns={"Location": "Region"})
         spec = region_df[region_df["Region"] == "Specialist Event"]
         region_df = region_df[region_df["Region"] != "Specialist Event"]
         region_df = pd.concat([region_df.sort_values("Records", ascending=False), spec], ignore_index=True)
-
         st.markdown(
             region_df[["Region", "Venue", "Records"]]
             .to_html(index=False, border=0, classes="records-table"),
             unsafe_allow_html=True
         )
-        
 
-    with tabs[4]:
+    with tabs[5]:
         st.markdown("## ❓ Frequently Asked Questions")
         st.markdown("""
 **Q: How often is this database updated?**  
@@ -287,17 +303,17 @@ A: We update the records shortly after each WRPF UK sanctioned event.
 **Q: What does 'Drug Tested' mean?**  
 A: It refers to divisions where athletes are subject to in-competition testing.
 
-**Q: What is the difference between Raw, Sleeves, Wraps and Equipped?**  
-A: Raw is single lifts only and means no supportive equipment other than a belt and wrist wraps were worn.  
-Sleeves is the division you fall under when wearing knee sleeves in a full power event.  
-Wraps are the same but you're wearing knee wraps and Equipped is when you're wearing fully supportive suits.
+**Q: What is the difference between Raw, Sleeves, Wraps, Single-ply and Multi-ply?**  
+A: Raw means no supportive equipment beyond belt and wrist wraps.  
+Sleeves = knee sleeves; Wraps = knee wraps.  
+Single-ply and Multi-ply refer to supportive suits made with one or multiple layers of material.
 
 **Q: How can I get a record updated or corrected?**  
 A: Please contact [events@wrpf.uk](mailto:events@wrpf.uk) with evidence or questions.
 
 **Q: What does Standard mean?**  
-A: This is just a record standard which has been selected from thousands of results data from OpenPowerlifting.
-To claim this record, you will need to break it by 0.5kg which you can do at any WRPF UK Event.
+A: This is just a record standard selected from OpenPowerlifting data.  
+To claim this record, you must break it by 0.5kg at any WRPF UK event.
         """)
 
 if __name__ == "__main__":
