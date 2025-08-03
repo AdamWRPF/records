@@ -27,7 +27,7 @@ VENUE_MAP = {
     "South Midlands": "Spartan Fitness",
     "West Midlands": "The Unit",
     "North East": "Stag Fitness Centre",
-    "Welwyn Garden City Qualifier": "Maverick Gym",
+    "Welwyn Garden City": "Maverick Gym",
     "Specialist Event": "DOTD, Strength Wars etc"
 }
 
@@ -319,5 +319,6 @@ To claim this record, you must break it by 0.5kg at any WRPF UK event.
 
 if __name__ == "__main__":
     main()
+
 
 
