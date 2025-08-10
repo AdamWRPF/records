@@ -451,10 +451,10 @@ Standard,157.5,,,T14-15DT,M,100,Wraps,S,Full Power,DT 100kg Classic
 Standard,92.5,,,T14-15DT,M,100,Wraps,B,Full Power,DT 100kg Classic
 Standard,167.5,,,T14-15DT,M,100,Wraps,D,Full Power,DT 100kg Classic
 Standard,402.5,,,T14-15DT,M,100,Wraps,Total,Full Power,DT 100kg Classic
-Standard,185,,,T16-17DT,M,100,Wraps,S,Full Power,DT 100kg Classic
-Standard,107.5,,,T16-17DT,M,100,Wraps,B,Full Power,DT 100kg Classic
-Standard,195,,,T16-17DT,M,100,Wraps,D,Full Power,DT 100kg Classic
-Standard,472.5,,,T16-17DT,M,100,Wraps,Total,Full Power,DT 100kg Classic
+George Lee,190,17/08/2025,South West Qualifier,T16-17DT,M,100,Wraps,S,Full Power,DT 100kg Classic
+George Lee,130,17/08/2025,South West Qualifier,T16-17DT,M,100,Wraps,B,Full Power,DT 100kg Classic
+George Lee,210,17/08/2025,South West Qualifier,T16-17DT,M,100,Wraps,D,Full Power,DT 100kg Classic
+George Lee,530,17/08/2025,South West Qualifier,T16-17DT,M,100,Wraps,Total,Full Power,DT 100kg Classic
 Standard,217.5,,,T18-19DT,M,100,Wraps,S,Full Power,DT 100kg Classic
 Standard,125,,,T18-19DT,M,100,Wraps,B,Full Power,DT 100kg Classic
 Standard,230,,,T18-19DT,M,100,Wraps,D,Full Power,DT 100kg Classic
@@ -941,7 +941,7 @@ Kelise Harrington,140,05/05/2024,Nottingham,JuniorDT,F,56,Sleeves,D,Full Power,D
 Kelise Harrington,325,05/05/2024,Nottingham,JuniorDT,F,56,Sleeves,Total,Full Power,DT 56kg Raw
 Phoebe Callison,120,07/12/2024,Nottingham,OpenDT,F,56,Sleeves,S,Full Power,DT 56kg Raw
 Standard,62.5,,,OpenDT,F,56,Sleeves,B,Full Power,DT 56kg Raw
-Standard,130,,,OpenDT,F,56,Sleeves,D,Full Power,DT 56kg Raw
+Vikki Brideson,130.5,17/08/2025,South West Qualifier,OpenDT,F,56,Sleeves,D,Full Power,DT 56kg Raw
 Standard,305,,,OpenDT,F,56,Sleeves,Total,Full Power,DT 56kg Raw
 Standard,102.5,,,M40-49DT,F,56,Sleeves,S,Full Power,DT 56kg Raw
 Standard,55,,,M40-49DT,F,56,Sleeves,B,Full Power,DT 56kg Raw
@@ -1078,7 +1078,7 @@ Standard,135,,,JuniorDT,F,67.5,Bare,D,Single Lift,DT 67.5kg Raw
 Standard,75,,,OpenDT,F,67.5,Bare,B,Single Lift,DT 67.5kg Raw
 Standard,157.5,,,OpenDT,F,67.5,Bare,D,Single Lift,DT 67.5kg Raw
 Standard,67.5,,,M40-49DT,F,67.5,Bare,B,Single Lift,DT 67.5kg Raw
-Lindsay McGuire,140.5,02/08/2025,Welwyn Garden City,M40-49DT,F,67.5,Bare,D,Single Lift,DT 67.5kg Raw
+Lindsay McGuire,140.5,03/08/2025,Welwyn Garden City,M40-49DT,F,67.5,Bare,D,Single Lift,DT 67.5kg Raw
 Standard,57.5,,,M50-59DT,F,67.5,Bare,B,Single Lift,DT 67.5kg Raw
 Standard,122.5,,,M50-59DT,F,67.5,Bare,D,Single Lift,DT 67.5kg Raw
 Standard,52.5,,,M60-69DT,F,67.5,Bare,B,Single Lift,DT 67.5kg Raw
@@ -1093,8 +1093,8 @@ Steffan Edwards,182.5,11/05/2025,Nottingham,T16-17DT,M,67.5,Sleeves,D,Full Power
 Steffan Edwards,425,11/05/2025,Nottingham,T16-17DT,M,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
 Standard,165,,,T18-19DT,M,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
 Standard,92.5,,,T18-19DT,M,67.5,Sleeves,B,Full Power,DT 67.5kg Raw
-Standard,172.5,,,T18-19DT,M,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
-Standard,417.5,,,T18-19DT,M,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
+Steffan Edwards,187.5,17/08/2025,South West Qualifier,T18-19DT,M,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
+Steffan Edwards,432.5,17/08/2025,South West Qualifier,T18-19DT,M,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
 Standard,192.5,,,JuniorDT,M,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
 Standard,110,,,JuniorDT,M,67.5,Sleeves,B,Full Power,DT 67.5kg Raw
 Standard,202.5,,,JuniorDT,M,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
@@ -1131,7 +1131,7 @@ Standard,122.5,,,JuniorDT,F,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
 Abigail Gosling,67.5,16/02/2025,Nottingham,JuniorDT,F,67.5,Sleeves,B,Full Power,DT 67.5kg Raw
 Juliette Appleby,140,28/07/2024,East Coast,JuniorDT,F,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
 Standard,317.5,,,JuniorDT,F,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
-Claire Rutland,152.5,02/08/2025,Welwyn Garden City,OpenDT,F,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
+Claire Rutland,152.5,03/08/2025,Welwyn Garden City,OpenDT,F,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
 Bec Giles,90,13/07/2025,East Coast,OpenDT,F,67.5,Sleeves,B,Full Power,DT 67.5kg Raw
 Lizzie Pipe,177.5,04/05/2025,North West,OpenDT,F,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
 Lizzie Pipe,415,04/05/2025,North West,OpenDT,F,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
@@ -1147,7 +1147,7 @@ Standard,117.5,,,M60-69DT,F,67.5,Sleeves,S,Full Power,DT 67.5kg Raw
 Standard,67.5,,,M60-69DT,F,67.5,Sleeves,B,Full Power,DT 67.5kg Raw
 Standard,122.5,,,M60-69DT,F,67.5,Sleeves,D,Full Power,DT 67.5kg Raw
 Standard,297.5,,,M60-69DT,F,67.5,Sleeves,Total,Full Power,DT 67.5kg Raw
-Josh Everett,100,02/08/2025,Welwyn Garden City,T14-15DT,M,75,Bare,B,Single Lift,DT 75kg Raw
+Josh Everett,100,03/08/2025,Welwyn Garden City,T14-15DT,M,75,Bare,B,Single Lift,DT 75kg Raw
 Standard,140,,,T14-15DT,M,75,Bare,D,Single Lift,DT 75kg Raw
 Standard,87.5,,,T16-17DT,M,75,Bare,B,Single Lift,DT 75kg Raw
 Standard,165,,,T16-17DT,M,75,Bare,D,Single Lift,DT 75kg Raw
@@ -1192,12 +1192,12 @@ Damian Thorpe,125,17/11/2024,South Midlands,T18-19DT,M,75,Sleeves,B,Full Power,D
 Damian Thorpe,200,17/11/2024,South Midlands,T18-19DT,M,75,Sleeves,D,Full Power,DT 75kg Raw
 Damian Thorpe,505,17/11/2024,South Midlands,T18-19DT,M,75,Sleeves,Total,Full Power,DT 75kg Raw
 Standard,215,,,JuniorDT,M,75,Sleeves,S,Full Power,DT 75kg Raw
-Standard,120,,,JuniorDT,M,75,Sleeves,B,Full Power,DT 75kg Raw
-Standard,225,,,JuniorDT,M,75,Sleeves,D,Full Power,DT 75kg Raw
-Standard,545,,,JuniorDT,M,75,Sleeves,Total,Full Power,DT 75kg Raw
+Geovani Negri,125,17/08/2025,South West Qualifier,JuniorDT,M,75,Sleeves,B,Full Power,DT 75kg Raw
+Geovani Negri,225,17/08/2025,South West Qualifier,JuniorDT,M,75,Sleeves,D,Full Power,DT 75kg Raw
+Geovani Negri,557.5,17/08/2025,South West Qualifier,JuniorDT,M,75,Sleeves,Total,Full Power,DT 75kg Raw
 Standard,250,,,OpenDT,M,75,Sleeves,S,Full Power,DT 75kg Raw
 Standard,142.5,,,OpenDT,M,75,Sleeves,B,Full Power,DT 75kg Raw
-AJ Mangoba,263,18/08/2024,South West,OpenDT,M,75,Sleeves,D,Full Power,DT 75kg Raw
+AJ Mangoba,265,17/08/2025,South West Qualifier,OpenDT,M,75,Sleeves,D,Full Power,DT 75kg Raw
 Standard,640,,,OpenDT,M,75,Sleeves,Total,Full Power,DT 75kg Raw
 Standard,220,,,M40-49DT,M,75,Sleeves,S,Full Power,DT 75kg Raw
 Standard,125,,,M40-49DT,M,75,Sleeves,B,Full Power,DT 75kg Raw
@@ -1233,7 +1233,7 @@ Joginte Gudaitiene,190,09/03/2025,East Coast,OpenDT,F,75,Sleeves,D,Full Power,DT
 Joginte Gudaitiene,435,09/03/2025,East Coast,OpenDT,F,75,Sleeves,Total,Full Power,DT 75kg Raw
 Standard,130,,,M40-49DT,F,75,Sleeves,S,Full Power,DT 75kg Raw
 Standard,70,,,M40-49DT,F,75,Sleeves,B,Full Power,DT 75kg Raw
-Kim Johnson,160,02/08/2025,Welwyn Garden City,M40-49DT,F,75,Sleeves,D,Full Power,DT 75kg Raw
+Kim Johnson,160,03/08/2025,Welwyn Garden City,M40-49DT,F,75,Sleeves,D,Full Power,DT 75kg Raw
 Standard,340,,,M40-49DT,F,75,Sleeves,Total,Full Power,DT 75kg Raw
 Standard,127.5,,,M50-59DT,F,75,Sleeves,S,Full Power,DT 75kg Raw
 Standard,75,,,M50-59DT,F,75,Sleeves,B,Full Power,DT 75kg Raw
@@ -1292,7 +1292,7 @@ Zach Smith,140,09/03/2025,East Coast,JuniorDT,M,82.5,Sleeves,B,Full Power,DT 82.
 Zach Smith,270,09/03/2025,East Coast,JuniorDT,M,82.5,Sleeves,D,Full Power,DT 82.5kg Raw
 Zach Smith,642.5,09/03/2025,East Coast,JuniorDT,M,82.5,Sleeves,Total,Full Power,DT 82.5kg Raw
 Standard,267.5,,,OpenDT,M,82.5,Sleeves,S,Full Power,DT 82.5kg Raw
-Ryan King,167.5,02/08/2025,Welwyn Garden City,OpenDT,M,82.5,Sleeves,B,Full Power,DT 82.5kg Raw
+Ryan King,167.5,03/08/2025,Welwyn Garden City,OpenDT,M,82.5,Sleeves,B,Full Power,DT 82.5kg Raw
 Standard,280,,,OpenDT,M,82.5,Sleeves,D,Full Power,DT 82.5kg Raw
 Standard,680,,,OpenDT,M,82.5,Sleeves,Total,Full Power,DT 82.5kg Raw
 Standard,232.5,,,M40-49DT,M,82.5,Sleeves,S,Full Power,DT 82.5kg Raw
@@ -1445,7 +1445,7 @@ Standard,135,,,JuniorDT,M,100,Bare,B,Single Lift,DT 100kg Raw
 Standard,252.5,,,JuniorDT,M,100,Bare,D,Single Lift,DT 100kg Raw
 Standard,160,,,OpenDT,M,100,Bare,B,Single Lift,DT 100kg Raw
 Standard,297.5,,,OpenDT,M,100,Bare,D,Single Lift,DT 100kg Raw
-Jacek Szast,145,02/08/2025,Welwyn Garden City,M40-49DT,M,100,Bare,B,Single Lift,DT 100kg Raw
+Jacek Szast,145,03/08/2025,Welwyn Garden City,M40-49DT,M,100,Bare,B,Single Lift,DT 100kg Raw
 Standard,260,,,M40-49DT,M,100,Bare,D,Single Lift,DT 100kg Raw
 Standard,122.5,,,M50-59DT,M,100,Bare,B,Single Lift,DT 100kg Raw
 Standard,227.5,,,M50-59DT,M,100,Bare,D,Single Lift,DT 100kg Raw
@@ -1479,10 +1479,10 @@ Standard,205,,,T18-19DT,M,100,Sleeves,S,Full Power,DT 100kg Raw
 Standard,115,,,T18-19DT,M,100,Sleeves,B,Full Power,DT 100kg Raw
 Standard,215,,,T18-19DT,M,100,Sleeves,D,Full Power,DT 100kg Raw
 Standard,522.5,,,T18-19DT,M,100,Sleeves,Total,Full Power,DT 100kg Raw
-Standard,240,,,JuniorDT,M,100,Sleeves,S,Full Power,DT 100kg Raw
-Standard,135,,,JuniorDT,M,100,Sleeves,B,Full Power,DT 100kg Raw
+Steffan D'Angelo,240.5,17/08/2025,South West Qualifier,JuniorDT,M,100,Sleeves,S,Full Power,DT 100kg Raw
+Steffan D'Angelo,145,17/08/2025,South West Qualifier,JuniorDT,M,100,Sleeves,B,Full Power,DT 100kg Raw
 Standard,252.5,,,JuniorDT,M,100,Sleeves,D,Full Power,DT 100kg Raw
-Standard,612.5,,,JuniorDT,M,100,Sleeves,Total,Full Power,DT 100kg Raw
+Steffan D'Angelo,635.5,17/08/2025,South West Qualifier,JuniorDT,M,100,Sleeves,Total,Full Power,DT 100kg Raw
 Standard,282.5,,,OpenDT,M,100,Sleeves,S,Full Power,DT 100kg Raw
 Zac Wareing,177.5,04/05/2025,North West,OpenDT,M,100,Sleeves,B,Full Power,DT 100kg Raw
 Zac Wareing,330,04/05/2025,North West,OpenDT,M,100,Sleeves,D,Full Power,DT 100kg Raw
@@ -3560,7 +3560,7 @@ Standard,170,,,Junior,M,110,Wraps,B,Full Power,UT 110kg Classic
 Standard,307.5,,,Junior,M,110,Wraps,D,Full Power,UT 110kg Classic
 Standard,750,,,Junior,M,110,Wraps,Total,Full Power,UT 110kg Classic
 Standard,345,,,Open,M,110,Wraps,S,Full Power,UT 110kg Classic
-Standard,200,,,Open,M,110,Wraps,B,Full Power,UT 110kg Classic
+Ewan Cunliffe,210,17/08/2025,South West Qualifier,Open,M,110,Wraps,B,Full Power,UT 110kg Classic
 Standard,362.5,,,Open,M,110,Wraps,D,Full Power,UT 110kg Classic
 Standard,880,,,Open,M,110,Wraps,Total,Full Power,UT 110kg Classic
 Standard,302.5,,,M40-49,M,110,Wraps,S,Full Power,UT 110kg Classic
@@ -4164,13 +4164,13 @@ Standard,65,,,Junior,F,67.5,Sleeves,B,Full Power,UT 67.5kg Raw
 Standard,132.5,,,Junior,F,67.5,Sleeves,D,Full Power,UT 67.5kg Raw
 Standard,317.5,,,Junior,F,67.5,Sleeves,Total,Full Power,UT 67.5kg Raw
 Standard,147.5,,,Open,F,67.5,Sleeves,S,Full Power,UT 67.5kg Raw
-Elaine Yu,85,02/08/2025,Welwyn Garden City,Open,F,67.5,Sleeves,B,Full Power,UT 67.5kg Raw
-Elaine Yu,185,02/08/2025,Welwyn Garden City,Open,F,67.5,Sleeves,D,Full Power,UT 67.5kg Raw
-Elaine Yu,407.5,02/08/2025,Welwyn Garden City,Open,F,67.5,Sleeves,Total,Full Power,UT 67.5kg Raw
-Elaine Yu,137.5,02/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,S,Full Power,UT 67.5kg Raw
-Elaine Yu,85,02/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,B,Full Power,UT 67.5kg Raw
-Elaine Yu,185,02/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,D,Full Power,UT 67.5kg Raw
-Elaine Yu,407.5,02/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,Total,Full Power,UT 67.5kg Raw
+Elaine Yu,85,03/08/2025,Welwyn Garden City,Open,F,67.5,Sleeves,B,Full Power,UT 67.5kg Raw
+Elaine Yu,185,03/08/2025,Welwyn Garden City,Open,F,67.5,Sleeves,D,Full Power,UT 67.5kg Raw
+Elaine Yu,407.5,03/08/2025,Welwyn Garden City,Open,F,67.5,Sleeves,Total,Full Power,UT 67.5kg Raw
+Elaine Yu,137.5,03/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,S,Full Power,UT 67.5kg Raw
+Elaine Yu,85,03/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,B,Full Power,UT 67.5kg Raw
+Elaine Yu,185,03/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,D,Full Power,UT 67.5kg Raw
+Elaine Yu,407.5,03/08/2025,Welwyn Garden City,M40-49,F,67.5,Sleeves,Total,Full Power,UT 67.5kg Raw
 Wendy Addison-Doy,147.5,04/05/2025,North West,M50-59,F,67.5,Sleeves,S,Full Power,UT 67.5kg Raw
 Wendy Addison-Doy,102.5,04/05/2025,North West,M50-59,F,67.5,Sleeves,B,Full Power,UT 67.5kg Raw
 Wendy Addison-Doy,170,04/05/2025,North West,M50-59,F,67.5,Sleeves,D,Full Power,UT 67.5kg Raw
@@ -4324,7 +4324,7 @@ Standard,127.5,,,Junior,M,82.5,Sleeves,B,Full Power,UT 82.5kg Raw
 Standard,237.5,,,Junior,M,82.5,Sleeves,D,Full Power,UT 82.5kg Raw
 Standard,575,,,Junior,M,82.5,Sleeves,Total,Full Power,UT 82.5kg Raw
 Standard,265,,,Open,M,82.5,Sleeves,S,Full Power,UT 82.5kg Raw
-Connor Mooney,160,02/08/2025,Welwyn Garden City,Open,M,82.5,Sleeves,B,Full Power,UT 82.5kg Raw
+Connor Mooney,160,03/08/2025,Welwyn Garden City,Open,M,82.5,Sleeves,B,Full Power,UT 82.5kg Raw
 Standard,277.5,,,Open,M,82.5,Sleeves,D,Full Power,UT 82.5kg Raw
 Standard,675,,,Open,M,82.5,Sleeves,Total,Full Power,UT 82.5kg Raw
 Standard,232.5,,,M40-49,M,82.5,Sleeves,S,Full Power,UT 82.5kg Raw
@@ -4336,9 +4336,9 @@ Standard,115,,,M50-59,M,82.5,Sleeves,B,Full Power,UT 82.5kg Raw
 Standard,215,,,M50-59,M,82.5,Sleeves,D,Full Power,UT 82.5kg Raw
 Standard,520,,,M50-59,M,82.5,Sleeves,Total,Full Power,UT 82.5kg Raw
 Standard,177.5,,,M60-69,M,82.5,Sleeves,S,Full Power,UT 82.5kg Raw
-Standard,102.5,,,M60-69,M,82.5,Sleeves,B,Full Power,UT 82.5kg Raw
-Standard,187.5,,,M60-69,M,82.5,Sleeves,D,Full Power,UT 82.5kg Raw
-Standard,455,,,M60-69,M,82.5,Sleeves,Total,Full Power,UT 82.5kg Raw
+Kevin Payne,105,17/08/2025,South West Qualifier,M60-69,M,82.5,Sleeves,B,Full Power,UT 82.5kg Raw
+Kevin Payne,215,17/08/2025,South West Qualifier,M60-69,M,82.5,Sleeves,D,Full Power,UT 82.5kg Raw
+Kevin Payne,477.5,17/08/2025,South West Qualifier,M60-69,M,82.5,Sleeves,Total,Full Power,UT 82.5kg Raw
 Standard,85,,,T14-15,F,82.5,Sleeves,S,Full Power,UT 82.5kg Raw
 Standard,45,,,T14-15,F,82.5,Sleeves,B,Full Power,UT 82.5kg Raw
 Standard,90,,,T14-15,F,82.5,Sleeves,D,Full Power,UT 82.5kg Raw
@@ -4423,10 +4423,10 @@ Matthew Jackson,278,27/04/2025,East Midlands,Open,M,90,Sleeves,S,Full Power,UT 9
 Matthew Jackson,190,08/12/2024,Nottingham,Open,M,90,Sleeves,B,Full Power,UT 90kg Raw
 Standard,292.5,,,Open,M,90,Sleeves,D,Full Power,UT 90kg Raw
 Matthew Jackson,760,08/12/2024,Nottingham,Open,M,90,Sleeves,Total,Full Power,UT 90kg Raw
-Standard,245,,,M40-49,M,90,Sleeves,S,Full Power,UT 90kg Raw
-Standard,137.5,,,M40-49,M,90,Sleeves,B,Full Power,UT 90kg Raw
+Clifford Richards,255,17/08/2025,South West Qualifier,M40-49,M,90,Sleeves,S,Full Power,UT 90kg Raw
+Clifford Richards,200,17/08/2025,South West Qualifier,M40-49,M,90,Sleeves,B,Full Power,UT 90kg Raw
 Standard,257.5,,,M40-49,M,90,Sleeves,D,Full Power,UT 90kg Raw
-Standard,622.5,,,M40-49,M,90,Sleeves,Total,Full Power,UT 90kg Raw
+Clifford Richards,705,17/08/2025,South West Qualifier,M40-49,M,90,Sleeves,Total,Full Power,UT 90kg Raw
 Standard,215,,,M50-59,M,90,Sleeves,S,Full Power,UT 90kg Raw
 Standard,120,,,M50-59,M,90,Sleeves,B,Full Power,UT 90kg Raw
 Standard,225,,,M50-59,M,90,Sleeves,D,Full Power,UT 90kg Raw
@@ -4477,7 +4477,7 @@ Standard,140,,,Junior,M,100,Bare,B,Single Lift,UT 100kg Raw
 Standard,260,,,Junior,M,100,Bare,D,Single Lift,UT 100kg Raw
 John Walsh,190,02/06/2024,Specialist Event,Open,M,100,Bare,B,Single Lift,UT 100kg Raw
 Standard,305,,,Open,M,100,Bare,D,Single Lift,UT 100kg Raw
-Spas Razhankov,177.5,02/08/2025,Welwyn Garden City,M40-49,M,100,Bare,B,Single Lift,UT 100kg Raw
+Spas Razhankov,177.5,03/08/2025,Welwyn Garden City,M40-49,M,100,Bare,B,Single Lift,UT 100kg Raw
 Steven Dale,275,27/07/2025,East Midlands,M40-49,M,100,Bare,D,Single Lift,UT 100kg Raw
 Standard,125,,,M50-59,M,100,Bare,B,Single Lift,UT 100kg Raw
 Standard,235,,,M50-59,M,100,Bare,D,Single Lift,UT 100kg Raw
@@ -4523,10 +4523,10 @@ Standard,255,,,M40-49,M,100,Sleeves,S,Full Power,UT 100kg Raw
 Spas Razhankov,175,13/04/2025,South Midlands,M40-49,M,100,Sleeves,B,Full Power,UT 100kg Raw
 Standard,267.5,,,M40-49,M,100,Sleeves,D,Full Power,UT 100kg Raw
 Jan Niznik,655,11/05/2025,Nottingham,M40-49,M,100,Sleeves,Total,Full Power,UT 100kg Raw
-Standard,222.5,,,M50-59,M,100,Sleeves,S,Full Power,UT 100kg Raw
+Darren Walker,232.5,17/08/2025,South West Qualifier,M50-59,M,100,Sleeves,S,Full Power,UT 100kg Raw
 Steve Whittles,140,04/05/2025,North West,M50-59,M,100,Sleeves,B,Full Power,UT 100kg Raw
-Steve Whittles,235,04/05/2025,North West,M50-59,M,100,Sleeves,D,Full Power,UT 100kg Raw
-Steve Whittles,585,04/05/2025,North West,M50-59,M,100,Sleeves,Total,Full Power,UT 100kg Raw
+Darren Walker,280,17/08/2025,South West Qualifier,M50-59,M,100,Sleeves,D,Full Power,UT 100kg Raw
+Darren Walker,647.5,17/08/2025,South West Qualifier,M50-59,M,100,Sleeves,Total,Full Power,UT 100kg Raw
 Standard,200,,,M60-69,M,100,Sleeves,S,Full Power,UT 100kg Raw
 Standard,115,,,M60-69,M,100,Sleeves,B,Full Power,UT 100kg Raw
 Standard,212.5,,,M60-69,M,100,Sleeves,D,Full Power,UT 100kg Raw
@@ -4612,7 +4612,7 @@ Andrew Martin,230.5,09/03/2025,East Coast,Junior,M,110,Sleeves,B,Full Power,UT 1
 Andrew Martin,315,09/03/2025,East Coast,Junior,M,110,Sleeves,D,Full Power,UT 110kg Raw
 Andrew Martin,866,09/03/2025,East Coast,Junior,M,110,Sleeves,Total,Full Power,UT 110kg Raw
 John Lock,320,28/07/2024,East Coast,Open,M,110,Sleeves,S,Full Power,UT 110kg Raw
-James Critchley,200,02/08/2025,Welwyn Garden City,Open,M,110,Sleeves,B,Full Power,UT 110kg Raw
+James Critchley,200,03/08/2025,Welwyn Garden City,Open,M,110,Sleeves,B,Full Power,UT 110kg Raw
 Standard,320,,,Open,M,110,Sleeves,D,Full Power,UT 110kg Raw
 Standard,780,,,Open,M,110,Sleeves,Total,Full Power,UT 110kg Raw
 John Lock,320,28/07/2024,East Coast,M40-49,M,110,Sleeves,S,Full Power,UT 110kg Raw
