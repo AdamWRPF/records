@@ -45,7 +45,7 @@ Standard,167.5,,,OpenDT,M,125,Bare,B,Single Lift,National
 Standard,312.5,,,OpenDT,M,125,Bare,D,Single Lift,National
 Standard,172.5,,,OpenDT,M,140,Bare,B,Single Lift,National
 Standard,320,,,OpenDT,M,140,Bare,D,Single Lift,National
-Chris Gillard,178,07/09/2025,Lincoln Lifting Single Lifts,OpenDT,M,140+,Bare,B,Single Lift,National
+Chris Gillard,178,07/09/2025,Lincoln Lifting,OpenDT,M,140+,Bare,B,Single Lift,National
 Standard,330,,,OpenDT,M,140+,Bare,D,Single Lift,National
 Standard,37.5,,,T14-15,M,52,Bare,B,Single Lift,National
 Standard,70,,,T14-15,M,52,Bare,D,Single Lift,National
@@ -171,7 +171,7 @@ Standard,65,,,T18-19DT,M,52,Bare,B,Single Lift,National
 Standard,120,,,T18-19DT,M,52,Bare,D,Single Lift,National
 Standard,72.5,,,T18-19DT,M,56,Bare,B,Single Lift,National
 Standard,135,,,T18-19DT,M,56,Bare,D,Single Lift,National
-Sarunas Barstys,92.5,07/09/2025,Lincoln Lifting Single Lifts,T18-19DT,M,60,Bare,B,Single Lift,National
+Sarunas Barstys,92.5,07/09/2025,Lincoln Lifting,T18-19DT,M,60,Bare,B,Single Lift,National
 Standard,150,,,T18-19DT,M,60,Bare,D,Single Lift,National
 Standard,92.5,,,T18-19DT,M,67.5,Bare,B,Single Lift,National
 Standard,172.5,,,T18-19DT,M,67.5,Bare,D,Single Lift,National
@@ -247,7 +247,7 @@ Standard,82.5,,,M40-49,M,60,Bare,B,Single Lift,National
 Standard,152.5,,,M40-49,M,60,Bare,D,Single Lift,National
 Standard,100,,,M40-49,M,67.5,Bare,B,Single Lift,National
 Standard,187.5,,,M40-49,M,67.5,Bare,D,Single Lift,National
-Jason Pearson,125,07/09/2025,Lincoln Lifting Single Lifts,M40-49,M,75,Bare,B,Single Lift,National
+Jason Pearson,125,07/09/2025,Lincoln Lifting,M40-49,M,75,Bare,B,Single Lift,National
 Standard,217.5,,,M40-49,M,75,Bare,D,Single Lift,National
 Standard,132.5,,,M40-49,M,82.5,Bare,B,Single Lift,National
 Standard,245,,,M40-49,M,82.5,Bare,D,Single Lift,National
@@ -257,7 +257,7 @@ Spas Razhankov,177.5,03/08/2025,Welwyn Garden City,M40-49,M,100,Bare,B,Single Li
 Steven Dale,275,27/07/2025,East Midlands,M40-49,M,100,Bare,D,Single Lift,National
 Standard,152.5,,,M40-49,M,110,Bare,B,Single Lift,National
 Standard,280,,,M40-49,M,110,Bare,D,Single Lift,National
-William Mcneil,195,07/09/2025,Lincoln Lifting Single Lifts,M40-49,M,125,Bare,B,Single Lift,National
+William Mcneil,195,07/09/2025,Lincoln Lifting,M40-49,M,125,Bare,B,Single Lift,National
 Standard,295,,,M40-49,M,125,Bare,D,Single Lift,National
 Standard,175,,,M40-49,M,140,Bare,B,Single Lift,National
 Standard,325,,,M40-49,M,140,Bare,D,Single Lift,National
@@ -278,10 +278,10 @@ Standard,215,,,M50-59,M,82.5,Bare,D,Single Lift,National
 Standard,120,,,M50-59,M,90,Bare,B,Single Lift,National
 Standard,225,,,M50-59,M,90,Bare,D,Single Lift,National
 Standard,125,,,M50-59,M,100,Bare,B,Single Lift,National
-Les Attewell,300,07/09/2025,Lincoln Lifting Single Lifts,M50-59,M,100,Bare,D,Single Lift,National
+Les Attewell,300,07/09/2025,Lincoln Lifting,M50-59,M,100,Bare,D,Single Lift,National
 Piotr Strzala,190,04/05/2025,North West,M50-59,M,110,Bare,B,Single Lift,National
 Standard,245,,,M50-59,M,110,Bare,D,Single Lift,National
-PJ Carter,152.5,07/09/2025,Lincoln Lifting Single Lifts,M50-59,M,125,Bare,B,Single Lift,National
+PJ Carter,152.5,07/09/2025,Lincoln Lifting,M50-59,M,125,Bare,B,Single Lift,National
 Standard,260,,,M50-59,M,125,Bare,D,Single Lift,National
 Standard,152.5,,,M50-59,M,140,Bare,B,Single Lift,National
 Standard,285,,,M50-59,M,140,Bare,D,Single Lift,National
@@ -299,7 +299,7 @@ Standard,90,,,M60-69,M,75,Bare,B,Single Lift,National
 Standard,167.5,,,M60-69,M,75,Bare,D,Single Lift,National
 Standard,102.5,,,M60-69,M,82.5,Bare,B,Single Lift,National
 Kevin Payne,212.5,11/05/2025,Nottingham,M60-69,M,82.5,Bare,D,Single Lift,National
-Mike Eve,110,07/09/2025,Lincoln Lifting Single Lifts,M60-69,M,90,Bare,B,Single Lift,National
+Mike Eve,110,07/09/2025,Lincoln Lifting,M60-69,M,90,Bare,B,Single Lift,National
 Standard,197.5,,,M60-69,M,90,Bare,D,Single Lift,National
 Standard,110,,,M60-69,M,100,Bare,B,Single Lift,National
 Standard,205,,,M60-69,M,100,Bare,D,Single Lift,National
@@ -342,14 +342,14 @@ Standard,142.5,,,M50-59DT,M,56,Bare,D,Single Lift,National
 Standard,85,,,M50-59DT,M,60,Bare,B,Single Lift,National
 Standard,160,,,M50-59DT,M,60,Bare,D,Single Lift,National
 Standard,97.5,,,M50-59DT,M,67.5,Bare,B,Single Lift,National
-Michael Parkinson,183,07/09/2025,Lincoln Lifting Single Lifts,M50-59DT,M,67.5,Bare,D,Single Lift,National
+Michael Parkinson,183,07/09/2025,Lincoln Lifting,M50-59DT,M,67.5,Bare,D,Single Lift,National
 Standard,110,,,M50-59DT,M,75,Bare,B,Single Lift,National
 Standard,202.5,,,M50-59DT,M,75,Bare,D,Single Lift,National
 Neil Jones,135,27/07/2025,East Midlands,M50-59DT,M,82.5,Bare,B,Single Lift,National
 Standard,215,,,M50-59DT,M,82.5,Bare,D,Single Lift,National
 Standard,120,,,M50-59DT,M,90,Bare,B,Single Lift,National
 Standard,222.5,,,M50-59DT,M,90,Bare,D,Single Lift,National
-John MacDonald,145,07/09/2025,Lincoln Lifting Single Lifts,M50-59DT,M,100,Bare,B,Single Lift,National
+John MacDonald,145,07/09/2025,Lincoln Lifting,M50-59DT,M,100,Bare,B,Single Lift,National
 Standard,227.5,,,M50-59DT,M,100,Bare,D,Single Lift,National
 Standard,125,,,M50-59DT,M,110,Bare,B,Single Lift,National
 Standard,235,,,M50-59DT,M,110,Bare,D,Single Lift,National
@@ -465,7 +465,7 @@ Standard,95,,,T14-15DT,F,52,Bare,D,Single Lift,National
 Standard,32.5,,,T14-15DT,F,56,Bare,B,Single Lift,National
 Standard,70,,,T14-15DT,F,56,Bare,D,Single Lift,National
 Standard,37.5,,,T14-15DT,F,60,Bare,B,Single Lift,National
-Poppy Cheshire,92.5,07/09/2025,Lincoln Lifting Single Lifts,T14-15DT,F,60,Bare,D,Single Lift,National
+Poppy Cheshire,92.5,07/09/2025,Lincoln Lifting,T14-15DT,F,60,Bare,D,Single Lift,National
 Standard,40,,,T14-15DT,F,67.5,Bare,B,Single Lift,National
 Standard,85,,,T14-15DT,F,67.5,Bare,D,Single Lift,National
 Standard,42.5,,,T14-15DT,F,75,Bare,B,Single Lift,National
@@ -731,13 +731,13 @@ Standard,100,,,M50-59DT,F,56,Bare,D,Single Lift,National
 Standard,52.5,,,M50-59DT,F,60,Bare,B,Single Lift,National
 Standard,110,,,M50-59DT,F,60,Bare,D,Single Lift,National
 Standard,57.5,,,M50-59DT,F,67.5,Bare,B,Single Lift,National
-Sandy Pandya,155,07/09/2025,Lincoln Lifting Single Lifts,M50-59DT,F,67.5,Bare,D,Single Lift,National
+Sandy Pandya,155,07/09/2025,Lincoln Lifting,M50-59DT,F,67.5,Bare,D,Single Lift,National
 Standard,60,,,M50-59DT,F,75,Bare,B,Single Lift,National
 Standard,125,,,M50-59DT,F,75,Bare,D,Single Lift,National
 Standard,65,,,M50-59DT,F,82.5,Bare,B,Single Lift,National
 Standard,135,,,M50-59DT,F,82.5,Bare,D,Single Lift,National
 Standard,67.5,,,M50-59DT,F,90,Bare,B,Single Lift,National
-Nicola Maycock,152.5,07/09/2025,Lincoln Lifting Single Lifts,M50-59DT,F,90,Bare,D,Single Lift,National
+Nicola Maycock,152.5,07/09/2025,Lincoln Lifting,M50-59DT,F,90,Bare,D,Single Lift,National
 Standard,72.5,,,M50-59DT,F,100,Bare,B,Single Lift,National
 Standard,150,,,M50-59DT,F,100,Bare,D,Single Lift,National
 Standard,72.5,,,M50-59DT,F,110,Bare,B,Single Lift,National
