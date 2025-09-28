@@ -375,7 +375,7 @@ Standard,105,,,M60-69DT,M,90,Bare,B,Single Lift,National
 Standard,195,,,M60-69DT,M,90,Bare,D,Single Lift,National
 Standard,130,,,M60-69DT,M,100,Bare,B,Single Lift,National
 Standard,200,,,M60-69DT,M,100,Bare,D,Single Lift,National
-Standard,110,,,M60-69DT,M,110,Bare,B,Single Lift,National
+Marc Giles,157.5,28/09/2025,South Midlands,M60-69DT,M,110,Bare,B,Single Lift,National
 Standard,205,,,M60-69DT,M,110,Bare,D,Single Lift,National
 Standard,112.5,,,M60-69DT,M,125,Bare,B,Single Lift,National
 Standard,210,,,M60-69DT,M,125,Bare,D,Single Lift,National
@@ -1128,10 +1128,10 @@ James Porritt,205,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,S,Full Power,Nat
 James Porritt,142.5,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,B,Full Power,National
 James Porritt,270,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,D,Full Power,National
 James Porritt,617.5,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,Total,Full Power,National
-Henry Hemming,215,18/08/2024,South West,T18-19DT,M,90,Sleeves,S,Full Power,National
+Kye Myers,216,28/09/2025,South Midlands,T18-19DT,M,90,Sleeves,S,Full Power,National
 Henry Hemming,115,18/08/2024,South West,T18-19DT,M,90,Sleeves,B,Full Power,National
-Henry Hemming,245,18/08/2024,South West,T18-19DT,M,90,Sleeves,D,Full Power,National
-Henry Hemming,585,18/08/2024,South West,T18-19DT,M,90,Sleeves,Total,Full Power,National
+Kye Myers,280,28/09/2025,South Midlands,T18-19DT,M,90,Sleeves,D,Full Power,National
+Kye Myers,603.5,28/09/2025,South Midlands,T18-19DT,M,90,Sleeves,Total,Full Power,National
 Standard,205,,,T18-19DT,M,100,Sleeves,S,Full Power,National
 Standard,115,,,T18-19DT,M,100,Sleeves,B,Full Power,National
 Standard,215,,,T18-19DT,M,100,Sleeves,D,Full Power,National
@@ -1228,7 +1228,7 @@ Jai Richardson,235,04/05/2025,North West,JuniorDT,M,90,Sleeves,S,Full Power,Nati
 Jai Richardson,152.5,04/05/2025,North West,JuniorDT,M,90,Sleeves,B,Full Power,National
 Jai Richardson,275,04/05/2025,North West,JuniorDT,M,90,Sleeves,D,Full Power,National
 Jai Richardson,662.5,04/05/2025,North West,JuniorDT,M,90,Sleeves,Total,Full Power,National
-Steffan D'Angelo,240.5,10/08/2025,South West,JuniorDT,M,100,Sleeves,S,Full Power,National
+Kacper Jurek,241,28/09/2025,South Midlands,JuniorDT,M,100,Sleeves,S,Full Power,National
 Tyrease Ferris,165,24/08/2025,North East,JuniorDT,M,100,Sleeves,B,Full Power,National
 Tyrease Ferris,285,24/08/2025,North East,JuniorDT,M,100,Sleeves,D,Full Power,National
 Tyrease Ferris,657.5,24/08/2025,North East,JuniorDT,M,100,Sleeves,Total,Full Power,National
@@ -1788,10 +1788,10 @@ Standard,67.5,,,T16-17DT,F,52,Sleeves,S,Full Power,National
 Standard,40,,,T16-17DT,F,52,Sleeves,B,Full Power,National
 Standard,70,,,T16-17DT,F,52,Sleeves,D,Full Power,National
 Standard,170,,,T16-17DT,F,52,Sleeves,Total,Full Power,National
-Rubee Whittaker,90,13/04/2025,South Midlands,T16-17DT,F,56,Sleeves,S,Full Power,National
-Rubee Whittaker,50,13/04/2025,South Midlands,T16-17DT,F,56,Sleeves,B,Full Power,National
-Rubee Whittaker,140,13/04/2025,South Midlands,T16-17DT,F,56,Sleeves,D,Full Power,National
-Rubee Whittaker,280,13/04/2025,South Midlands,T16-17DT,F,56,Sleeves,Total,Full Power,National
+Rubee Whittaker,110,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,S,Full Power,National
+Rubee Whittaker,52.5,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,B,Full Power,National
+Rubee Whittaker,150,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,D,Full Power,National
+Rubee Whittaker,312.5,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,Total,Full Power,National
 Standard,82.5,,,T16-17DT,F,60,Sleeves,S,Full Power,National
 Standard,47.5,,,T16-17DT,F,60,Sleeves,B,Full Power,National
 Standard,87.5,,,T16-17DT,F,60,Sleeves,D,Full Power,National
@@ -1852,10 +1852,10 @@ Standard,112.5,,,T18-19,F,75,Sleeves,S,Full Power,National
 Standard,57.5,,,T18-19,F,75,Sleeves,B,Full Power,National
 Standard,117.5,,,T18-19,F,75,Sleeves,D,Full Power,National
 Standard,282.5,,,T18-19,F,75,Sleeves,Total,Full Power,National
-Standard,117.5,,,T18-19,F,82.5,Sleeves,S,Full Power,National
-Standard,60,,,T18-19,F,82.5,Sleeves,B,Full Power,National
-Standard,125,,,T18-19,F,82.5,Sleeves,D,Full Power,National
-Standard,300,,,T18-19,F,82.5,Sleeves,Total,Full Power,National
+Daniella Pirks,120,28/09/2025,South Midlands,T18-19,F,82.5,Sleeves,S,Full Power,National
+Daniella Pirks,60,28/09/2025,South Midlands,T18-19,F,82.5,Sleeves,B,Full Power,National
+Daniella Pirks,130,28/09/2025,South Midlands,T18-19,F,82.5,Sleeves,D,Full Power,National
+Daniella Pirks,310,28/09/2025,South Midlands,T18-19,F,82.5,Sleeves,Total,Full Power,National
 Standard,125,,,T18-19,F,90,Sleeves,S,Full Power,National
 Standard,65,,,T18-19,F,90,Sleeves,B,Full Power,National
 Standard,132.5,,,T18-19,F,90,Sleeves,D,Full Power,National
@@ -1990,8 +1990,8 @@ Reegan Green,167.5,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,D,Full Power,Nati
 Reegan Green,385,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,Total,Full Power,National
 Standard,122.5,,,JuniorDT,F,67.5,Sleeves,S,Full Power,National
 Abigail Gosling,67.5,16/02/2025,Nottingham,JuniorDT,F,67.5,Sleeves,B,Full Power,National
-Juliette Appleby,140,28/07/2024,East Coast,JuniorDT,F,67.5,Sleeves,D,Full Power,National
-Standard,317.5,,,JuniorDT,F,67.5,Sleeves,Total,Full Power,National
+Amera Telfer-Ross,167.5,28/09/2025,South Midlands,JuniorDT,F,67.5,Sleeves,D,Full Power,National
+Amera Telfer-Ross,322.5,28/09/2025,South Midlands,JuniorDT,F,67.5,Sleeves,Total,Full Power,National
 Standard,127.5,,,JuniorDT,F,75,Sleeves,S,Full Power,National
 Standard,67.5,,,JuniorDT,F,75,Sleeves,B,Full Power,National
 Standard,140,,,JuniorDT,F,75,Sleeves,D,Full Power,National
@@ -2337,7 +2337,7 @@ Fen Gallagher,200,17/11/2024,South Midlands,Open,M,100,Wraps,B,Full Power,Nation
 Standard,342.5,,,Open,M,100,Wraps,D,Full Power,National
 Standard,830,,,Open,M,100,Wraps,Total,Full Power,National
 Standard,345,,,Open,M,110,Wraps,S,Full Power,National
-Ewan Cunliffe,210,10/08/2025,South West,Open,M,110,Wraps,B,Full Power,National
+Fen Gallagher,211,28/09/2025,South Midlands,Open,M,110,Wraps,B,Full Power,National
 Standard,362.5,,,Open,M,110,Wraps,D,Full Power,National
 Standard,880,,,Open,M,110,Wraps,Total,Full Power,National
 David Richardson,400,08/12/2024,Nottingham,Open,M,125,Wraps,S,Full Power,National
@@ -2817,7 +2817,7 @@ Standard,165,,,M40-49,M,100,Wraps,B,Full Power,National
 Standard,300,,,M40-49,M,100,Wraps,D,Full Power,National
 Standard,727.5,,,M40-49,M,100,Wraps,Total,Full Power,National
 Standard,302.5,,,M40-49,M,110,Wraps,S,Full Power,National
-Standard,175,,,M40-49,M,110,Wraps,B,Full Power,National
+Mark Hallam,180,28/09/2025,South Midlands,M40-49,M,110,Wraps,B,Full Power,National
 Standard,317.5,,,M40-49,M,110,Wraps,D,Full Power,National
 Standard,770,,,M40-49,M,110,Wraps,Total,Full Power,National
 Standard,315,,,M40-49,M,125,Wraps,S,Full Power,National
@@ -3622,7 +3622,7 @@ Standard,180,,,M50-59,F,75,Wraps,D,Full Power,National
 Standard,412.5,,,M50-59,F,75,Wraps,Total,Full Power,National
 Standard,152.5,,,M50-59,F,82.5,Wraps,S,Full Power,National
 Standard,87.5,,,M50-59,F,82.5,Wraps,B,Full Power,National
-Standard,160,,,M50-59,F,82.5,Wraps,D,Full Power,National
+Katie Edwards,175,28/09/2025,South Midlands,M50-59,F,82.5,Wraps,D,Full Power,National
 Standard,385,,,M50-59,F,82.5,Wraps,Total,Full Power,National
 Standard,157.5,,,M50-59,F,90,Wraps,S,Full Power,National
 Standard,90,,,M50-59,F,90,Wraps,B,Full Power,National
