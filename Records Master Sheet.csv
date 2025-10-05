@@ -3856,7 +3856,7 @@ Standard,222.5,,,Open,M,67.5,Single-ply,D,Full Power,National
 Standard,625,,,Open,M,67.5,Single-ply,Total,Full Power,National
 Standard,157.5,,,Open,M,67.5,Single-ply,B,Single Lift,National
 Standard,222.5,,,Open,M,67.5,Single-ply,D,Single Lift,National
-Standard,290,,,Open,M,75,Single-ply,S,Full Power,National
+Aodhan Phillips-Lees,292.5,05/10/2025,South West,Open,M,75,Single-ply,S,Full Power,National
 Standard,185,,,Open,M,75,Single-ply,B,Full Power,National
 Standard,255,,,Open,M,75,Single-ply,D,Full Power,National
 Standard,725,,,Open,M,75,Single-ply,Total,Full Power,National
@@ -3872,7 +3872,7 @@ Standard,322.5,,,Open,M,90,Single-ply,S,Full Power,National
 Standard,200,,,Open,M,90,Single-ply,B,Full Power,National
 Standard,282.5,,,Open,M,90,Single-ply,D,Full Power,National
 Standard,800,,,Open,M,90,Single-ply,Total,Full Power,National
-Standard,200,,,Open,M,90,Single-ply,B,Single Lift,National
+Luke Litchfield,202.5,05/10/2025,South West,Open,M,90,Single-ply,B,Single Lift,National
 Standard,282.5,,,Open,M,90,Single-ply,D,Single Lift,National
 Standard,332.5,,,Open,M,100,Single-ply,S,Full Power,National
 Standard,210,,,Open,M,100,Single-ply,B,Full Power,National
@@ -3952,16 +3952,16 @@ Standard,270,,,OpenDT,M,100,Single-ply,D,Full Power,National
 Standard,765,,,OpenDT,M,100,Single-ply,Total,Full Power,National
 Standard,192.5,,,OpenDT,M,100,Single-ply,B,Single Lift,National
 Standard,270,,,OpenDT,M,100,Single-ply,D,Single Lift,National
-Standard,317.5,,,OpenDT,M,110,Single-ply,S,Full Power,National
-Standard,197.5,,,OpenDT,M,110,Single-ply,B,Full Power,National
+Andy Champ,350,05/10/2025,South West,OpenDT,M,110,Single-ply,S,Full Power,National
+Andy Champ,272.5,05/10/2025,South West,OpenDT,M,110,Single-ply,B,Full Power,National
 Standard,280,,,OpenDT,M,110,Single-ply,D,Full Power,National
-Standard,790,,,OpenDT,M,110,Single-ply,Total,Full Power,National
-Standard,197.5,,,OpenDT,M,110,Single-ply,B,Single Lift,National
+Andy Champ,892.5,05/10/2025,South West,OpenDT,M,110,Single-ply,Total,Full Power,National
+James Pearson,210,05/10/2025,South West,OpenDT,M,110,Single-ply,B,Single Lift,National
 Standard,280,,,OpenDT,M,110,Single-ply,D,Single Lift,National
-Standard,327.5,,,OpenDT,M,125,Single-ply,S,Full Power,National
-Standard,205,,,OpenDT,M,125,Single-ply,B,Full Power,National
+Dominic Coman,390,05/10/2025,South West,OpenDT,M,125,Single-ply,S,Full Power,National
+Dominic Coman,222.5,05/10/2025,South West,OpenDT,M,125,Single-ply,B,Full Power,National
 Standard,285,,,OpenDT,M,125,Single-ply,D,Full Power,National
-Standard,810,,,OpenDT,M,125,Single-ply,Total,Full Power,National
+Dominic Coman,887.5,05/10/2025,South West,OpenDT,M,125,Single-ply,Total,Full Power,National
 Standard,205,,,OpenDT,M,125,Single-ply,B,Single Lift,National
 Standard,285,,,OpenDT,M,125,Single-ply,D,Single Lift,National
 Standard,332.5,,,OpenDT,M,140,Single-ply,S,Full Power,National
@@ -4949,7 +4949,7 @@ Standard,482.5,,,M60-69DT,M,82.5,Single-ply,Total,Full Power,National
 Standard,122.5,,,M60-69DT,M,82.5,Single-ply,B,Single Lift,National
 Standard,172.5,,,M60-69DT,M,82.5,Single-ply,D,Single Lift,National
 Standard,200,,,M60-69DT,M,90,Single-ply,S,Full Power,National
-Standard,127.5,,,M60-69DT,M,90,Single-ply,B,Full Power,National
+Kevin Barrs,155,05/10/2025,South West,M60-69DT,M,90,Single-ply,B,Full Power,National
 Standard,177.5,,,M60-69DT,M,90,Single-ply,D,Full Power,National
 Standard,497.5,,,M60-69DT,M,90,Single-ply,Total,Full Power,National
 Kevin Barrs,152.5,27/07/2025,East Midlands,M60-69DT,M,90,Single-ply,B,Single Lift,National
@@ -5102,7 +5102,7 @@ Standard,192.5,,,OpenDT,F,82.5,Single-ply,S,Full Power,National
 Standard,97.5,,,OpenDT,F,82.5,Single-ply,B,Full Power,National
 Standard,170,,,OpenDT,F,82.5,Single-ply,D,Full Power,National
 Standard,477.5,,,OpenDT,F,82.5,Single-ply,Total,Full Power,National
-Standard,97.5,,,OpenDT,F,82.5,Single-ply,B,Single Lift,National
+Amanda Riman,102.5,05/10/2025,South West,OpenDT,F,82.5,Single-ply,B,Single Lift,National
 Standard,170,,,OpenDT,F,82.5,Single-ply,D,Single Lift,National
 Standard,200,,,OpenDT,F,90,Single-ply,S,Full Power,National
 Standard,100,,,OpenDT,F,90,Single-ply,B,Full Power,National
@@ -6025,9 +6025,9 @@ Standard,342.5,,,M50-59DT,F,67.5,Single-ply,Total,Full Power,National
 Michelle Franklin,75,27/07/2025,East Midlands,M50-59DT,F,67.5,Single-ply,B,Single Lift,National
 Standard,122.5,,,M50-59DT,F,67.5,Single-ply,D,Single Lift,National
 Standard,142.5,,,M50-59DT,F,75,Single-ply,S,Full Power,National
-Standard,77.5,,,M50-59DT,F,75,Single-ply,B,Full Power,National
-Standard,135,,,M50-59DT,F,75,Single-ply,D,Full Power,National
-Standard,352.5,,,M50-59DT,F,75,Single-ply,Total,Full Power,National
+Michelle Franklin,82.5,05/10/2025,South West,M50-59DT,F,75,Single-ply,B,Full Power,National
+Michelle Franklin,140,05/10/2025,South West,M50-59DT,F,75,Single-ply,D,Full Power,National
+Michelle Franklin,352.5,05/10/2025,South West,M50-59DT,F,75,Single-ply,Total,Full Power,National
 Standard,72.5,,,M50-59DT,F,75,Single-ply,B,Single Lift,National
 Standard,125,,,M50-59DT,F,75,Single-ply,D,Single Lift,National
 Standard,147.5,,,M50-59DT,F,82.5,Single-ply,S,Full Power,National
@@ -6251,7 +6251,7 @@ Standard,202.5,,,OpenDT,M,100,Multi-ply,B,Full Power,National
 Standard,282.5,,,OpenDT,M,100,Multi-ply,D,Full Power,National
 Standard,805,,,OpenDT,M,100,Multi-ply,Total,Full Power,National
 Standard,202.5,,,OpenDT,M,100,Multi-ply,B,Single Lift,National
-Tom Gee,282.5,11/05/2025,Nottingham,OpenDT,M,100,Multi-ply,D,Single Lift,National
+Tom Gee,290.5,05/10/2025,South West,OpenDT,M,100,Multi-ply,D,Single Lift,National
 Standard,332.5,,,OpenDT,M,110,Multi-ply,S,Full Power,National
 Standard,207.5,,,OpenDT,M,110,Multi-ply,B,Full Power,National
 Standard,292.5,,,OpenDT,M,110,Multi-ply,D,Full Power,National
@@ -6275,7 +6275,7 @@ Standard,225,,,OpenDT,M,140+,Multi-ply,B,Full Power,National
 Standard,312.5,,,OpenDT,M,140+,Multi-ply,D,Full Power,National
 Standard,892.5,,,OpenDT,M,140+,Multi-ply,Total,Full Power,National
 Standard,225,,,OpenDT,M,140+,Multi-ply,B,Single Lift,National
-Standard,312.5,,,OpenDT,M,140+,Multi-ply,D,Single Lift,National
+Mokrane Chir,325,05/10/2025,South West,OpenDT,M,140+,Multi-ply,D,Single Lift,National
 Standard,95,,,T14-15,M,52,Multi-ply,S,Full Power,National
 Standard,60,,,T14-15,M,52,Multi-ply,B,Full Power,National
 Standard,82.5,,,T14-15,M,52,Multi-ply,D,Full Power,National
@@ -6450,10 +6450,10 @@ Standard,165,,,T16-17,M,75,Multi-ply,D,Full Power,National
 Standard,470,,,T16-17,M,75,Multi-ply,Total,Full Power,National
 Standard,117.5,,,T16-17,M,75,Multi-ply,B,Single Lift,National
 Standard,165,,,T16-17,M,75,Multi-ply,D,Single Lift,National
-Standard,202.5,,,T16-17,M,82.5,Multi-ply,S,Full Power,National
-Standard,127.5,,,T16-17,M,82.5,Multi-ply,B,Full Power,National
-Standard,177.5,,,T16-17,M,82.5,Multi-ply,D,Full Power,National
-Standard,505,,,T16-17,M,82.5,Multi-ply,Total,Full Power,National
+Gregory Pearson,396,05/10/2025,South West,T16-17,M,82.5,Multi-ply,S,Full Power,National
+Gregory Pearson,245,05/10/2025,South West,T16-17,M,82.5,Multi-ply,B,Full Power,National
+Gregory Pearson,325,05/10/2025,South West,T16-17,M,82.5,Multi-ply,D,Full Power,National
+Gregory Pearson,966,05/10/2025,South West,T16-17,M,82.5,Multi-ply,Total,Full Power,National
 Standard,127.5,,,T16-17,M,82.5,Multi-ply,B,Single Lift,National
 Standard,177.5,,,T16-17,M,82.5,Multi-ply,D,Single Lift,National
 Standard,210,,,T16-17,M,90,Multi-ply,S,Full Power,National
@@ -6806,8 +6806,8 @@ Standard,142.5,,,JuniorDT,M,67.5,Multi-ply,B,Single Lift,National
 Standard,197.5,,,JuniorDT,M,67.5,Multi-ply,D,Single Lift,National
 Standard,245,,,JuniorDT,M,75,Multi-ply,S,Full Power,National
 Standard,155,,,JuniorDT,M,75,Multi-ply,B,Full Power,National
-Standard,215,,,JuniorDT,M,75,Multi-ply,D,Full Power,National
-Standard,612.5,,,JuniorDT,M,75,Multi-ply,Total,Full Power,National
+Nathan Lynch,240,05/10/2025,South West,JuniorDT,M,75,Multi-ply,D,Full Power,National
+Nathan Lynch,620,05/10/2025,South West,JuniorDT,M,75,Multi-ply,Total,Full Power,National
 Standard,155,,,JuniorDT,M,75,Multi-ply,B,Single Lift,National
 Standard,215,,,JuniorDT,M,75,Multi-ply,D,Single Lift,National
 Standard,257.5,,,JuniorDT,M,82.5,Multi-ply,S,Full Power,National
@@ -7381,15 +7381,15 @@ Standard,425,,,OpenDT,F,56,Multi-ply,Total,Full Power,National
 Standard,85,,,OpenDT,F,56,Multi-ply,B,Single Lift,National
 Standard,150,,,OpenDT,F,56,Multi-ply,D,Single Lift,National
 Standard,180,,,OpenDT,F,60,Multi-ply,S,Full Power,National
-Standard,90,,,OpenDT,F,60,Multi-ply,B,Full Power,National
+Jodie Davies,122.5,05/10/2025,South West,OpenDT,F,60,Multi-ply,B,Full Power,National
 Standard,157.5,,,OpenDT,F,60,Multi-ply,D,Full Power,National
 Standard,447.5,,,OpenDT,F,60,Multi-ply,Total,Full Power,National
 Standard,90,,,OpenDT,F,60,Multi-ply,B,Single Lift,National
 Standard,157.5,,,OpenDT,F,60,Multi-ply,D,Single Lift,National
-Standard,187.5,,,OpenDT,F,67.5,Multi-ply,S,Full Power,National
-Standard,95,,,OpenDT,F,67.5,Multi-ply,B,Full Power,National
-Standard,165,,,OpenDT,F,67.5,Multi-ply,D,Full Power,National
-Standard,467.5,,,OpenDT,F,67.5,Multi-ply,Total,Full Power,National
+Jodie Dyble,205,05/10/2025,South West,OpenDT,F,67.5,Multi-ply,S,Full Power,National
+Jodie Dyble,115,05/10/2025,South West,OpenDT,F,67.5,Multi-ply,B,Full Power,National
+Jodie Dyble,175,05/10/2025,South West,OpenDT,F,67.5,Multi-ply,D,Full Power,National
+Jodie Dyble,495,05/10/2025,South West,OpenDT,F,67.5,Multi-ply,Total,Full Power,National
 Standard,95,,,OpenDT,F,67.5,Multi-ply,B,Single Lift,National
 Standard,165,,,OpenDT,F,67.5,Multi-ply,D,Single Lift,National
 Standard,195,,,OpenDT,F,75,Multi-ply,S,Full Power,National
@@ -8054,10 +8054,10 @@ Standard,167.5,,,M40-49,F,90,Multi-ply,D,Full Power,National
 Standard,475,,,M40-49,F,90,Multi-ply,Total,Full Power,National
 Standard,120,,,M40-49,F,90,Multi-ply,B,Single Lift,National
 Standard,167.5,,,M40-49,F,90,Multi-ply,D,Single Lift,National
-Standard,200,,,M40-49,F,100,Multi-ply,S,Full Power,National
+Katherine Rogers,220,05/10/2025,South West,M40-49,F,100,Multi-ply,S,Full Power,National
 Standard,125,,,M40-49,F,100,Multi-ply,B,Full Power,National
 Standard,175,,,M40-49,F,100,Multi-ply,D,Full Power,National
-Standard,500,,,M40-49,F,100,Multi-ply,Total,Full Power,National
+Katherine Rogers,510,05/10/2025,South West,M40-49,F,100,Multi-ply,Total,Full Power,National
 Standard,105,,,M40-49,F,100,Multi-ply,B,Single Lift,National
 Standard,182.5,,,M40-49,F,100,Multi-ply,D,Single Lift,National
 Standard,210,,,M40-49,F,110,Multi-ply,S,Full Power,National
