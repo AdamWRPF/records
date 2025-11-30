@@ -18,7 +18,7 @@ Chris Derrick,310,10/08/2025,South West,Open,M,100,Bare,D,Single Lift,National
 Zilvinas Peldzious,217.5,04/05/2025,North West,Open,M,110,Bare,B,Single Lift,National
 Standard,320,,,Open,M,110,Bare,D,Single Lift,National
 Alasdair MacLeod,185,23/11/2025,Welwyn Garden City,Open,M,125,Bare,B,Single Lift,National
-Standard,337.5,,,Open,M,125,Bare,D,Single Lift,National
+Luke Tolman,357.5,30/11/2025,South West,Open,M,125,Bare,D,Single Lift,National
 Standard,200,,,Open,M,140,Bare,B,Single Lift,National
 Standard,370,,,Open,M,140,Bare,D,Single Lift,National
 Scott Munroe,210,17/08/2025,North West,Open,M,140+,Bare,B,Single Lift,National
@@ -203,7 +203,7 @@ Standard,112.5,,,Junior,M,75,Bare,B,Single Lift,National
 Standard,210,,,Junior,M,75,Bare,D,Single Lift,National
 Standard,127.5,,,Junior,M,82.5,Bare,B,Single Lift,National
 Standard,237.5,,,Junior,M,82.5,Bare,D,Single Lift,National
-Standard,135,,,Junior,M,90,Bare,B,Single Lift,National
+Callum Moss,180,30/11/2025,South West,Junior,M,90,Bare,B,Single Lift,National
 Standard,250,,,Junior,M,90,Bare,D,Single Lift,National
 Standard,140,,,Junior,M,100,Bare,B,Single Lift,National
 Standard,260,,,Junior,M,100,Bare,D,Single Lift,National
@@ -399,7 +399,7 @@ Briony Duerden,165,09/03/2025,East Coast,Open,F,67.5,Bare,D,Single Lift,National
 Standard,77.5,,,Open,F,75,Bare,B,Single Lift,National
 Standard,160,,,Open,F,75,Bare,D,Single Lift,National
 Standard,82.5,,,Open,F,82.5,Bare,B,Single Lift,National
-Katie Holding,171,13/07/2025,East Coast,Open,F,82.5,Bare,D,Single Lift,National
+Katie Holding,190,23/11/2025,International Event,Open,F,82.5,Bare,D,Single Lift,National
 Standard,90,,,Open,F,90,Bare,B,Single Lift,National
 Standard,182.5,,,Open,F,90,Bare,D,Single Lift,National
 Standard,92.5,,,Open,F,100,Bare,B,Single Lift,National
@@ -418,7 +418,7 @@ Standard,62.5,,,OpenDT,F,56,Bare,B,Single Lift,National
 Standard,130,,,OpenDT,F,56,Bare,D,Single Lift,National
 Standard,67.5,,,OpenDT,F,60,Bare,B,Single Lift,National
 Sarah Ellis,145,02/11/2024,Specialist Event,OpenDT,F,60,Bare,D,Single Lift,National
-Standard,75,,,OpenDT,F,67.5,Bare,B,Single Lift,National
+Alice Swain,75,30/11/2025,South West,OpenDT,F,67.5,Bare,B,Single Lift,National
 Standard,157.5,,,OpenDT,F,67.5,Bare,D,Single Lift,National
 Standard,77.5,,,OpenDT,F,75,Bare,B,Single Lift,National
 Standard,165,,,OpenDT,F,75,Bare,D,Single Lift,National
@@ -936,10 +936,10 @@ Standard,130,,,T14-15DT,M,82.5,Sleeves,S,Full Power,National
 Standard,75,,,T14-15DT,M,82.5,Sleeves,B,Full Power,National
 Standard,137.5,,,T14-15DT,M,82.5,Sleeves,D,Full Power,National
 Standard,332.5,,,T14-15DT,M,82.5,Sleeves,Total,Full Power,National
-Standard,140,,,T14-15DT,M,90,Sleeves,S,Full Power,National
-Standard,82.5,,,T14-15DT,M,90,Sleeves,B,Full Power,National
-Standard,147.5,,,T14-15DT,M,90,Sleeves,D,Full Power,National
-Standard,357.5,,,T14-15DT,M,90,Sleeves,Total,Full Power,National
+Sasha Sutton,180,30/11/2025,South West,T14-15DT,M,90,Sleeves,S,Full Power,National
+Sasha Sutton,130,30/11/2025,South West,T14-15DT,M,90,Sleeves,B,Full Power,National
+Sasha Sutton,180,30/11/2025,South West,T14-15DT,M,90,Sleeves,D,Full Power,National
+Sasha Sutton,490,30/11/2025,South West,T14-15DT,M,90,Sleeves,Total,Full Power,National
 Standard,150,,,T14-15DT,M,100,Sleeves,S,Full Power,National
 Standard,87.5,,,T14-15DT,M,100,Sleeves,B,Full Power,National
 Standard,157.5,,,T14-15DT,M,100,Sleeves,D,Full Power,National
@@ -1048,10 +1048,10 @@ Standard,185,,,T16-17DT,M,125,Sleeves,S,Full Power,National
 Standard,107.5,,,T16-17DT,M,125,Sleeves,B,Full Power,National
 Standard,195,,,T16-17DT,M,125,Sleeves,D,Full Power,National
 Standard,470,,,T16-17DT,M,125,Sleeves,Total,Full Power,National
-Standard,190,,,T16-17DT,M,140,Sleeves,S,Full Power,National
-Standard,110,,,T16-17DT,M,140,Sleeves,B,Full Power,National
-Standard,200,,,T16-17DT,M,140,Sleeves,D,Full Power,National
-Standard,482.5,,,T16-17DT,M,140,Sleeves,Total,Full Power,National
+Freddie Sullivan,252.5,30/11/2025,South West,T16-17DT,M,140,Sleeves,S,Full Power,National
+Freddie Sullivan,132.5,30/11/2025,South West,T16-17DT,M,140,Sleeves,B,Full Power,National
+Freddie Sullivan,225,30/11/2025,South West,T16-17DT,M,140,Sleeves,D,Full Power,National
+Freddie Sullivan,610,30/11/2025,South West,T16-17DT,M,140,Sleeves,Total,Full Power,National
 Standard,195,,,T16-17DT,M,140+,Sleeves,S,Full Power,National
 Standard,112.5,,,T16-17DT,M,140+,Sleeves,B,Full Power,National
 Standard,205,,,T16-17DT,M,140+,Sleeves,D,Full Power,National
@@ -1421,7 +1421,7 @@ Standard,135,,,M40-49DT,M,90,Sleeves,B,Full Power,National
 Standard,252.5,,,M40-49DT,M,90,Sleeves,D,Full Power,National
 Standard,612.5,,,M40-49DT,M,90,Sleeves,Total,Full Power,National
 Standard,247.5,,,M40-49DT,M,100,Sleeves,S,Full Power,National
-Ashley Thompson,148,27/07/2025,East Midlands,M40-49DT,M,100,Sleeves,B,Full Power,National
+Daniel Northover,150,30/11/2025,South West,M40-49DT,M,100,Sleeves,B,Full Power,National
 Standard,260,,,M40-49DT,M,100,Sleeves,D,Full Power,National
 Standard,630,,,M40-49DT,M,100,Sleeves,Total,Full Power,National
 Standard,255,,,M40-49DT,M,110,Sleeves,S,Full Power,National
