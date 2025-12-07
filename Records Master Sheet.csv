@@ -463,7 +463,7 @@ Standard,60,,,T14-15DT,F,48,Bare,D,Single Lift,National
 Standard,47.5,,,T14-15DT,F,52,Bare,B,Single Lift,National
 Standard,95,,,T14-15DT,F,52,Bare,D,Single Lift,National
 Standard,32.5,,,T14-15DT,F,56,Bare,B,Single Lift,National
-Standard,70,,,T14-15DT,F,56,Bare,D,Single Lift,National
+Poppy Cheshire,105,07/12/2025,Nottingham,T14-15DT,F,56,Bare,D,Single Lift,National
 Standard,37.5,,,T14-15DT,F,60,Bare,B,Single Lift,National
 Poppy Cheshire,92.5,07/09/2025,Lincoln,T14-15DT,F,60,Bare,D,Single Lift,National
 Standard,40,,,T14-15DT,F,67.5,Bare,B,Single Lift,National
@@ -741,7 +741,7 @@ Nicola Maycock,152.5,07/09/2025,Lincoln,M50-59DT,F,90,Bare,D,Single Lift,Nationa
 Standard,72.5,,,M50-59DT,F,100,Bare,B,Single Lift,National
 Standard,150,,,M50-59DT,F,100,Bare,D,Single Lift,National
 Standard,72.5,,,M50-59DT,F,110,Bare,B,Single Lift,National
-Jo Lovell,152.5,27/07/2025,East Midlands,M50-59DT,F,110,Bare,D,Single Lift,National
+Jo Lovell,153,07/12/2025,Nottingham,M50-59DT,F,110,Bare,D,Single Lift,National
 Standard,75,,,M50-59DT,F,110+,Bare,B,Single Lift,National
 Standard,155,,,M50-59DT,F,110+,Bare,D,Single Lift,National
 Standard,30,,,M60-69DT,F,44,Bare,B,Single Lift,National
@@ -755,10 +755,10 @@ Standard,87.5,,,M60-69DT,F,56,Bare,D,Single Lift,National
 Sharon Graham,57.5,17/08/2025,North West,M60-69DT,F,60,Bare,B,Single Lift,National
 Sharon Graham,145,17/08/2025,North West,M60-69DT,F,60,Bare,D,Single Lift,National
 Standard,52.5,,,M60-69DT,F,67.5,Bare,B,Single Lift,National
-Standard,107.5,,,M60-69DT,F,67.5,Bare,D,Single Lift,National
+Julie Garner,107.5,07/12/2025,Nottingham,M60-69DT,F,67.5,Bare,D,Single Lift,National
 Standard,52.5,,,M60-69DT,F,75,Bare,B,Single Lift,National
 Standard,112.5,,,M60-69DT,F,75,Bare,D,Single Lift,National
-Standard,57.5,,,M60-69DT,F,82.5,Bare,B,Single Lift,National
+Sue Giles,57.5,07/12/2025,Nottingham,M60-69DT,F,82.5,Bare,B,Single Lift,National
 Standard,120,,,M60-69DT,F,82.5,Bare,D,Single Lift,National
 Standard,60,,,M60-69DT,F,90,Bare,B,Single Lift,National
 Standard,125,,,M60-69DT,F,90,Bare,D,Single Lift,National
@@ -1588,11 +1588,11 @@ Standard,85,,,OpenDT,F,44,Sleeves,S,Full Power,National
 Standard,45,,,OpenDT,F,44,Sleeves,B,Full Power,National
 Standard,92.5,,,OpenDT,F,44,Sleeves,D,Full Power,National
 Standard,217.5,,,OpenDT,F,44,Sleeves,Total,Full Power,National
-Standard,102.5,,,OpenDT,F,48,Sleeves,S,Full Power,National
-Standard,55,,,OpenDT,F,48,Sleeves,B,Full Power,National
-Standard,112.5,,,OpenDT,F,48,Sleeves,D,Full Power,National
-Standard,267.5,,,OpenDT,F,48,Sleeves,Total,Full Power,National
-Lamorna Bardwell,112.5,02/11/2025,Nottingham,OpenDT,F,52,Sleeves,S,Full Power,National
+Emily Hussey,103,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,S,Full Power,National
+Emily Hussey,55.5,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,B,Full Power,National
+Emily Hussey,127.5,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,D,Full Power,National
+Emily Hussey,286,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,Total,Full Power,National
+Sadife Kisyova,117.5,07/12/2025,Nottingham,OpenDT,F,52,Sleeves,S,Full Power,National
 Lamorna Bardwell,70,02/11/2025,Nottingham,OpenDT,F,52,Sleeves,B,Full Power,National
 Lamorna Bardwell,155,02/11/2025,Nottingham,OpenDT,F,52,Sleeves,D,Full Power,National
 Lamorna Bardwell,337.5,02/11/2025,Nottingham,OpenDT,F,52,Sleeves,Total,Full Power,National
@@ -1605,7 +1605,7 @@ Charlotte Viccars,97.5,02/11/2025,Nottingham,OpenDT,F,60,Sleeves,B,Full Power,Na
 Siobhan Read,180,04/05/2025,North West,OpenDT,F,60,Sleeves,D,Full Power,National
 Siobhan Read,422.5,04/05/2025,North West,OpenDT,F,60,Sleeves,Total,Full Power,National
 Claire Rutland,152.5,03/08/2025,Welwyn Garden City,OpenDT,F,67.5,Sleeves,S,Full Power,National
-Bec Giles,90,13/07/2025,East Coast,OpenDT,F,67.5,Sleeves,B,Full Power,National
+Bec Giles,95,07/12/2025,Nottingham,OpenDT,F,67.5,Sleeves,B,Full Power,National
 Lizzie Pipe,182.5,02/11/2025,Nottingham,OpenDT,F,67.5,Sleeves,D,Full Power,National
 Lizzie Pipe,415,04/05/2025,North West,OpenDT,F,67.5,Sleeves,Total,Full Power,National
 Sarah Higgins,172.5,02/11/2025,Nottingham,OpenDT,F,75,Sleeves,S,Full Power,National
@@ -1716,10 +1716,10 @@ Standard,92.5,,,T14-15DT,F,90,Sleeves,S,Full Power,National
 Standard,52.5,,,T14-15DT,F,90,Sleeves,B,Full Power,National
 Standard,97.5,,,T14-15DT,F,90,Sleeves,D,Full Power,National
 Standard,232.5,,,T14-15DT,F,90,Sleeves,Total,Full Power,National
-Standard,112.5,,,T14-15DT,F,100,Sleeves,S,Full Power,National
+Eleni Bradshaw,130,07/12/2025,Nottingham,T14-15DT,F,100,Sleeves,S,Full Power,National
 Standard,60,,,T14-15DT,F,100,Sleeves,B,Full Power,National
-Standard,130,,,T14-15DT,F,100,Sleeves,D,Full Power,National
-Standard,297.5,,,T14-15DT,F,100,Sleeves,Total,Full Power,National
+Eleni Bradshaw,150,07/12/2025,Nottingham,T14-15DT,F,100,Sleeves,D,Full Power,National
+Eleni Bradshaw,337.5,07/12/2025,Nottingham,T14-15DT,F,100,Sleeves,Total,Full Power,National
 Standard,115,,,T14-15DT,F,110,Sleeves,S,Full Power,National
 Standard,62.5,,,T14-15DT,F,110,Sleeves,B,Full Power,National
 Standard,132.5,,,T14-15DT,F,110,Sleeves,D,Full Power,National
@@ -1789,9 +1789,9 @@ Standard,40,,,T16-17DT,F,52,Sleeves,B,Full Power,National
 Standard,70,,,T16-17DT,F,52,Sleeves,D,Full Power,National
 Standard,170,,,T16-17DT,F,52,Sleeves,Total,Full Power,National
 Rubee Whittaker,110,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,S,Full Power,National
-Rubee Whittaker,52.5,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,B,Full Power,National
-Rubee Whittaker,150,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,D,Full Power,National
-Rubee Whittaker,312.5,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,Total,Full Power,National
+Rubee Whittaker,55,07/12/2025,Nottingham,T16-17DT,F,56,Sleeves,B,Full Power,National
+Rubee Whittaker,157.5,07/12/2025,Nottingham,T16-17DT,F,56,Sleeves,D,Full Power,National
+Rubee Whittaker,322.5,07/12/2025,Nottingham,T16-17DT,F,56,Sleeves,Total,Full Power,National
 Standard,82.5,,,T16-17DT,F,60,Sleeves,S,Full Power,National
 Standard,47.5,,,T16-17DT,F,60,Sleeves,B,Full Power,National
 Standard,87.5,,,T16-17DT,F,60,Sleeves,D,Full Power,National
@@ -1885,9 +1885,9 @@ Ruby Harrison,52.5,17/08/2025,North West,T18-19DT,F,52,Sleeves,B,Full Power,Nati
 Ruby Harrison,105,17/08/2025,North West,T18-19DT,F,52,Sleeves,D,Full Power,National
 Ruby Harrison,242.5,17/08/2025,North West,T18-19DT,F,52,Sleeves,Total,Full Power,National
 Ruby Harrison,90,06/04/2025,South Midlands,T18-19DT,F,56,Sleeves,S,Full Power,National
-Ruby Harrison,46,06/04/2025,South Midlands,T18-19DT,F,56,Sleeves,B,Full Power,National
+Ruby Harrison,55,07/12/2025,Nottingham,T18-19DT,F,56,Sleeves,B,Full Power,National
 Ruby Harrison,110,06/04/2025,South Midlands,T18-19DT,F,56,Sleeves,D,Full Power,National
-Ruby Harrison,246,06/04/2025,South Midlands,T18-19DT,F,56,Sleeves,Total,Full Power,National
+Ruby Harrison,250,07/12/2025,Nottingham,T18-19DT,F,56,Sleeves,Total,Full Power,National
 Standard,95,,,T18-19DT,F,60,Sleeves,S,Full Power,National
 Standard,50,,,T18-19DT,F,60,Sleeves,B,Full Power,National
 Standard,105,,,T18-19DT,F,60,Sleeves,D,Full Power,National
@@ -1984,10 +1984,10 @@ Kelise Harrington,135,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,S,Full Power,N
 Kelise Harrington,72.5,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,B,Full Power,National
 Kelise Harrington,175,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,D,Full Power,National
 Kelise Harrington,382.5,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,Total,Full Power,National
-Reegan Green,150,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,S,Full Power,National
-Reegan Green,67.5,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,B,Full Power,National
-Reegan Green,167.5,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,D,Full Power,National
-Reegan Green,385,13/07/2025,East Coast,JuniorDT,F,60,Sleeves,Total,Full Power,National
+Reegan Green,160,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,S,Full Power,National
+Reegan Green,70,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,B,Full Power,National
+Reegan Green,175,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,D,Full Power,National
+Reegan Green,405,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,Total,Full Power,National
 Standard,122.5,,,JuniorDT,F,67.5,Sleeves,S,Full Power,National
 Abigail Gosling,67.5,16/02/2025,Nottingham,JuniorDT,F,67.5,Sleeves,B,Full Power,National
 Amera Telfer-Ross,167.5,28/09/2025,South Midlands,JuniorDT,F,67.5,Sleeves,D,Full Power,National
@@ -2180,14 +2180,14 @@ Beckie Hebson,140,17/08/2025,North West,M40-49DT,F,60,Sleeves,S,Full Power,Natio
 Beckie Hebson,70,17/08/2025,North West,M40-49DT,F,60,Sleeves,B,Full Power,National
 Beckie Hebson,160,17/08/2025,North West,M40-49DT,F,60,Sleeves,D,Full Power,National
 Beckie Hebson,370,17/08/2025,North West,M40-49DT,F,60,Sleeves,Total,Full Power,National
-Standard,125,,,M40-49DT,F,67.5,Sleeves,S,Full Power,National
-Standard,67.5,,,M40-49DT,F,67.5,Sleeves,B,Full Power,National
-Katy Smeathers,155,11/05/2025,Nottingham,M40-49DT,F,67.5,Sleeves,D,Full Power,National
-Katy Smeathers,340,11/05/2025,Nottingham,M40-49DT,F,67.5,Sleeves,Total,Full Power,National
+Sumina Rashid,142.5,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,S,Full Power,National
+Beckie Hebson,70,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,B,Full Power,National
+Beckie Hebson,165,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,D,Full Power,National
+Beckie Hebson,370,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,Total,Full Power,National
 Standard,130,,,M40-49DT,F,75,Sleeves,S,Full Power,National
 Standard,70,,,M40-49DT,F,75,Sleeves,B,Full Power,National
-Kim Johnson,160,03/08/2025,Welwyn Garden City,M40-49DT,F,75,Sleeves,D,Full Power,National
-Standard,340,,,M40-49DT,F,75,Sleeves,Total,Full Power,National
+Kim Johnson,170,07/12/2025,Nottingham,M40-49DT,F,75,Sleeves,D,Full Power,National
+Kim Johnson,355,07/12/2025,Nottingham,M40-49DT,F,75,Sleeves,Total,Full Power,National
 Standard,140,,,M40-49DT,F,82.5,Sleeves,S,Full Power,National
 Standard,72.5,,,M40-49DT,F,82.5,Sleeves,B,Full Power,National
 Standard,152.5,,,M40-49DT,F,82.5,Sleeves,D,Full Power,National
@@ -2200,12 +2200,12 @@ Standard,150,,,M40-49DT,F,100,Sleeves,S,Full Power,National
 Standard,82.5,,,M40-49DT,F,100,Sleeves,B,Full Power,National
 Standard,175,,,M40-49DT,F,100,Sleeves,D,Full Power,National
 Standard,405,,,M40-49DT,F,100,Sleeves,Total,Full Power,National
-Standard,155,,,M40-49DT,F,110,Sleeves,S,Full Power,National
-Standard,85,,,M40-49DT,F,110,Sleeves,B,Full Power,National
+Marie Hume,175,07/12/2025,Nottingham,M40-49DT,F,110,Sleeves,S,Full Power,National
+Marie Hume,95,07/12/2025,Nottingham,M40-49DT,F,110,Sleeves,B,Full Power,National
 Standard,180,,,M40-49DT,F,110,Sleeves,D,Full Power,National
-Standard,415,,,M40-49DT,F,110,Sleeves,Total,Full Power,National
-Standard,157.5,,,M40-49DT,F,110+,Sleeves,S,Full Power,National
-Standard,85,,,M40-49DT,F,110+,Sleeves,B,Full Power,National
+Marie Hume,440,07/12/2025,Nottingham,M40-49DT,F,110,Sleeves,Total,Full Power,National
+Jamiella Bruzulier,160,07/12/2025,Nottingham,M40-49DT,F,110+,Sleeves,S,Full Power,National
+Jamiella Bruzulier,92.5,07/12/2025,Nottingham,M40-49DT,F,110+,Sleeves,B,Full Power,National
 Standard,185,,,M40-49DT,F,110+,Sleeves,D,Full Power,National
 Standard,425,,,M40-49DT,F,110+,Sleeves,Total,Full Power,National
 Standard,72.5,,,M50-59DT,F,44,Sleeves,S,Full Power,National
@@ -2226,28 +2226,28 @@ Standard,105,,,M50-59DT,F,56,Sleeves,D,Full Power,National
 Standard,255,,,M50-59DT,F,56,Sleeves,Total,Full Power,National
 Standard,112.5,,,M50-59DT,F,60,Sleeves,S,Full Power,National
 Standard,65,,,M50-59DT,F,60,Sleeves,B,Full Power,National
-Louise Wain,135,24/08/2025,North East,M50-59DT,F,60,Sleeves,D,Full Power,National
-Louise Wain,287.5,24/08/2025,North East,M50-59DT,F,60,Sleeves,Total,Full Power,National
+Tracey Boore,140,07/12/2025,Nottingham,M50-59DT,F,60,Sleeves,D,Full Power,National
+Louise Wain,295,07/12/2025,Nottingham,M50-59DT,F,60,Sleeves,Total,Full Power,National
 Standard,122.5,,,M50-59DT,F,67.5,Sleeves,S,Full Power,National
 Standard,72.5,,,M50-59DT,F,67.5,Sleeves,B,Full Power,National
-Standard,130,,,M50-59DT,F,67.5,Sleeves,D,Full Power,National
-Standard,312.5,,,M50-59DT,F,67.5,Sleeves,Total,Full Power,National
+April Latham,147.5,07/12/2025,Nottingham,M50-59DT,F,67.5,Sleeves,D,Full Power,National
+April Latham,320,07/12/2025,Nottingham,M50-59DT,F,67.5,Sleeves,Total,Full Power,National
 Standard,127.5,,,M50-59DT,F,75,Sleeves,S,Full Power,National
 Standard,75,,,M50-59DT,F,75,Sleeves,B,Full Power,National
 Standard,135,,,M50-59DT,F,75,Sleeves,D,Full Power,National
 Standard,325,,,M50-59DT,F,75,Sleeves,Total,Full Power,National
 Standard,135,,,M50-59DT,F,82.5,Sleeves,S,Full Power,National
 Standard,80,,,M50-59DT,F,82.5,Sleeves,B,Full Power,National
-Standard,142.5,,,M50-59DT,F,82.5,Sleeves,D,Full Power,National
-Standard,345,,,M50-59DT,F,82.5,Sleeves,Total,Full Power,National
+Paulette Boniface,165,07/12/2025,Nottingham,M50-59DT,F,82.5,Sleeves,D,Full Power,National
+Paulette Boniface,345,07/12/2025,Nottingham,M50-59DT,F,82.5,Sleeves,Total,Full Power,National
 Standard,142.5,,,M50-59DT,F,90,Sleeves,S,Full Power,National
 Standard,82.5,,,M50-59DT,F,90,Sleeves,B,Full Power,National
-Nicola Maycock,150.5,27/04/2025,East Midlands,M50-59DT,F,90,Sleeves,D,Full Power,National
+Debbie Leach,155,07/12/2025,Nottingham,M50-59DT,F,90,Sleeves,D,Full Power,National
 Standard,365,,,M50-59DT,F,90,Sleeves,Total,Full Power,National
-Standard,137.5,,,M50-59DT,F,100,Sleeves,S,Full Power,National
-Standard,75,,,M50-59DT,F,100,Sleeves,B,Full Power,National
-Standard,157.5,,,M50-59DT,F,100,Sleeves,D,Full Power,National
-Standard,365,,,M50-59DT,F,100,Sleeves,Total,Full Power,National
+Sarah Hulin,147.5,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,S,Full Power,National
+Sarah Hulin,77.5,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,B,Full Power,National
+Sarah Hulin,160,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,D,Full Power,National
+Sarah Hulin,385,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,Total,Full Power,National
 Standard,140,,,M50-59DT,F,110,Sleeves,S,Full Power,National
 Standard,75,,,M50-59DT,F,110,Sleeves,B,Full Power,National
 Standard,162.5,,,M50-59DT,F,110,Sleeves,D,Full Power,National
@@ -2272,10 +2272,10 @@ Standard,95,,,M60-69DT,F,56,Sleeves,S,Full Power,National
 Standard,55,,,M60-69DT,F,56,Sleeves,B,Full Power,National
 Standard,100,,,M60-69DT,F,56,Sleeves,D,Full Power,National
 Standard,242.5,,,M60-69DT,F,56,Sleeves,Total,Full Power,National
-Standard,107.5,,,M60-69DT,F,60,Sleeves,S,Full Power,National
+Jo Wright,110,07/12/2025,Nottingham,M60-69DT,F,60,Sleeves,S,Full Power,National
 Standard,62.5,,,M60-69DT,F,60,Sleeves,B,Full Power,National
-Standard,112.5,,,M60-69DT,F,60,Sleeves,D,Full Power,National
-Standard,270,,,M60-69DT,F,60,Sleeves,Total,Full Power,National
+Jo Wright,155,07/12/2025,Nottingham,M60-69DT,F,60,Sleeves,D,Full Power,National
+Jo Wright,322.5,07/12/2025,Nottingham,M60-69DT,F,60,Sleeves,Total,Full Power,National
 Standard,117.5,,,M60-69DT,F,67.5,Sleeves,S,Full Power,National
 Standard,67.5,,,M60-69DT,F,67.5,Sleeves,B,Full Power,National
 Standard,122.5,,,M60-69DT,F,67.5,Sleeves,D,Full Power,National
@@ -3760,10 +3760,10 @@ Standard,140,,,M50-59DT,F,67.5,Wraps,S,Full Power,National
 Standard,80,,,M50-59DT,F,67.5,Wraps,B,Full Power,National
 Standard,147.5,,,M50-59DT,F,67.5,Wraps,D,Full Power,National
 Standard,355,,,M50-59DT,F,67.5,Wraps,Total,Full Power,National
-Annmarie Botha-Jones,150,16/02/2025,Nottingham,M50-59DT,F,75,Wraps,S,Full Power,National
+Annmarie Botha-Jones,152.5,07/12/2025,Nottingham,M50-59DT,F,75,Wraps,S,Full Power,National
 Standard,85,,,M50-59DT,F,75,Wraps,B,Full Power,National
 Standard,155,,,M50-59DT,F,75,Wraps,D,Full Power,National
-Standard,372.5,,,M50-59DT,F,75,Wraps,Total,Full Power,National
+Annmarie Botha-Jones,372.5,07/12/2025,Nottingham,M50-59DT,F,75,Wraps,Total,Full Power,National
 Standard,152.5,,,M50-59DT,F,82.5,Wraps,S,Full Power,National
 Standard,87.5,,,M50-59DT,F,82.5,Wraps,B,Full Power,National
 Standard,160,,,M50-59DT,F,82.5,Wraps,D,Full Power,National
@@ -5078,8 +5078,8 @@ Standard,162.5,,,OpenDT,F,56,Single-ply,S,Full Power,National
 Standard,82.5,,,OpenDT,F,56,Single-ply,B,Full Power,National
 Linzi Waite,145,27/07/2025,East Midlands,OpenDT,F,56,Single-ply,D,Full Power,National
 Standard,405,,,OpenDT,F,56,Single-ply,Total,Full Power,National
-Standard,82.5,,,OpenDT,F,56,Single-ply,B,Single Lift,National
-Standard,142.5,,,OpenDT,F,56,Single-ply,D,Single Lift,National
+Linzi Waite,82.5,07/12/2025,Nottingham,OpenDT,F,56,Single-ply,B,Single Lift,National
+Linzi Waite,142.5,07/12/2025,Nottingham,OpenDT,F,56,Single-ply,D,Single Lift,National
 Standard,172.5,,,OpenDT,F,60,Single-ply,S,Full Power,National
 Standard,87.5,,,OpenDT,F,60,Single-ply,B,Full Power,National
 Standard,150,,,OpenDT,F,60,Single-ply,D,Full Power,National
@@ -6100,8 +6100,8 @@ Standard,125,,,M60-69DT,F,75,Single-ply,S,Full Power,National
 Standard,62.5,,,M60-69DT,F,75,Single-ply,B,Full Power,National
 Standard,110,,,M60-69DT,F,75,Single-ply,D,Full Power,National
 Standard,310,,,M60-69DT,F,75,Single-ply,Total,Full Power,National
-Standard,70,,,M60-69DT,F,75,Single-ply,B,Single Lift,National
-Standard,122.5,,,M60-69DT,F,75,Single-ply,D,Single Lift,National
+Kelly Clark,72.5,07/12/2025,Nottingham,M60-69DT,F,75,Single-ply,B,Single Lift,National
+Kelly Clark,141,07/12/2025,Nottingham,M60-69DT,F,75,Single-ply,D,Single Lift,National
 Standard,130,,,M60-69DT,F,82.5,Single-ply,S,Full Power,National
 Standard,65,,,M60-69DT,F,82.5,Single-ply,B,Full Power,National
 Standard,115,,,M60-69DT,F,82.5,Single-ply,D,Full Power,National
