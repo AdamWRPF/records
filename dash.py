@@ -19,6 +19,7 @@ DIVISION_ORDER = [
 ]
 
 VENUE_MAP = {
+    "National Championships": "United Kingdom",
     "Nottingham": "Nottingham Strong",
     "North West": "Raw Strength Gym",
     "East Coast": "Iron Warehouse Gym",
@@ -321,6 +322,7 @@ To claim this record, you must break it by 0.5kg at any WRPF UK event.
 
 if __name__ == "__main__":
     main()
+
 
 
 
