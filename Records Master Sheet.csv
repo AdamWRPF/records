@@ -11,10 +11,10 @@ Standard,132.5,,,Open,M,75,Bare,B,Single Lift,National
 Standard,247.5,,,Open,M,75,Bare,D,Single Lift,National
 Michael Bond,185,27/04/2025,East Midlands,Open,M,82.5,Bare,B,Single Lift,National
 Standard,277.5,,,Open,M,82.5,Bare,D,Single Lift,National
-Dean Pearson,162.5,05/12/2025,Nottingham,Open,M,90,Bare,B,Single Lift,National
+Dean Pearson,162.5,05/12/2025,National Championships,Open,M,90,Bare,B,Single Lift,National
 Standard,292.5,,,Open,M,90,Bare,D,Single Lift,National
 John Walsh,190,02/06/2024,Specialist Event,Open,M,100,Bare,B,Single Lift,National
-Chris Derrick,325,05/12/2025,Nottingham,Open,M,100,Bare,D,Single Lift,National
+Chris Derrick,325,05/12/2025,National Championships,Open,M,100,Bare,D,Single Lift,National
 Zilvinas Peldzious,217.5,04/05/2025,North West,Open,M,110,Bare,B,Single Lift,National
 Standard,320,,,Open,M,110,Bare,D,Single Lift,National
 Alasdair MacLeod,185,23/11/2025,Welwyn Garden City,Open,M,125,Bare,B,Single Lift,National
@@ -45,7 +45,7 @@ Standard,167.5,,,OpenDT,M,125,Bare,B,Single Lift,National
 Standard,312.5,,,OpenDT,M,125,Bare,D,Single Lift,National
 Standard,172.5,,,OpenDT,M,140,Bare,B,Single Lift,National
 Standard,320,,,OpenDT,M,140,Bare,D,Single Lift,National
-Chris Gillard,180,06/12/2025,Nottingham,OpenDT,M,140+,Bare,B,Single Lift,National
+Chris Gillard,180,06/12/2025,National Championships,OpenDT,M,140+,Bare,B,Single Lift,National
 Standard,330,,,OpenDT,M,140+,Bare,D,Single Lift,National
 Standard,37.5,,,T14-15,M,52,Bare,B,Single Lift,National
 Standard,70,,,T14-15,M,52,Bare,D,Single Lift,National
@@ -77,8 +77,8 @@ Standard,55,,,T14-15DT,M,56,Bare,B,Single Lift,National
 Standard,100,,,T14-15DT,M,56,Bare,D,Single Lift,National
 Standard,60,,,T14-15DT,M,60,Bare,B,Single Lift,National
 Standard,110,,,T14-15DT,M,60,Bare,D,Single Lift,National
-Bentley Harvey,85,06/12/2025,Nottingham,T14-15DT,M,67.5,Bare,B,Single Lift,National
-Bentley Harvey,172.5,06/12/2025,Nottingham,T14-15DT,M,67.5,Bare,D,Single Lift,National
+Bentley Harvey,85,06/12/2025,National Championships,T14-15DT,M,67.5,Bare,B,Single Lift,National
+Bentley Harvey,172.5,06/12/2025,National Championships,T14-15DT,M,67.5,Bare,D,Single Lift,National
 Josh Everett,100,03/08/2025,Welwyn Garden City,T14-15DT,M,75,Bare,B,Single Lift,National
 Standard,140,,,T14-15DT,M,75,Bare,D,Single Lift,National
 Standard,80,,,T14-15DT,M,82.5,Bare,B,Single Lift,National
@@ -127,7 +127,7 @@ Standard,70,,,T16-17DT,M,60,Bare,B,Single Lift,National
 Standard,127.5,,,T16-17DT,M,60,Bare,D,Single Lift,National
 Ryan Ktorides,92.5,12-Jan,North East,T16-17DT,M,67.5,Bare,B,Single Lift,National
 Standard,147.5,,,T16-17DT,M,67.5,Bare,D,Single Lift,National
-Josh Everett,110,06/12/2025,Nottingham,T16-17DT,M,75,Bare,B,Single Lift,National
+Josh Everett,110,06/12/2025,National Championships,T16-17DT,M,75,Bare,B,Single Lift,National
 Standard,165,,,T16-17DT,M,75,Bare,D,Single Lift,National
 Standard,95,,,T16-17DT,M,82.5,Bare,B,Single Lift,National
 Standard,175,,,T16-17DT,M,82.5,Bare,D,Single Lift,National
@@ -256,7 +256,7 @@ Standard,257.5,,,M40-49,M,90,Bare,D,Single Lift,National
 Spas Razhankov,177.5,03/08/2025,Welwyn Garden City,M40-49,M,100,Bare,B,Single Lift,National
 Steven Dale,275,27/07/2025,East Midlands,M40-49,M,100,Bare,D,Single Lift,National
 Steven Dale,185,26/10/2025,International Event,M40-49,M,110,Bare,B,Single Lift,National
-Steven Dale,285,05/12/2025,Nottingham,M40-49,M,110,Bare,D,Single Lift,National
+Steven Dale,285,05/12/2025,National Championships,M40-49,M,110,Bare,D,Single Lift,National
 William Mcneil,195,07/09/2025,Lincoln,M40-49,M,125,Bare,B,Single Lift,National
 Standard,295,,,M40-49,M,125,Bare,D,Single Lift,National
 Standard,175,,,M40-49,M,140,Bare,B,Single Lift,National
@@ -279,9 +279,9 @@ Standard,120,,,M50-59,M,90,Bare,B,Single Lift,National
 Standard,225,,,M50-59,M,90,Bare,D,Single Lift,National
 Standard,125,,,M50-59,M,100,Bare,B,Single Lift,National
 Les Attewell,300,07/09/2025,Lincoln,M50-59,M,100,Bare,D,Single Lift,National
-Piotr Strzala,192.5,05/12/2025,Nottingham,M50-59,M,110,Bare,B,Single Lift,National
+Piotr Strzala,192.5,05/12/2025,National Championships,M50-59,M,110,Bare,B,Single Lift,National
 Standard,245,,,M50-59,M,110,Bare,D,Single Lift,National
-Paul Carter,160,05/12/2025,Nottingham,M50-59,M,125,Bare,B,Single Lift,National
+Paul Carter,160,05/12/2025,National Championships,M50-59,M,125,Bare,B,Single Lift,National
 Standard,260,,,M50-59,M,125,Bare,D,Single Lift,National
 Standard,152.5,,,M50-59,M,140,Bare,B,Single Lift,National
 Standard,285,,,M50-59,M,140,Bare,D,Single Lift,National
@@ -329,7 +329,7 @@ Jacek Szast,145,03/08/2025,Welwyn Garden City,M40-49DT,M,100,Bare,B,Single Lift,
 Standard,260,,,M40-49DT,M,100,Bare,D,Single Lift,National
 Standard,142.5,,,M40-49DT,M,110,Bare,B,Single Lift,National
 Standard,267.5,,,M40-49DT,M,110,Bare,D,Single Lift,National
-Sergej Naumenko,165,06/12/2025,Nottingham,M40-49DT,M,125,Bare,B,Single Lift,National
+Sergej Naumenko,165,06/12/2025,National Championships,M40-49DT,M,125,Bare,B,Single Lift,National
 Standard,275,,,M40-49DT,M,125,Bare,D,Single Lift,National
 Standard,152.5,,,M40-49DT,M,140,Bare,B,Single Lift,National
 Standard,280,,,M40-49DT,M,140,Bare,D,Single Lift,National
@@ -463,7 +463,7 @@ Standard,60,,,T14-15DT,F,48,Bare,D,Single Lift,National
 Standard,47.5,,,T14-15DT,F,52,Bare,B,Single Lift,National
 Standard,95,,,T14-15DT,F,52,Bare,D,Single Lift,National
 Standard,32.5,,,T14-15DT,F,56,Bare,B,Single Lift,National
-Poppy Cheshire,105,07/12/2025,Nottingham,T14-15DT,F,56,Bare,D,Single Lift,National
+Poppy Cheshire,105,07/12/2025,National Championships,T14-15DT,F,56,Bare,D,Single Lift,National
 Standard,37.5,,,T14-15DT,F,60,Bare,B,Single Lift,National
 Poppy Cheshire,92.5,07/09/2025,Lincoln,T14-15DT,F,60,Bare,D,Single Lift,National
 Standard,40,,,T14-15DT,F,67.5,Bare,B,Single Lift,National
@@ -741,7 +741,7 @@ Nicola Maycock,152.5,07/09/2025,Lincoln,M50-59DT,F,90,Bare,D,Single Lift,Nationa
 Standard,72.5,,,M50-59DT,F,100,Bare,B,Single Lift,National
 Standard,150,,,M50-59DT,F,100,Bare,D,Single Lift,National
 Standard,72.5,,,M50-59DT,F,110,Bare,B,Single Lift,National
-Jo Lovell,153,07/12/2025,Nottingham,M50-59DT,F,110,Bare,D,Single Lift,National
+Jo Lovell,153,07/12/2025,National Championships,M50-59DT,F,110,Bare,D,Single Lift,National
 Standard,75,,,M50-59DT,F,110+,Bare,B,Single Lift,National
 Standard,155,,,M50-59DT,F,110+,Bare,D,Single Lift,National
 Standard,30,,,M60-69DT,F,44,Bare,B,Single Lift,National
@@ -755,10 +755,10 @@ Standard,87.5,,,M60-69DT,F,56,Bare,D,Single Lift,National
 Sharon Graham,57.5,17/08/2025,North West,M60-69DT,F,60,Bare,B,Single Lift,National
 Sharon Graham,145,17/08/2025,North West,M60-69DT,F,60,Bare,D,Single Lift,National
 Standard,52.5,,,M60-69DT,F,67.5,Bare,B,Single Lift,National
-Julie Garner,107.5,07/12/2025,Nottingham,M60-69DT,F,67.5,Bare,D,Single Lift,National
+Julie Garner,107.5,07/12/2025,National Championships,M60-69DT,F,67.5,Bare,D,Single Lift,National
 Standard,52.5,,,M60-69DT,F,75,Bare,B,Single Lift,National
 Standard,112.5,,,M60-69DT,F,75,Bare,D,Single Lift,National
-Sue Giles,57.5,07/12/2025,Nottingham,M60-69DT,F,82.5,Bare,B,Single Lift,National
+Sue Giles,57.5,07/12/2025,National Championships,M60-69DT,F,82.5,Bare,B,Single Lift,National
 Standard,120,,,M60-69DT,F,82.5,Bare,D,Single Lift,National
 Standard,60,,,M60-69DT,F,90,Bare,B,Single Lift,National
 Standard,125,,,M60-69DT,F,90,Bare,D,Single Lift,National
@@ -785,9 +785,9 @@ Standard,115,,,Open,M,67.5,Sleeves,B,Full Power,National
 Standard,212.5,,,Open,M,67.5,Sleeves,D,Full Power,National
 Standard,515,,,Open,M,67.5,Sleeves,Total,Full Power,National
 Standard,235,,,Open,M,75,Sleeves,S,Full Power,National
-Ben Towning,162.5,05/12/2025,Nottingham,Open,M,75,Sleeves,B,Full Power,National
-Ben Towning,248,05/12/2025,Nottingham,Open,M,75,Sleeves,D,Full Power,National
-Ben Towning,640.5,05/12/2025,Nottingham,Open,M,75,Sleeves,Total,Full Power,National
+Ben Towning,162.5,05/12/2025,National Championships,Open,M,75,Sleeves,B,Full Power,National
+Ben Towning,248,05/12/2025,National Championships,Open,M,75,Sleeves,D,Full Power,National
+Ben Towning,640.5,05/12/2025,National Championships,Open,M,75,Sleeves,Total,Full Power,National
 Gregory Pearson,287.5,02/11/2025,Nottingham,Open,M,82.5,Sleeves,S,Full Power,National
 Gregory Pearson,185,02/11/2025,Nottingham,Open,M,82.5,Sleeves,B,Full Power,National
 Gregory Pearson,322,02/11/2025,Nottingham,Open,M,82.5,Sleeves,D,Full Power,National
@@ -796,10 +796,10 @@ Matthew Jackson,280,13/09/2025,International Event,Open,M,90,Sleeves,S,Full Powe
 Matthew Jackson,190,08/12/2024,Nottingham,Open,M,90,Sleeves,B,Full Power,National
 Standard,292.5,,,Open,M,90,Sleeves,D,Full Power,National
 Matthew Jackson,760,08/12/2024,Nottingham,Open,M,90,Sleeves,Total,Full Power,National
-Sonny Barrah,318,05/12/2025,Nottingham,Open,M,100,Sleeves,S,Full Power,National
-Sonny Barrah,210,05/12/2025,Nottingham,Open,M,100,Sleeves,B,Full Power,National
-Sonny Barrah,345,05/12/2025,Nottingham,Open,M,100,Sleeves,D,Full Power,National
-Sonny Barrah,873,05/12/2025,Nottingham,Open,M,100,Sleeves,Total,Full Power,National
+Sonny Barrah,318,05/12/2025,National Championships,Open,M,100,Sleeves,S,Full Power,National
+Sonny Barrah,210,05/12/2025,National Championships,Open,M,100,Sleeves,B,Full Power,National
+Sonny Barrah,345,05/12/2025,National Championships,Open,M,100,Sleeves,D,Full Power,National
+Sonny Barrah,873,05/12/2025,National Championships,Open,M,100,Sleeves,Total,Full Power,National
 Jamie Sneddon,335,02/11/2025,Nottingham,Open,M,110,Sleeves,S,Full Power,National
 Jamie Sneddon,217.5,04/05/2025,North West,Open,M,110,Sleeves,B,Full Power,National
 Jamie Sneddon,335,02/11/2025,Nottingham,Open,M,110,Sleeves,D,Full Power,National
@@ -834,12 +834,12 @@ Standard,237.5,,,OpenDT,M,67.5,Sleeves,D,Full Power,National
 Standard,575,,,OpenDT,M,67.5,Sleeves,Total,Full Power,National
 Standard,250,,,OpenDT,M,75,Sleeves,S,Full Power,National
 Tom Humphreys,147.5,02/11/2025,Nottingham,OpenDT,M,75,Sleeves,B,Full Power,National
-AJ Mangoba,265.5,06/12/2025,Nottingham,OpenDT,M,75,Sleeves,D,Full Power,National
+AJ Mangoba,265.5,06/12/2025,National Championships,OpenDT,M,75,Sleeves,D,Full Power,National
 Standard,640,,,OpenDT,M,75,Sleeves,Total,Full Power,National
-Carn Wharmby,270,06/12/2025,Nottingham,OpenDT,M,82.5,Sleeves,S,Full Power,National
+Carn Wharmby,270,06/12/2025,National Championships,OpenDT,M,82.5,Sleeves,S,Full Power,National
 Ryan King,167.5,03/08/2025,Welwyn Garden City,OpenDT,M,82.5,Sleeves,B,Full Power,National
-Carn Wharmby,310,06/12/2025,Nottingham,OpenDT,M,82.5,Sleeves,D,Full Power,National
-Carn Wharmby,700,06/12/2025,Nottingham,OpenDT,M,82.5,Sleeves,Total,Full Power,National
+Carn Wharmby,310,06/12/2025,National Championships,OpenDT,M,82.5,Sleeves,D,Full Power,National
+Carn Wharmby,700,06/12/2025,National Championships,OpenDT,M,82.5,Sleeves,Total,Full Power,National
 Standard,275,,,OpenDT,M,90,Sleeves,S,Full Power,National
 Jake Cummings,180,02/11/2025,Nottingham,OpenDT,M,90,Sleeves,B,Full Power,National
 Jake Cummings,305,02/11/2025,Nottingham,OpenDT,M,90,Sleeves,D,Full Power,National
@@ -853,9 +853,9 @@ Stephen Manuel,192.5,04/05/2025,North West,OpenDT,M,110,Sleeves,B,Full Power,Nat
 Jamie Jonathan Foord,350,02/11/2025,Nottingham,OpenDT,M,110,Sleeves,D,Full Power,National
 Jamie Jonathan Foord,832.5,02/11/2025,Nottingham,OpenDT,M,110,Sleeves,Total,Full Power,National
 Lukas Jusko,320,02/11/2025,Nottingham,OpenDT,M,125,Sleeves,S,Full Power,National
-Levi Hartshorne,197.5,06/12/2025,Nottingham,OpenDT,M,125,Sleeves,B,Full Power,National
-Levi Hartshorne,330,06/12/2025,Nottingham,OpenDT,M,125,Sleeves,D,Full Power,National
-Levi Hartshorne,827.5,06/12/2025,Nottingham,OpenDT,M,125,Sleeves,Total,Full Power,National
+Levi Hartshorne,197.5,06/12/2025,National Championships,OpenDT,M,125,Sleeves,B,Full Power,National
+Levi Hartshorne,330,06/12/2025,National Championships,OpenDT,M,125,Sleeves,D,Full Power,National
+Levi Hartshorne,827.5,06/12/2025,National Championships,OpenDT,M,125,Sleeves,Total,Full Power,National
 Standard,305,,,OpenDT,M,140,Sleeves,S,Full Power,National
 Standard,172.5,,,OpenDT,M,140,Sleeves,B,Full Power,National
 Standard,320,,,OpenDT,M,140,Sleeves,D,Full Power,National
@@ -976,10 +976,10 @@ Standard,125,,,T16-17,M,67.5,Sleeves,S,Full Power,National
 Standard,72.5,,,T16-17,M,67.5,Sleeves,B,Full Power,National
 Standard,132.5,,,T16-17,M,67.5,Sleeves,D,Full Power,National
 Standard,320,,,T16-17,M,67.5,Sleeves,Total,Full Power,National
-Liam Backhurst,155,05/12/2025,Nottingham,T16-17,M,75,Sleeves,S,Full Power,National
-Liam Backhurst,112.5,05/12/2025,Nottingham,T16-17,M,75,Sleeves,B,Full Power,National
-Liam Backhurst,185,05/12/2025,Nottingham,T16-17,M,75,Sleeves,D,Full Power,National
-Liam Backhurst,452.5,05/12/2025,Nottingham,T16-17,M,75,Sleeves,Total,Full Power,National
+Liam Backhurst,155,05/12/2025,National Championships,T16-17,M,75,Sleeves,S,Full Power,National
+Liam Backhurst,112.5,05/12/2025,National Championships,T16-17,M,75,Sleeves,B,Full Power,National
+Liam Backhurst,185,05/12/2025,National Championships,T16-17,M,75,Sleeves,D,Full Power,National
+Liam Backhurst,452.5,05/12/2025,National Championships,T16-17,M,75,Sleeves,Total,Full Power,National
 Gregory Pearson,287.5,02/11/2025,Nottingham,T16-17,M,82.5,Sleeves,S,Full Power,National
 Gregory Pearson,185,02/11/2025,Nottingham,T16-17,M,82.5,Sleeves,B,Full Power,National
 Gregory Pearson,322,02/11/2025,Nottingham,T16-17,M,82.5,Sleeves,D,Full Power,National
@@ -1028,22 +1028,22 @@ Standard,165,,,T16-17DT,M,75,Sleeves,S,Full Power,National
 Islam Kintal,105,09/03/2025,East Coast,T16-17DT,M,75,Sleeves,B,Full Power,National
 Islam Kintal,172.5,09/03/2025,East Coast,T16-17DT,M,75,Sleeves,D,Full Power,National
 Islam Kintal,422.5,09/03/2025,East Coast,T16-17DT,M,75,Sleeves,Total,Full Power,National
-Emil Trybala,200,06/12/2025,Nottingham,T16-17DT,M,82.5,Sleeves,S,Full Power,National
-Emil Trybala,135,06/12/2025,Nottingham,T16-17DT,M,82.5,Sleeves,B,Full Power,National
+Emil Trybala,200,06/12/2025,National Championships,T16-17DT,M,82.5,Sleeves,S,Full Power,National
+Emil Trybala,135,06/12/2025,National Championships,T16-17DT,M,82.5,Sleeves,B,Full Power,National
 Harvey Lock,205,09/03/2025,East Coast,T16-17DT,M,82.5,Sleeves,D,Full Power,National
-Emil Trybala,535,06/12/2025,Nottingham,T16-17DT,M,82.5,Sleeves,Total,Full Power,National
+Emil Trybala,535,06/12/2025,National Championships,T16-17DT,M,82.5,Sleeves,Total,Full Power,National
 Standard,165,,,T16-17DT,M,90,Sleeves,S,Full Power,National
 Kyle Robson,92.5,11/05/2025,Nottingham,T16-17DT,M,90,Sleeves,B,Full Power,National
-Kyle Robson,235,06/12/2025,Nottingham,T16-17DT,M,90,Sleeves,D,Full Power,National
-Kyle Robson,480,06/12/2025,Nottingham,T16-17DT,M,90,Sleeves,Total,Full Power,National
+Kyle Robson,235,06/12/2025,National Championships,T16-17DT,M,90,Sleeves,D,Full Power,National
+Kyle Robson,480,06/12/2025,National Championships,T16-17DT,M,90,Sleeves,Total,Full Power,National
 Oliver Andrews Reeves,200,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,S,Full Power,National
 Oliver Andrews Reeves,130,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,B,Full Power,National
 Kyle Robson,215,24/08/2025,North East,T16-17DT,M,100,Sleeves,D,Full Power,National
 Oliver Andrews Reeves,515,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,Total,Full Power,National
-Oliver Andrews Reeves,205,06/12/2025,Nottingham,T16-17DT,M,110,Sleeves,S,Full Power,National
-Oliver Andrews Reeves,147.5,06/12/2025,Nottingham,T16-17DT,M,110,Sleeves,B,Full Power,National
+Oliver Andrews Reeves,205,06/12/2025,National Championships,T16-17DT,M,110,Sleeves,S,Full Power,National
+Oliver Andrews Reeves,147.5,06/12/2025,National Championships,T16-17DT,M,110,Sleeves,B,Full Power,National
 George Colley,225,09/03/2025,East Coast,T16-17DT,M,110,Sleeves,D,Full Power,National
-Oliver Andrews Reeves,547.5,06/12/2025,Nottingham,T16-17DT,M,110,Sleeves,Total,Full Power,National
+Oliver Andrews Reeves,547.5,06/12/2025,National Championships,T16-17DT,M,110,Sleeves,Total,Full Power,National
 Standard,185,,,T16-17DT,M,125,Sleeves,S,Full Power,National
 Standard,107.5,,,T16-17DT,M,125,Sleeves,B,Full Power,National
 Standard,195,,,T16-17DT,M,125,Sleeves,D,Full Power,National
@@ -1116,7 +1116,7 @@ Standard,142.5,,,T18-19DT,M,60,Sleeves,S,Full Power,National
 Standard,80,,,T18-19DT,M,60,Sleeves,B,Full Power,National
 Standard,150,,,T18-19DT,M,60,Sleeves,D,Full Power,National
 Standard,362.5,,,T18-19DT,M,60,Sleeves,Total,Full Power,National
-Steffan Edwards,165,06/12/2025,Nottingham,T18-19DT,M,67.5,Sleeves,S,Full Power,National
+Steffan Edwards,165,06/12/2025,National Championships,T18-19DT,M,67.5,Sleeves,S,Full Power,National
 Standard,92.5,,,T18-19DT,M,67.5,Sleeves,B,Full Power,National
 Steffan Edwards,187.5,10/08/2025,South West,T18-19DT,M,67.5,Sleeves,D,Full Power,National
 Steffan Edwards,432.5,10/08/2025,South West,T18-19DT,M,67.5,Sleeves,Total,Full Power,National
@@ -1134,11 +1134,11 @@ Kye Myers,280,28/09/2025,South Midlands,T18-19DT,M,90,Sleeves,D,Full Power,Natio
 Kye Myers,603.5,28/09/2025,South Midlands,T18-19DT,M,90,Sleeves,Total,Full Power,National
 Standard,205,,,T18-19DT,M,100,Sleeves,S,Full Power,National
 Standard,115,,,T18-19DT,M,100,Sleeves,B,Full Power,National
-Jacob Rana,215.5,06/12/2025,Nottingham,T18-19DT,M,100,Sleeves,D,Full Power,National
+Jacob Rana,215.5,06/12/2025,National Championships,T18-19DT,M,100,Sleeves,D,Full Power,National
 Standard,522.5,,,T18-19DT,M,100,Sleeves,Total,Full Power,National
 Oliver Whalley,270,24/08/2025,North East,T18-19DT,M,110,Sleeves,S,Full Power,National
-George Colley,150,06/12/2025,Nottingham,T18-19DT,M,110,Sleeves,B,Full Power,National
-Oliver Whalley,251,06/12/2025,Nottingham,T18-19DT,M,110,Sleeves,D,Full Power,National
+George Colley,150,06/12/2025,National Championships,T18-19DT,M,110,Sleeves,B,Full Power,National
+Oliver Whalley,251,06/12/2025,National Championships,T18-19DT,M,110,Sleeves,D,Full Power,National
 Oliver Whalley,640.5,24/08/2025,North East,T18-19DT,M,110,Sleeves,Total,Full Power,National
 Standard,217.5,,,T18-19DT,M,125,Sleeves,S,Full Power,National
 Oliver Hayes,125.5,24/08/2025,North East,T18-19DT,M,125,Sleeves,B,Full Power,National
@@ -1177,9 +1177,9 @@ Standard,127.5,,,Junior,M,82.5,Sleeves,B,Full Power,National
 Standard,237.5,,,Junior,M,82.5,Sleeves,D,Full Power,National
 Standard,575,,,Junior,M,82.5,Sleeves,Total,Full Power,National
 Standard,237.5,,,Junior,M,90,Sleeves,S,Full Power,National
-Adam Malton,135,05/12/2025,Nottingham,Junior,M,90,Sleeves,B,Full Power,National
-Adam Malton,250,05/12/2025,Nottingham,Junior,M,90,Sleeves,D,Full Power,National
-Adam Malton,610,05/12/2025,Nottingham,Junior,M,90,Sleeves,Total,Full Power,National
+Adam Malton,135,05/12/2025,National Championships,Junior,M,90,Sleeves,B,Full Power,National
+Adam Malton,250,05/12/2025,National Championships,Junior,M,90,Sleeves,D,Full Power,National
+Adam Malton,610,05/12/2025,National Championships,Junior,M,90,Sleeves,Total,Full Power,National
 Andrew Martin,311,24/08/2025,North East,Junior,M,100,Sleeves,S,Full Power,National
 Andrew Martin,217.5,24/08/2025,North East,Junior,M,100,Sleeves,B,Full Power,National
 Andrew Martin,317.5,24/08/2025,North East,Junior,M,100,Sleeves,D,Full Power,National
@@ -1217,7 +1217,7 @@ Standard,110,,,JuniorDT,M,67.5,Sleeves,B,Full Power,National
 Standard,202.5,,,JuniorDT,M,67.5,Sleeves,D,Full Power,National
 Standard,490,,,JuniorDT,M,67.5,Sleeves,Total,Full Power,National
 Standard,215,,,JuniorDT,M,75,Sleeves,S,Full Power,National
-Malvin Gauci,125.5,06/12/2025,Nottingham,JuniorDT,M,75,Sleeves,B,Full Power,National
+Malvin Gauci,125.5,06/12/2025,National Championships,JuniorDT,M,75,Sleeves,B,Full Power,National
 Geovani Negri,225,10/08/2025,South West,JuniorDT,M,75,Sleeves,D,Full Power,National
 Geovani Negri,557.5,10/08/2025,South West,JuniorDT,M,75,Sleeves,Total,Full Power,National
 Zach Smith,232.5,09/03/2025,East Coast,JuniorDT,M,82.5,Sleeves,S,Full Power,National
@@ -1228,17 +1228,17 @@ Jai Richardson,235,04/05/2025,North West,JuniorDT,M,90,Sleeves,S,Full Power,Nati
 Jai Richardson,152.5,04/05/2025,North West,JuniorDT,M,90,Sleeves,B,Full Power,National
 Jai Richardson,275,04/05/2025,North West,JuniorDT,M,90,Sleeves,D,Full Power,National
 Jai Richardson,662.5,04/05/2025,North West,JuniorDT,M,90,Sleeves,Total,Full Power,National
-Jai Richardson,270,06/12/2025,Nottingham,JuniorDT,M,100,Sleeves,S,Full Power,National
-Jai Richardson,170,06/12/2025,Nottingham,JuniorDT,M,100,Sleeves,B,Full Power,National
+Jai Richardson,270,06/12/2025,National Championships,JuniorDT,M,100,Sleeves,S,Full Power,National
+Jai Richardson,170,06/12/2025,National Championships,JuniorDT,M,100,Sleeves,B,Full Power,National
 Tyrease Ferris,285,24/08/2025,North East,JuniorDT,M,100,Sleeves,D,Full Power,National
-Jai Richardson,720,06/12/2025,Nottingham,JuniorDT,M,100,Sleeves,Total,Full Power,National
+Jai Richardson,720,06/12/2025,National Championships,JuniorDT,M,100,Sleeves,Total,Full Power,National
 Jamie Jonathan Foord,290,02/11/2025,Nottingham,JuniorDT,M,110,Sleeves,S,Full Power,National
 Jamie Jonathan Foord,192.5,02/11/2025,Nottingham,JuniorDT,M,110,Sleeves,B,Full Power,National
 Jamie Jonathan Foord,350,02/11/2025,Nottingham,JuniorDT,M,110,Sleeves,D,Full Power,National
 Jamie Jonathan Foord,832.5,02/11/2025,Nottingham,JuniorDT,M,110,Sleeves,Total,Full Power,National
 Lukas Jusko,320,02/11/2025,Nottingham,JuniorDT,M,125,Sleeves,S,Full Power,National
-Tyrease Ferris,177.5,06/12/2025,Nottingham,JuniorDT,M,125,Sleeves,B,Full Power,National
-Tyrease Ferris,300,06/12/2025,Nottingham,JuniorDT,M,125,Sleeves,D,Full Power,National
+Tyrease Ferris,177.5,06/12/2025,National Championships,JuniorDT,M,125,Sleeves,B,Full Power,National
+Tyrease Ferris,300,06/12/2025,National Championships,JuniorDT,M,125,Sleeves,D,Full Power,National
 Lukas Jusko,775,02/11/2025,Nottingham,JuniorDT,M,125,Sleeves,Total,Full Power,National
 Standard,260,,,JuniorDT,M,140,Sleeves,S,Full Power,National
 Standard,147.5,,,JuniorDT,M,140,Sleeves,B,Full Power,National
@@ -1269,9 +1269,9 @@ Standard,117.5,,,M40-49,M,75,Sleeves,B,Full Power,National
 Standard,217.5,,,M40-49,M,75,Sleeves,D,Full Power,National
 Standard,525,,,M40-49,M,75,Sleeves,Total,Full Power,National
 Standard,232.5,,,M40-49,M,82.5,Sleeves,S,Full Power,National
-Darren Clayton,150,05/12/2025,Nottingham,M40-49,M,82.5,Sleeves,B,Full Power,National
-Darren Clayton,245,05/12/2025,Nottingham,M40-49,M,82.5,Sleeves,D,Full Power,National
-Darren Clayton,605,05/12/2025,Nottingham,M40-49,M,82.5,Sleeves,Total,Full Power,National
+Darren Clayton,150,05/12/2025,National Championships,M40-49,M,82.5,Sleeves,B,Full Power,National
+Darren Clayton,245,05/12/2025,National Championships,M40-49,M,82.5,Sleeves,D,Full Power,National
+Darren Clayton,605,05/12/2025,National Championships,M40-49,M,82.5,Sleeves,Total,Full Power,National
 Clifford Richards,255,10/08/2025,South West,M40-49,M,90,Sleeves,S,Full Power,National
 Clifford Richards,200,10/08/2025,South West,M40-49,M,90,Sleeves,B,Full Power,National
 Standard,257.5,,,M40-49,M,90,Sleeves,D,Full Power,National
@@ -1320,10 +1320,10 @@ Standard,205,,,M50-59,M,82.5,Sleeves,S,Full Power,National
 Standard,115,,,M50-59,M,82.5,Sleeves,B,Full Power,National
 Standard,215,,,M50-59,M,82.5,Sleeves,D,Full Power,National
 Standard,520,,,M50-59,M,82.5,Sleeves,Total,Full Power,National
-Les Attewell,220,05/12/2025,Nottingham,M50-59,M,90,Sleeves,S,Full Power,National
-Les Attewell,140,05/12/2025,Nottingham,M50-59,M,90,Sleeves,B,Full Power,National
-Les Attewell,275,05/12/2025,Nottingham,M50-59,M,90,Sleeves,D,Full Power,National
-Les Attewell,635,05/12/2025,Nottingham,M50-59,M,90,Sleeves,Total,Full Power,National
+Les Attewell,220,05/12/2025,National Championships,M50-59,M,90,Sleeves,S,Full Power,National
+Les Attewell,140,05/12/2025,National Championships,M50-59,M,90,Sleeves,B,Full Power,National
+Les Attewell,275,05/12/2025,National Championships,M50-59,M,90,Sleeves,D,Full Power,National
+Les Attewell,635,05/12/2025,National Championships,M50-59,M,90,Sleeves,Total,Full Power,National
 Darren Walker,232.5,10/08/2025,South West,M50-59,M,100,Sleeves,S,Full Power,National
 Steve Whittles,140,04/05/2025,North West,M50-59,M,100,Sleeves,B,Full Power,National
 Darren Walker,280,10/08/2025,South West,M50-59,M,100,Sleeves,D,Full Power,National
@@ -1588,11 +1588,11 @@ Standard,85,,,OpenDT,F,44,Sleeves,S,Full Power,National
 Standard,45,,,OpenDT,F,44,Sleeves,B,Full Power,National
 Standard,92.5,,,OpenDT,F,44,Sleeves,D,Full Power,National
 Standard,217.5,,,OpenDT,F,44,Sleeves,Total,Full Power,National
-Emily Hussey,103,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,S,Full Power,National
-Emily Hussey,55.5,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,B,Full Power,National
-Emily Hussey,127.5,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,D,Full Power,National
-Emily Hussey,286,07/12/2025,Nottingham,OpenDT,F,48,Sleeves,Total,Full Power,National
-Sadife Kisyova,117.5,07/12/2025,Nottingham,OpenDT,F,52,Sleeves,S,Full Power,National
+Emily Hussey,103,07/12/2025,National Championships,OpenDT,F,48,Sleeves,S,Full Power,National
+Emily Hussey,55.5,07/12/2025,National Championships,OpenDT,F,48,Sleeves,B,Full Power,National
+Emily Hussey,127.5,07/12/2025,National Championships,OpenDT,F,48,Sleeves,D,Full Power,National
+Emily Hussey,286,07/12/2025,National Championships,OpenDT,F,48,Sleeves,Total,Full Power,National
+Sadife Kisyova,117.5,07/12/2025,National Championships,OpenDT,F,52,Sleeves,S,Full Power,National
 Lamorna Bardwell,70,02/11/2025,Nottingham,OpenDT,F,52,Sleeves,B,Full Power,National
 Lamorna Bardwell,155,02/11/2025,Nottingham,OpenDT,F,52,Sleeves,D,Full Power,National
 Lamorna Bardwell,337.5,02/11/2025,Nottingham,OpenDT,F,52,Sleeves,Total,Full Power,National
@@ -1605,7 +1605,7 @@ Charlotte Viccars,97.5,02/11/2025,Nottingham,OpenDT,F,60,Sleeves,B,Full Power,Na
 Siobhan Read,180,04/05/2025,North West,OpenDT,F,60,Sleeves,D,Full Power,National
 Siobhan Read,422.5,04/05/2025,North West,OpenDT,F,60,Sleeves,Total,Full Power,National
 Claire Rutland,152.5,03/08/2025,Welwyn Garden City,OpenDT,F,67.5,Sleeves,S,Full Power,National
-Bec Giles,95,07/12/2025,Nottingham,OpenDT,F,67.5,Sleeves,B,Full Power,National
+Bec Giles,95,07/12/2025,National Championships,OpenDT,F,67.5,Sleeves,B,Full Power,National
 Lizzie Pipe,182.5,02/11/2025,Nottingham,OpenDT,F,67.5,Sleeves,D,Full Power,National
 Lizzie Pipe,415,04/05/2025,North West,OpenDT,F,67.5,Sleeves,Total,Full Power,National
 Sarah Higgins,172.5,02/11/2025,Nottingham,OpenDT,F,75,Sleeves,S,Full Power,National
@@ -1716,10 +1716,10 @@ Standard,92.5,,,T14-15DT,F,90,Sleeves,S,Full Power,National
 Standard,52.5,,,T14-15DT,F,90,Sleeves,B,Full Power,National
 Standard,97.5,,,T14-15DT,F,90,Sleeves,D,Full Power,National
 Standard,232.5,,,T14-15DT,F,90,Sleeves,Total,Full Power,National
-Eleni Bradshaw,130,07/12/2025,Nottingham,T14-15DT,F,100,Sleeves,S,Full Power,National
+Eleni Bradshaw,130,07/12/2025,National Championships,T14-15DT,F,100,Sleeves,S,Full Power,National
 Standard,60,,,T14-15DT,F,100,Sleeves,B,Full Power,National
-Eleni Bradshaw,150,07/12/2025,Nottingham,T14-15DT,F,100,Sleeves,D,Full Power,National
-Eleni Bradshaw,337.5,07/12/2025,Nottingham,T14-15DT,F,100,Sleeves,Total,Full Power,National
+Eleni Bradshaw,150,07/12/2025,National Championships,T14-15DT,F,100,Sleeves,D,Full Power,National
+Eleni Bradshaw,337.5,07/12/2025,National Championships,T14-15DT,F,100,Sleeves,Total,Full Power,National
 Standard,115,,,T14-15DT,F,110,Sleeves,S,Full Power,National
 Standard,62.5,,,T14-15DT,F,110,Sleeves,B,Full Power,National
 Standard,132.5,,,T14-15DT,F,110,Sleeves,D,Full Power,National
@@ -1789,9 +1789,9 @@ Standard,40,,,T16-17DT,F,52,Sleeves,B,Full Power,National
 Standard,70,,,T16-17DT,F,52,Sleeves,D,Full Power,National
 Standard,170,,,T16-17DT,F,52,Sleeves,Total,Full Power,National
 Rubee Whittaker,110,28/09/2025,South Midlands,T16-17DT,F,56,Sleeves,S,Full Power,National
-Rubee Whittaker,55,07/12/2025,Nottingham,T16-17DT,F,56,Sleeves,B,Full Power,National
-Rubee Whittaker,157.5,07/12/2025,Nottingham,T16-17DT,F,56,Sleeves,D,Full Power,National
-Rubee Whittaker,322.5,07/12/2025,Nottingham,T16-17DT,F,56,Sleeves,Total,Full Power,National
+Rubee Whittaker,55,07/12/2025,National Championships,T16-17DT,F,56,Sleeves,B,Full Power,National
+Rubee Whittaker,157.5,07/12/2025,National Championships,T16-17DT,F,56,Sleeves,D,Full Power,National
+Rubee Whittaker,322.5,07/12/2025,National Championships,T16-17DT,F,56,Sleeves,Total,Full Power,National
 Standard,82.5,,,T16-17DT,F,60,Sleeves,S,Full Power,National
 Standard,47.5,,,T16-17DT,F,60,Sleeves,B,Full Power,National
 Standard,87.5,,,T16-17DT,F,60,Sleeves,D,Full Power,National
@@ -1885,9 +1885,9 @@ Ruby Harrison,52.5,17/08/2025,North West,T18-19DT,F,52,Sleeves,B,Full Power,Nati
 Ruby Harrison,105,17/08/2025,North West,T18-19DT,F,52,Sleeves,D,Full Power,National
 Ruby Harrison,242.5,17/08/2025,North West,T18-19DT,F,52,Sleeves,Total,Full Power,National
 Ruby Harrison,90,06/04/2025,South Midlands,T18-19DT,F,56,Sleeves,S,Full Power,National
-Ruby Harrison,55,07/12/2025,Nottingham,T18-19DT,F,56,Sleeves,B,Full Power,National
+Ruby Harrison,55,07/12/2025,National Championships,T18-19DT,F,56,Sleeves,B,Full Power,National
 Ruby Harrison,110,06/04/2025,South Midlands,T18-19DT,F,56,Sleeves,D,Full Power,National
-Ruby Harrison,250,07/12/2025,Nottingham,T18-19DT,F,56,Sleeves,Total,Full Power,National
+Ruby Harrison,250,07/12/2025,National Championships,T18-19DT,F,56,Sleeves,Total,Full Power,National
 Standard,95,,,T18-19DT,F,60,Sleeves,S,Full Power,National
 Standard,50,,,T18-19DT,F,60,Sleeves,B,Full Power,National
 Standard,105,,,T18-19DT,F,60,Sleeves,D,Full Power,National
@@ -1984,10 +1984,10 @@ Kelise Harrington,135,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,S,Full Power,N
 Kelise Harrington,72.5,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,B,Full Power,National
 Kelise Harrington,175,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,D,Full Power,National
 Kelise Harrington,382.5,02/11/2025,Nottingham,JuniorDT,F,56,Sleeves,Total,Full Power,National
-Reegan Green,160,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,S,Full Power,National
-Reegan Green,70,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,B,Full Power,National
-Reegan Green,175,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,D,Full Power,National
-Reegan Green,405,07/12/2025,Nottingham,JuniorDT,F,60,Sleeves,Total,Full Power,National
+Reegan Green,160,07/12/2025,National Championships,JuniorDT,F,60,Sleeves,S,Full Power,National
+Reegan Green,70,07/12/2025,National Championships,JuniorDT,F,60,Sleeves,B,Full Power,National
+Reegan Green,175,07/12/2025,National Championships,JuniorDT,F,60,Sleeves,D,Full Power,National
+Reegan Green,405,07/12/2025,National Championships,JuniorDT,F,60,Sleeves,Total,Full Power,National
 Standard,122.5,,,JuniorDT,F,67.5,Sleeves,S,Full Power,National
 Abigail Gosling,67.5,16/02/2025,Nottingham,JuniorDT,F,67.5,Sleeves,B,Full Power,National
 Amera Telfer-Ross,167.5,28/09/2025,South Midlands,JuniorDT,F,67.5,Sleeves,D,Full Power,National
@@ -2049,8 +2049,8 @@ Standard,72.5,,,M40-49,F,82.5,Sleeves,B,Full Power,National
 Standard,150,,,M40-49,F,82.5,Sleeves,D,Full Power,National
 Standard,362.5,,,M40-49,F,82.5,Sleeves,Total,Full Power,National
 Standard,152.5,,,M40-49,F,90,Sleeves,S,Full Power,National
-Claire Hopley,85,05/12/2025,Nottingham,M40-49,F,90,Sleeves,B,Full Power,National
-Claire Hopley,162.5,05/12/2025,Nottingham,M40-49,F,90,Sleeves,D,Full Power,National
+Claire Hopley,85,05/12/2025,National Championships,M40-49,F,90,Sleeves,B,Full Power,National
+Claire Hopley,162.5,05/12/2025,National Championships,M40-49,F,90,Sleeves,D,Full Power,National
 Standard,385,,,M40-49,F,90,Sleeves,Total,Full Power,National
 Standard,152.5,,,M40-49,F,100,Sleeves,S,Full Power,National
 Standard,82.5,,,M40-49,F,100,Sleeves,B,Full Power,National
@@ -2137,9 +2137,9 @@ Standard,52.5,,,M60-69,F,67.5,Sleeves,B,Full Power,National
 Standard,105,,,M60-69,F,67.5,Sleeves,D,Full Power,National
 Standard,252.5,,,M60-69,F,67.5,Sleeves,Total,Full Power,National
 Standard,102.5,,,M60-69,F,75,Sleeves,S,Full Power,National
-Debbie Barr,52.5,05/12/2025,Nottingham,M60-69,F,75,Sleeves,B,Full Power,National
-Debbie Barr,127.5,05/12/2025,Nottingham,M60-69,F,75,Sleeves,D,Full Power,National
-Debbie Barr,280,05/12/2025,Nottingham,M60-69,F,75,Sleeves,Total,Full Power,National
+Debbie Barr,52.5,05/12/2025,National Championships,M60-69,F,75,Sleeves,B,Full Power,National
+Debbie Barr,127.5,05/12/2025,National Championships,M60-69,F,75,Sleeves,D,Full Power,National
+Debbie Barr,280,05/12/2025,National Championships,M60-69,F,75,Sleeves,Total,Full Power,National
 Standard,110,,,M60-69,F,82.5,Sleeves,S,Full Power,National
 Standard,57.5,,,M60-69,F,82.5,Sleeves,B,Full Power,National
 Standard,115,,,M60-69,F,82.5,Sleeves,D,Full Power,National
@@ -2180,14 +2180,14 @@ Beckie Hebson,140,17/08/2025,North West,M40-49DT,F,60,Sleeves,S,Full Power,Natio
 Beckie Hebson,70,17/08/2025,North West,M40-49DT,F,60,Sleeves,B,Full Power,National
 Beckie Hebson,160,17/08/2025,North West,M40-49DT,F,60,Sleeves,D,Full Power,National
 Beckie Hebson,370,17/08/2025,North West,M40-49DT,F,60,Sleeves,Total,Full Power,National
-Sumina Rashid,142.5,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,S,Full Power,National
-Beckie Hebson,70,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,B,Full Power,National
-Beckie Hebson,165,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,D,Full Power,National
-Beckie Hebson,370,07/12/2025,Nottingham,M40-49DT,F,67.5,Sleeves,Total,Full Power,National
+Sumina Rashid,142.5,07/12/2025,National Championships,M40-49DT,F,67.5,Sleeves,S,Full Power,National
+Beckie Hebson,70,07/12/2025,National Championships,M40-49DT,F,67.5,Sleeves,B,Full Power,National
+Beckie Hebson,165,07/12/2025,National Championships,M40-49DT,F,67.5,Sleeves,D,Full Power,National
+Beckie Hebson,370,07/12/2025,National Championships,M40-49DT,F,67.5,Sleeves,Total,Full Power,National
 Standard,130,,,M40-49DT,F,75,Sleeves,S,Full Power,National
 Standard,70,,,M40-49DT,F,75,Sleeves,B,Full Power,National
-Kim Johnson,170,07/12/2025,Nottingham,M40-49DT,F,75,Sleeves,D,Full Power,National
-Kim Johnson,355,07/12/2025,Nottingham,M40-49DT,F,75,Sleeves,Total,Full Power,National
+Kim Johnson,170,07/12/2025,National Championships,M40-49DT,F,75,Sleeves,D,Full Power,National
+Kim Johnson,355,07/12/2025,National Championships,M40-49DT,F,75,Sleeves,Total,Full Power,National
 Standard,140,,,M40-49DT,F,82.5,Sleeves,S,Full Power,National
 Standard,72.5,,,M40-49DT,F,82.5,Sleeves,B,Full Power,National
 Standard,152.5,,,M40-49DT,F,82.5,Sleeves,D,Full Power,National
@@ -2200,12 +2200,12 @@ Standard,150,,,M40-49DT,F,100,Sleeves,S,Full Power,National
 Standard,82.5,,,M40-49DT,F,100,Sleeves,B,Full Power,National
 Standard,175,,,M40-49DT,F,100,Sleeves,D,Full Power,National
 Standard,405,,,M40-49DT,F,100,Sleeves,Total,Full Power,National
-Marie Hume,175,07/12/2025,Nottingham,M40-49DT,F,110,Sleeves,S,Full Power,National
-Marie Hume,95,07/12/2025,Nottingham,M40-49DT,F,110,Sleeves,B,Full Power,National
+Marie Hume,175,07/12/2025,National Championships,M40-49DT,F,110,Sleeves,S,Full Power,National
+Marie Hume,95,07/12/2025,National Championships,M40-49DT,F,110,Sleeves,B,Full Power,National
 Standard,180,,,M40-49DT,F,110,Sleeves,D,Full Power,National
-Marie Hume,440,07/12/2025,Nottingham,M40-49DT,F,110,Sleeves,Total,Full Power,National
-Jamiella Bruzulier,160,07/12/2025,Nottingham,M40-49DT,F,110+,Sleeves,S,Full Power,National
-Jamiella Bruzulier,92.5,07/12/2025,Nottingham,M40-49DT,F,110+,Sleeves,B,Full Power,National
+Marie Hume,440,07/12/2025,National Championships,M40-49DT,F,110,Sleeves,Total,Full Power,National
+Jamiella Bruzulier,160,07/12/2025,National Championships,M40-49DT,F,110+,Sleeves,S,Full Power,National
+Jamiella Bruzulier,92.5,07/12/2025,National Championships,M40-49DT,F,110+,Sleeves,B,Full Power,National
 Standard,185,,,M40-49DT,F,110+,Sleeves,D,Full Power,National
 Standard,425,,,M40-49DT,F,110+,Sleeves,Total,Full Power,National
 Standard,72.5,,,M50-59DT,F,44,Sleeves,S,Full Power,National
@@ -2226,28 +2226,28 @@ Standard,105,,,M50-59DT,F,56,Sleeves,D,Full Power,National
 Standard,255,,,M50-59DT,F,56,Sleeves,Total,Full Power,National
 Standard,112.5,,,M50-59DT,F,60,Sleeves,S,Full Power,National
 Standard,65,,,M50-59DT,F,60,Sleeves,B,Full Power,National
-Tracey Boore,140,07/12/2025,Nottingham,M50-59DT,F,60,Sleeves,D,Full Power,National
-Louise Wain,295,07/12/2025,Nottingham,M50-59DT,F,60,Sleeves,Total,Full Power,National
+Tracey Boore,140,07/12/2025,National Championships,M50-59DT,F,60,Sleeves,D,Full Power,National
+Louise Wain,295,07/12/2025,National Championships,M50-59DT,F,60,Sleeves,Total,Full Power,National
 Standard,122.5,,,M50-59DT,F,67.5,Sleeves,S,Full Power,National
 Standard,72.5,,,M50-59DT,F,67.5,Sleeves,B,Full Power,National
-April Latham,147.5,07/12/2025,Nottingham,M50-59DT,F,67.5,Sleeves,D,Full Power,National
-April Latham,320,07/12/2025,Nottingham,M50-59DT,F,67.5,Sleeves,Total,Full Power,National
+April Latham,147.5,07/12/2025,National Championships,M50-59DT,F,67.5,Sleeves,D,Full Power,National
+April Latham,320,07/12/2025,National Championships,M50-59DT,F,67.5,Sleeves,Total,Full Power,National
 Standard,127.5,,,M50-59DT,F,75,Sleeves,S,Full Power,National
 Standard,75,,,M50-59DT,F,75,Sleeves,B,Full Power,National
 Standard,135,,,M50-59DT,F,75,Sleeves,D,Full Power,National
 Standard,325,,,M50-59DT,F,75,Sleeves,Total,Full Power,National
 Standard,135,,,M50-59DT,F,82.5,Sleeves,S,Full Power,National
 Standard,80,,,M50-59DT,F,82.5,Sleeves,B,Full Power,National
-Paulette Boniface,165,07/12/2025,Nottingham,M50-59DT,F,82.5,Sleeves,D,Full Power,National
-Paulette Boniface,345,07/12/2025,Nottingham,M50-59DT,F,82.5,Sleeves,Total,Full Power,National
+Paulette Boniface,165,07/12/2025,National Championships,M50-59DT,F,82.5,Sleeves,D,Full Power,National
+Paulette Boniface,345,07/12/2025,National Championships,M50-59DT,F,82.5,Sleeves,Total,Full Power,National
 Standard,142.5,,,M50-59DT,F,90,Sleeves,S,Full Power,National
 Standard,82.5,,,M50-59DT,F,90,Sleeves,B,Full Power,National
-Debbie Leach,155,07/12/2025,Nottingham,M50-59DT,F,90,Sleeves,D,Full Power,National
+Debbie Leach,155,07/12/2025,National Championships,M50-59DT,F,90,Sleeves,D,Full Power,National
 Standard,365,,,M50-59DT,F,90,Sleeves,Total,Full Power,National
-Sarah Hulin,147.5,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,S,Full Power,National
-Sarah Hulin,77.5,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,B,Full Power,National
-Sarah Hulin,160,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,D,Full Power,National
-Sarah Hulin,385,07/12/2025,Nottingham,M50-59DT,F,100,Sleeves,Total,Full Power,National
+Sarah Hulin,147.5,07/12/2025,National Championships,M50-59DT,F,100,Sleeves,S,Full Power,National
+Sarah Hulin,77.5,07/12/2025,National Championships,M50-59DT,F,100,Sleeves,B,Full Power,National
+Sarah Hulin,160,07/12/2025,National Championships,M50-59DT,F,100,Sleeves,D,Full Power,National
+Sarah Hulin,385,07/12/2025,National Championships,M50-59DT,F,100,Sleeves,Total,Full Power,National
 Standard,140,,,M50-59DT,F,110,Sleeves,S,Full Power,National
 Standard,75,,,M50-59DT,F,110,Sleeves,B,Full Power,National
 Standard,162.5,,,M50-59DT,F,110,Sleeves,D,Full Power,National
@@ -2272,10 +2272,10 @@ Standard,95,,,M60-69DT,F,56,Sleeves,S,Full Power,National
 Standard,55,,,M60-69DT,F,56,Sleeves,B,Full Power,National
 Standard,100,,,M60-69DT,F,56,Sleeves,D,Full Power,National
 Standard,242.5,,,M60-69DT,F,56,Sleeves,Total,Full Power,National
-Jo Wright,110,07/12/2025,Nottingham,M60-69DT,F,60,Sleeves,S,Full Power,National
+Jo Wright,110,07/12/2025,National Championships,M60-69DT,F,60,Sleeves,S,Full Power,National
 Standard,62.5,,,M60-69DT,F,60,Sleeves,B,Full Power,National
-Jo Wright,155,07/12/2025,Nottingham,M60-69DT,F,60,Sleeves,D,Full Power,National
-Jo Wright,322.5,07/12/2025,Nottingham,M60-69DT,F,60,Sleeves,Total,Full Power,National
+Jo Wright,155,07/12/2025,National Championships,M60-69DT,F,60,Sleeves,D,Full Power,National
+Jo Wright,322.5,07/12/2025,National Championships,M60-69DT,F,60,Sleeves,Total,Full Power,National
 Standard,117.5,,,M60-69DT,F,67.5,Sleeves,S,Full Power,National
 Standard,67.5,,,M60-69DT,F,67.5,Sleeves,B,Full Power,National
 Standard,122.5,,,M60-69DT,F,67.5,Sleeves,D,Full Power,National
@@ -2756,10 +2756,10 @@ Standard,227.5,,,JuniorDT,M,75,Wraps,S,Full Power,National
 Standard,132.5,,,JuniorDT,M,75,Wraps,B,Full Power,National
 Standard,240,,,JuniorDT,M,75,Wraps,D,Full Power,National
 Standard,582.5,,,JuniorDT,M,75,Wraps,Total,Full Power,National
-Memphis Lindley,245,06/12/2025,Nottingham,JuniorDT,M,82.5,Wraps,S,Full Power,National
+Memphis Lindley,245,06/12/2025,National Championships,JuniorDT,M,82.5,Wraps,S,Full Power,National
 Standard,137.5,,,JuniorDT,M,82.5,Wraps,B,Full Power,National
 Standard,252.5,,,JuniorDT,M,82.5,Wraps,D,Full Power,National
-Memphis Lindley,612.5,06/12/2025,Nottingham,JuniorDT,M,82.5,Wraps,Total,Full Power,National
+Memphis Lindley,612.5,06/12/2025,National Championships,JuniorDT,M,82.5,Wraps,Total,Full Power,National
 Standard,245,,,JuniorDT,M,90,Wraps,S,Full Power,National
 Standard,142.5,,,JuniorDT,M,90,Wraps,B,Full Power,National
 Standard,257.5,,,JuniorDT,M,90,Wraps,D,Full Power,National
@@ -2780,10 +2780,10 @@ Standard,277.5,,,JuniorDT,M,140,Wraps,S,Full Power,National
 Standard,160,,,JuniorDT,M,140,Wraps,B,Full Power,National
 Standard,292.5,,,JuniorDT,M,140,Wraps,D,Full Power,National
 Standard,707.5,,,JuniorDT,M,140,Wraps,Total,Full Power,National
-William Mccoll,360,06/12/2025,Nottingham,JuniorDT,M,140+,Wraps,S,Full Power,National
-William Mccoll,235,06/12/2025,Nottingham,JuniorDT,M,140+,Wraps,B,Full Power,National
+William Mccoll,360,06/12/2025,National Championships,JuniorDT,M,140+,Wraps,S,Full Power,National
+William Mccoll,235,06/12/2025,National Championships,JuniorDT,M,140+,Wraps,B,Full Power,National
 Standard,297.5,,,JuniorDT,M,140+,Wraps,D,Full Power,National
-William Mccoll,860,06/12/2025,Nottingham,JuniorDT,M,140+,Wraps,Total,Full Power,National
+William Mccoll,860,06/12/2025,National Championships,JuniorDT,M,140+,Wraps,Total,Full Power,National
 Standard,137.5,,,M40-49,M,52,Wraps,S,Full Power,National
 Standard,80,,,M40-49,M,52,Wraps,B,Full Power,National
 Standard,145,,,M40-49,M,52,Wraps,D,Full Power,National
@@ -2860,10 +2860,10 @@ Standard,240,,,M50-59,M,90,Wraps,S,Full Power,National
 Standard,140,,,M50-59,M,90,Wraps,B,Full Power,National
 Standard,252.5,,,M50-59,M,90,Wraps,D,Full Power,National
 Standard,612.5,,,M50-59,M,90,Wraps,Total,Full Power,National
-Paul Wain,270,05/12/2025,Nottingham,M50-59,M,100,Wraps,S,Full Power,National
-Paul Wain,155,05/12/2025,Nottingham,M50-59,M,100,Wraps,B,Full Power,National
-Paul Wain,302.5,05/12/2025,Nottingham,M50-59,M,100,Wraps,D,Full Power,National
-Paul Wain,727.5,05/12/2025,Nottingham,M50-59,M,100,Wraps,Total,Full Power,National
+Paul Wain,270,05/12/2025,National Championships,M50-59,M,100,Wraps,S,Full Power,National
+Paul Wain,155,05/12/2025,National Championships,M50-59,M,100,Wraps,B,Full Power,National
+Paul Wain,302.5,05/12/2025,National Championships,M50-59,M,100,Wraps,D,Full Power,National
+Paul Wain,727.5,05/12/2025,National Championships,M50-59,M,100,Wraps,Total,Full Power,National
 Standard,265,,,M50-59,M,110,Wraps,S,Full Power,National
 Standard,152.5,,,M50-59,M,110,Wraps,B,Full Power,National
 Standard,277.5,,,M50-59,M,110,Wraps,D,Full Power,National
@@ -3368,10 +3368,10 @@ Standard,115,,,T18-19,F,56,Wraps,S,Full Power,National
 Standard,67.5,,,T18-19,F,56,Wraps,B,Full Power,National
 Standard,120,,,T18-19,F,56,Wraps,D,Full Power,National
 Standard,290,,,T18-19,F,56,Wraps,Total,Full Power,National
-Nikola Bergane,170,05/12/2025,Nottingham,T18-19,F,60,Wraps,S,Full Power,National
+Nikola Bergane,170,05/12/2025,National Championships,T18-19,F,60,Wraps,S,Full Power,National
 Standard,72.5,,,T18-19,F,60,Wraps,B,Full Power,National
-Nikola Bergane,160,05/12/2025,Nottingham,T18-19,F,60,Wraps,D,Full Power,National
-Nikola Bergane,395,05/12/2025,Nottingham,T18-19,F,60,Wraps,Total,Full Power,National
+Nikola Bergane,160,05/12/2025,National Championships,T18-19,F,60,Wraps,D,Full Power,National
+Nikola Bergane,395,05/12/2025,National Championships,T18-19,F,60,Wraps,Total,Full Power,National
 Standard,130,,,T18-19,F,67.5,Wraps,S,Full Power,National
 Standard,75,,,T18-19,F,67.5,Wraps,B,Full Power,National
 Standard,137.5,,,T18-19,F,67.5,Wraps,D,Full Power,National
@@ -3468,10 +3468,10 @@ Standard,145,,,Junior,F,60,Wraps,S,Full Power,National
 Standard,85,,,Junior,F,60,Wraps,B,Full Power,National
 Standard,152.5,,,Junior,F,60,Wraps,D,Full Power,National
 Standard,370,,,Junior,F,60,Wraps,Total,Full Power,National
-Nyah Aughton-Rimmer,160,05/12/2025,Nottingham,Junior,F,67.5,Wraps,S,Full Power,National
+Nyah Aughton-Rimmer,160,05/12/2025,National Championships,Junior,F,67.5,Wraps,S,Full Power,National
 Standard,87.5,,,Junior,F,67.5,Wraps,B,Full Power,National
 Standard,160,,,Junior,F,67.5,Wraps,D,Full Power,National
-Nyah Aughton-Rimmer,387.5,05/12/2025,Nottingham,Junior,F,67.5,Wraps,Total,Full Power,National
+Nyah Aughton-Rimmer,387.5,05/12/2025,National Championships,Junior,F,67.5,Wraps,Total,Full Power,National
 Standard,162.5,,,Junior,F,75,Wraps,S,Full Power,National
 Standard,95,,,Junior,F,75,Wraps,B,Full Power,National
 Standard,170,,,Junior,F,75,Wraps,D,Full Power,National
@@ -3760,10 +3760,10 @@ Standard,140,,,M50-59DT,F,67.5,Wraps,S,Full Power,National
 Standard,80,,,M50-59DT,F,67.5,Wraps,B,Full Power,National
 Standard,147.5,,,M50-59DT,F,67.5,Wraps,D,Full Power,National
 Standard,355,,,M50-59DT,F,67.5,Wraps,Total,Full Power,National
-Annmarie Botha-Jones,152.5,07/12/2025,Nottingham,M50-59DT,F,75,Wraps,S,Full Power,National
+Annmarie Botha-Jones,152.5,07/12/2025,National Championships,M50-59DT,F,75,Wraps,S,Full Power,National
 Standard,85,,,M50-59DT,F,75,Wraps,B,Full Power,National
 Standard,155,,,M50-59DT,F,75,Wraps,D,Full Power,National
-Annmarie Botha-Jones,372.5,07/12/2025,Nottingham,M50-59DT,F,75,Wraps,Total,Full Power,National
+Annmarie Botha-Jones,372.5,07/12/2025,National Championships,M50-59DT,F,75,Wraps,Total,Full Power,National
 Standard,152.5,,,M50-59DT,F,82.5,Wraps,S,Full Power,National
 Standard,87.5,,,M50-59DT,F,82.5,Wraps,B,Full Power,National
 Standard,160,,,M50-59DT,F,82.5,Wraps,D,Full Power,National
@@ -3885,7 +3885,7 @@ Standard,222.5,,,Open,M,110,Single-ply,B,Full Power,National
 Standard,310,,,Open,M,110,Single-ply,D,Full Power,National
 Standard,880,,,Open,M,110,Single-ply,Total,Full Power,National
 Standard,222.5,,,Open,M,110,Single-ply,B,Single Lift,National
-Harry Cooper,310,05/12/2025,Nottingham,Open,M,110,Single-ply,D,Single Lift,National
+Harry Cooper,310,05/12/2025,National Championships,Open,M,110,Single-ply,D,Single Lift,National
 Standard,367.5,,,Open,M,125,Single-ply,S,Full Power,National
 Standard,232.5,,,Open,M,125,Single-ply,B,Full Power,National
 Standard,322.5,,,Open,M,125,Single-ply,D,Full Power,National
@@ -3934,10 +3934,10 @@ Standard,240,,,OpenDT,M,75,Single-ply,D,Full Power,National
 Standard,685,,,OpenDT,M,75,Single-ply,Total,Full Power,National
 Standard,172.5,,,OpenDT,M,75,Single-ply,B,Single Lift,National
 Standard,240,,,OpenDT,M,75,Single-ply,D,Single Lift,National
-Paul Campbell,300,06/12/2025,Nottingham,OpenDT,M,82.5,Single-ply,S,Full Power,National
-Paul Campbell,190,06/12/2025,Nottingham,OpenDT,M,82.5,Single-ply,B,Full Power,National
-Paul Campbell,265,06/12/2025,Nottingham,OpenDT,M,82.5,Single-ply,D,Full Power,National
-Paul Campbell,755,06/12/2025,Nottingham,OpenDT,M,82.5,Single-ply,Total,Full Power,National
+Paul Campbell,300,06/12/2025,National Championships,OpenDT,M,82.5,Single-ply,S,Full Power,National
+Paul Campbell,190,06/12/2025,National Championships,OpenDT,M,82.5,Single-ply,B,Full Power,National
+Paul Campbell,265,06/12/2025,National Championships,OpenDT,M,82.5,Single-ply,D,Full Power,National
+Paul Campbell,755,06/12/2025,National Championships,OpenDT,M,82.5,Single-ply,Total,Full Power,National
 Standard,182.5,,,OpenDT,M,82.5,Single-ply,B,Single Lift,National
 Standard,252.5,,,OpenDT,M,82.5,Single-ply,D,Single Lift,National
 Standard,295,,,OpenDT,M,90,Single-ply,S,Full Power,National
@@ -3951,7 +3951,7 @@ Standard,192.5,,,OpenDT,M,100,Single-ply,B,Full Power,National
 Standard,270,,,OpenDT,M,100,Single-ply,D,Full Power,National
 Standard,765,,,OpenDT,M,100,Single-ply,Total,Full Power,National
 Standard,192.5,,,OpenDT,M,100,Single-ply,B,Single Lift,National
-Tom Gee,292.5,06/12/2025,Nottingham,OpenDT,M,100,Single-ply,D,Single Lift,National
+Tom Gee,292.5,06/12/2025,National Championships,OpenDT,M,100,Single-ply,D,Single Lift,National
 Andy Champ,350,05/10/2025,South West,OpenDT,M,110,Single-ply,S,Full Power,National
 Andy Champ,272.5,05/10/2025,South West,OpenDT,M,110,Single-ply,B,Full Power,National
 Standard,280,,,OpenDT,M,110,Single-ply,D,Full Power,National
@@ -4298,7 +4298,7 @@ Standard,227.5,,,T18-19,M,82.5,Single-ply,S,Full Power,National
 Standard,142.5,,,T18-19,M,82.5,Single-ply,B,Full Power,National
 Standard,197.5,,,T18-19,M,82.5,Single-ply,D,Full Power,National
 Standard,565,,,T18-19,M,82.5,Single-ply,Total,Full Power,National
-Gregory Pearson,263,05/12/2025,Nottingham,T18-19,M,82.5,Single-ply,B,Single Lift,National
+Gregory Pearson,263,05/12/2025,National Championships,T18-19,M,82.5,Single-ply,B,Single Lift,National
 Standard,197.5,,,T18-19,M,82.5,Single-ply,D,Single Lift,National
 Standard,235,,,T18-19,M,90,Single-ply,S,Full Power,National
 Standard,145,,,T18-19,M,90,Single-ply,B,Full Power,National
@@ -5078,8 +5078,8 @@ Standard,162.5,,,OpenDT,F,56,Single-ply,S,Full Power,National
 Standard,82.5,,,OpenDT,F,56,Single-ply,B,Full Power,National
 Linzi Waite,145,27/07/2025,East Midlands,OpenDT,F,56,Single-ply,D,Full Power,National
 Standard,405,,,OpenDT,F,56,Single-ply,Total,Full Power,National
-Linzi Waite,82.5,07/12/2025,Nottingham,OpenDT,F,56,Single-ply,B,Single Lift,National
-Linzi Waite,142.5,07/12/2025,Nottingham,OpenDT,F,56,Single-ply,D,Single Lift,National
+Linzi Waite,82.5,07/12/2025,National Championships,OpenDT,F,56,Single-ply,B,Single Lift,National
+Linzi Waite,142.5,07/12/2025,National Championships,OpenDT,F,56,Single-ply,D,Single Lift,National
 Standard,172.5,,,OpenDT,F,60,Single-ply,S,Full Power,National
 Standard,87.5,,,OpenDT,F,60,Single-ply,B,Full Power,National
 Standard,150,,,OpenDT,F,60,Single-ply,D,Full Power,National
@@ -6100,8 +6100,8 @@ Standard,125,,,M60-69DT,F,75,Single-ply,S,Full Power,National
 Standard,62.5,,,M60-69DT,F,75,Single-ply,B,Full Power,National
 Standard,110,,,M60-69DT,F,75,Single-ply,D,Full Power,National
 Standard,310,,,M60-69DT,F,75,Single-ply,Total,Full Power,National
-Kelly Clark,72.5,07/12/2025,Nottingham,M60-69DT,F,75,Single-ply,B,Single Lift,National
-Kelly Clark,141,07/12/2025,Nottingham,M60-69DT,F,75,Single-ply,D,Single Lift,National
+Kelly Clark,72.5,07/12/2025,National Championships,M60-69DT,F,75,Single-ply,B,Single Lift,National
+Kelly Clark,141,07/12/2025,National Championships,M60-69DT,F,75,Single-ply,D,Single Lift,National
 Standard,130,,,M60-69DT,F,82.5,Single-ply,S,Full Power,National
 Standard,65,,,M60-69DT,F,82.5,Single-ply,B,Full Power,National
 Standard,115,,,M60-69DT,F,82.5,Single-ply,D,Full Power,National
@@ -6810,10 +6810,10 @@ Nathan Lynch,240,05/10/2025,South West,JuniorDT,M,75,Multi-ply,D,Full Power,Nati
 Nathan Lynch,620,05/10/2025,South West,JuniorDT,M,75,Multi-ply,Total,Full Power,National
 Standard,155,,,JuniorDT,M,75,Multi-ply,B,Single Lift,National
 Standard,215,,,JuniorDT,M,75,Multi-ply,D,Single Lift,National
-Nathan Lynch,258,06/12/2025,Nottingham,JuniorDT,M,82.5,Multi-ply,S,Full Power,National
-Nathan Lynch,160.5,06/12/2025,Nottingham,JuniorDT,M,82.5,Multi-ply,B,Full Power,National
-Nathan Lynch,242.5,06/12/2025,Nottingham,JuniorDT,M,82.5,Multi-ply,D,Full Power,National
-Nathan Lynch,661,06/12/2025,Nottingham,JuniorDT,M,82.5,Multi-ply,Total,Full Power,National
+Nathan Lynch,258,06/12/2025,National Championships,JuniorDT,M,82.5,Multi-ply,S,Full Power,National
+Nathan Lynch,160.5,06/12/2025,National Championships,JuniorDT,M,82.5,Multi-ply,B,Full Power,National
+Nathan Lynch,242.5,06/12/2025,National Championships,JuniorDT,M,82.5,Multi-ply,D,Full Power,National
+Nathan Lynch,661,06/12/2025,National Championships,JuniorDT,M,82.5,Multi-ply,Total,Full Power,National
 Standard,160,,,JuniorDT,M,82.5,Multi-ply,B,Single Lift,National
 Standard,225,,,JuniorDT,M,82.5,Multi-ply,D,Single Lift,National
 Standard,265,,,JuniorDT,M,90,Multi-ply,S,Full Power,National
