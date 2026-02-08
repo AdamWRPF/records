@@ -11,7 +11,7 @@ Standard,132.5,,,Open,M,75,Bare,B,Single Lift,National
 Standard,247.5,,,Open,M,75,Bare,D,Single Lift,National
 Michael Bond,185,27/04/2025,East Midlands,Open,M,82.5,Bare,B,Single Lift,National
 Standard,277.5,,,Open,M,82.5,Bare,D,Single Lift,National
-Dean Pearson,162.5,05/12/2025,National Championships,Open,M,90,Bare,B,Single Lift,National
+Dean Pearson,163,08/02/2026,Peterborough,Open,M,90,Bare,B,Single Lift,National
 Standard,292.5,,,Open,M,90,Bare,D,Single Lift,National
 John Walsh,190,02/06/2024,Specialist Event,Open,M,100,Bare,B,Single Lift,National
 Chris Derrick,325,05/12/2025,National Championships,Open,M,100,Bare,D,Single Lift,National
@@ -257,7 +257,7 @@ Spas Razhankov,177.5,03/08/2025,Welwyn Garden City,M40-49,M,100,Bare,B,Single Li
 Steven Dale,280,18/01/2026,Lincoln,M40-49,M,100,Bare,D,Single Lift,National
 Steven Dale,185,26/10/2025,International Event,M40-49,M,110,Bare,B,Single Lift,National
 Steven Dale,285,05/12/2025,National Championships,M40-49,M,110,Bare,D,Single Lift,National
-William Mcneil,195,07/09/2025,Lincoln,M40-49,M,125,Bare,B,Single Lift,National
+William Mcneil,195.5,08/02/2026,Peterborough,M40-49,M,125,Bare,B,Single Lift,National
 Standard,295,,,M40-49,M,125,Bare,D,Single Lift,National
 Standard,175,,,M40-49,M,140,Bare,B,Single Lift,National
 Standard,325,,,M40-49,M,140,Bare,D,Single Lift,National
@@ -281,7 +281,7 @@ Standard,125,,,M50-59,M,100,Bare,B,Single Lift,National
 Les Attewell,300,07/09/2025,Lincoln,M50-59,M,100,Bare,D,Single Lift,National
 Piotr Strzala,192.5,05/12/2025,National Championships,M50-59,M,110,Bare,B,Single Lift,National
 Standard,245,,,M50-59,M,110,Bare,D,Single Lift,National
-Paul Carter,160,05/12/2025,National Championships,M50-59,M,125,Bare,B,Single Lift,National
+Simon French,172.5,08/02/2026,Peterborough,M50-59,M,125,Bare,B,Single Lift,National
 Standard,260,,,M50-59,M,125,Bare,D,Single Lift,National
 Standard,152.5,,,M50-59,M,140,Bare,B,Single Lift,National
 Standard,285,,,M50-59,M,140,Bare,D,Single Lift,National
@@ -327,7 +327,7 @@ Standard,135,,,M40-49DT,M,90,Bare,B,Single Lift,National
 Standard,252.5,,,M40-49DT,M,90,Bare,D,Single Lift,National
 Jacek Szast,145,03/08/2025,Welwyn Garden City,M40-49DT,M,100,Bare,B,Single Lift,National
 Standard,260,,,M40-49DT,M,100,Bare,D,Single Lift,National
-Standard,142.5,,,M40-49DT,M,110,Bare,B,Single Lift,National
+Sergej Naumenko,160,08/02/2026,Peterborough,M40-49DT,M,110,Bare,B,Single Lift,National
 Standard,267.5,,,M40-49DT,M,110,Bare,D,Single Lift,National
 Sergej Naumenko,165,06/12/2025,National Championships,M40-49DT,M,125,Bare,B,Single Lift,National
 Standard,275,,,M40-49DT,M,125,Bare,D,Single Lift,National
@@ -620,7 +620,7 @@ Standard,75,,,JuniorDT,F,90,Bare,B,Single Lift,National
 Standard,157.5,,,JuniorDT,F,90,Bare,D,Single Lift,National
 Standard,80,,,JuniorDT,F,100,Bare,B,Single Lift,National
 Standard,165,,,JuniorDT,F,100,Bare,D,Single Lift,National
-Standard,80,,,JuniorDT,F,110,Bare,B,Single Lift,National
+Freya Parks,90,08/02/2026,Peterborough,JuniorDT,F,110,Bare,B,Single Lift,National
 Standard,170,,,JuniorDT,F,110,Bare,D,Single Lift,National
 Standard,82.5,,,JuniorDT,F,110+,Bare,B,Single Lift,National
 Standard,172.5,,,JuniorDT,F,110+,Bare,D,Single Lift,National
@@ -700,7 +700,7 @@ Standard,40,,,M40-49DT,F,44,Bare,B,Single Lift,National
 Standard,82.5,,,M40-49DT,F,44,Bare,D,Single Lift,National
 Standard,47.5,,,M40-49DT,F,48,Bare,B,Single Lift,National
 Standard,100,,,M40-49DT,F,48,Bare,D,Single Lift,National
-Standard,50,,,M40-49DT,F,52,Bare,B,Single Lift,National
+Nadezda Kotyakina,51,08/02/2026,Peterborough,M40-49DT,F,52,Bare,B,Single Lift,National
 Standard,102.5,,,M40-49DT,F,52,Bare,D,Single Lift,National
 Standard,55,,,M40-49DT,F,56,Bare,B,Single Lift,National
 Standard,112.5,,,M40-49DT,F,56,Bare,D,Single Lift,National
@@ -985,9 +985,9 @@ Gregory Pearson,185,02/11/2025,Nottingham,T16-17,M,82.5,Sleeves,B,Full Power,Nat
 Gregory Pearson,322,02/11/2025,Nottingham,T16-17,M,82.5,Sleeves,D,Full Power,National
 Gregory Pearson,794.5,02/11/2025,Nottingham,T16-17,M,82.5,Sleeves,Total,Full Power,National
 Standard,172.5,,,T16-17,M,90,Sleeves,S,Full Power,National
-Harrison Dent,115,01/02/2026,West Yorkshire,T16-17,M,90,Sleeves,B,Full Power,National
-Harrison Dent,225,01/02/2026,West Yorkshire,T16-17,M,90,Sleeves,D,Full Power,National
-Harrison Dent,510,01/02/2026,West Yorkshire,T16-17,M,90,Sleeves,Total,Full Power,National
+Harrison Dent,115,01/02/2026,West Yorkshire Qualifier,T16-17,M,90,Sleeves,B,Full Power,National
+Harrison Dent,225,01/02/2026,West Yorkshire Qualifier,T16-17,M,90,Sleeves,D,Full Power,National
+Harrison Dent,510,01/02/2026,West Yorkshire Qualifier,T16-17,M,90,Sleeves,Total,Full Power,National
 Standard,180,,,T16-17,M,100,Sleeves,S,Full Power,National
 Standard,102.5,,,T16-17,M,100,Sleeves,B,Full Power,National
 Standard,190,,,T16-17,M,100,Sleeves,D,Full Power,National
@@ -1032,10 +1032,10 @@ Emil Trybala,200,06/12/2025,National Championships,T16-17DT,M,82.5,Sleeves,S,Ful
 Emil Trybala,135,06/12/2025,National Championships,T16-17DT,M,82.5,Sleeves,B,Full Power,National
 Harvey Lock,205,09/03/2025,East Coast,T16-17DT,M,82.5,Sleeves,D,Full Power,National
 Emil Trybala,535,06/12/2025,National Championships,T16-17DT,M,82.5,Sleeves,Total,Full Power,National
-Standard,165,,,T16-17DT,M,90,Sleeves,S,Full Power,National
-Kyle Robson,92.5,11/05/2025,Nottingham,T16-17DT,M,90,Sleeves,B,Full Power,National
+Lawrence Addison,190,08/02/2026,Peterborough,T16-17DT,M,90,Sleeves,S,Full Power,National
+Lawrence Addison,105,08/02/2026,Peterborough,T16-17DT,M,90,Sleeves,B,Full Power,National
 Kyle Robson,235,06/12/2025,National Championships,T16-17DT,M,90,Sleeves,D,Full Power,National
-Kyle Robson,480,06/12/2025,National Championships,T16-17DT,M,90,Sleeves,Total,Full Power,National
+Lawrence Addison,505,08/02/2026,Peterborough,T16-17DT,M,90,Sleeves,Total,Full Power,National
 Oliver Andrews Reeves,200,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,S,Full Power,National
 Oliver Andrews Reeves,130,13/07/2025,East Coast,T16-17DT,M,100,Sleeves,B,Full Power,National
 Kyle Robson,215,24/08/2025,North East,T16-17DT,M,100,Sleeves,D,Full Power,National
@@ -1889,9 +1889,9 @@ Ruby Harrison,55,07/12/2025,National Championships,T18-19DT,F,56,Sleeves,B,Full 
 Ruby Harrison,110,06/04/2025,South Midlands,T18-19DT,F,56,Sleeves,D,Full Power,National
 Ruby Harrison,250,07/12/2025,National Championships,T18-19DT,F,56,Sleeves,Total,Full Power,National
 Standard,95,,,T18-19DT,F,60,Sleeves,S,Full Power,National
-Standard,50,,,T18-19DT,F,60,Sleeves,B,Full Power,National
-Standard,105,,,T18-19DT,F,60,Sleeves,D,Full Power,National
-Standard,245,,,T18-19DT,F,60,Sleeves,Total,Full Power,National
+Victoria Zhuravel,62.5,08/02/2026,Peterborough,T18-19DT,F,60,Sleeves,B,Full Power,National
+Victoria Zhuravel,107.5,08/02/2026,Peterborough,T18-19DT,F,60,Sleeves,D,Full Power,National
+Victoria Zhuravel,255,08/02/2026,Peterborough,T18-19DT,F,60,Sleeves,Total,Full Power,National
 Zoe Thomas,117.5,18/08/2024,South West,T18-19DT,F,67.5,Sleeves,S,Full Power,National
 Standard,60,,,T18-19DT,F,67.5,Sleeves,B,Full Power,National
 Zoe Thomas,145,18/08/2024,South West,T18-19DT,F,67.5,Sleeves,D,Full Power,National
@@ -6911,7 +6911,7 @@ Standard,212.5,,,M40-49,M,125,Multi-ply,B,Full Power,National
 Standard,295,,,M40-49,M,125,Multi-ply,D,Full Power,National
 Standard,842.5,,,M40-49,M,125,Multi-ply,Total,Full Power,National
 Standard,212.5,,,M40-49,M,125,Multi-ply,B,Single Lift,National
-Marian Lighean,305,01/02/2026,West Yorkshire,M40-49,M,125,Multi-ply,D,Single Lift,National
+Marian Lighean,305,01/02/2026,West Yorkshire Qualifier,M40-49,M,125,Multi-ply,D,Single Lift,National
 Standard,352.5,,,M40-49,M,140,Multi-ply,S,Full Power,National
 Standard,220,,,M40-49,M,140,Multi-ply,B,Full Power,National
 Standard,310,,,M40-49,M,140,Multi-ply,D,Full Power,National
