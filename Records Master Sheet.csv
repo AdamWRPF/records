@@ -41,7 +41,7 @@ Standard,160,,,OpenDT,M,100,Bare,B,Single Lift,National
 Standard,297.5,,,OpenDT,M,100,Bare,D,Single Lift,National
 Standard,165,,,OpenDT,M,110,Bare,B,Single Lift,National
 Standard,305,,,OpenDT,M,110,Bare,D,Single Lift,National
-Sean Hayes,180,22/02/2026,Hereford Qualifier,OpenDT,M,125,Bare,B,Single Lift,National
+Sean Hayes,180,22/02/2026,West Midlands,OpenDT,M,125,Bare,B,Single Lift,National
 Standard,312.5,,,OpenDT,M,125,Bare,D,Single Lift,National
 Standard,172.5,,,OpenDT,M,140,Bare,B,Single Lift,National
 Standard,320,,,OpenDT,M,140,Bare,D,Single Lift,National
@@ -1032,10 +1032,10 @@ Standard,130,,,T14-15DT,M,82.5,Sleeves,S,Full Power,National
 Standard,75,,,T14-15DT,M,82.5,Sleeves,B,Full Power,National
 Standard,137.5,,,T14-15DT,M,82.5,Sleeves,D,Full Power,National
 Standard,332.5,,,T14-15DT,M,82.5,Sleeves,Total,Full Power,National
-Sasha Sutton,200,22/02/2026,Hereford Qualifier,T14-15DT,M,90,Sleeves,S,Full Power,National
+Sasha Sutton,200,22/02/2026,West Midlands,T14-15DT,M,90,Sleeves,S,Full Power,National
 Sasha Sutton,130,22/02/2026,South West,T14-15DT,M,90,Sleeves,B,Full Power,National
-Sasha Sutton,200,18/07/1900,Hereford Qualifier,T14-15DT,M,90,Sleeves,D,Full Power,National
-Sasha Sutton,530,22/02/2026,Hereford Qualifier,T14-15DT,M,90,Sleeves,Total,Full Power,National
+Sasha Sutton,200,18/07/1900,West Midlands,T14-15DT,M,90,Sleeves,D,Full Power,National
+Sasha Sutton,530,22/02/2026,West Midlands,T14-15DT,M,90,Sleeves,Total,Full Power,National
 Standard,150,,,T14-15DT,M,100,Sleeves,S,Full Power,National
 Standard,87.5,,,T14-15DT,M,100,Sleeves,B,Full Power,National
 Standard,157.5,,,T14-15DT,M,100,Sleeves,D,Full Power,National
@@ -1236,10 +1236,10 @@ Oliver Whalley,270,24/08/2025,North East,T18-19DT,M,110,Sleeves,S,Full Power,Nat
 George Colley,150,06/12/2025,National Championships,T18-19DT,M,110,Sleeves,B,Full Power,National
 Oliver Whalley,251,06/12/2025,National Championships,T18-19DT,M,110,Sleeves,D,Full Power,National
 Oliver Whalley,640.5,24/08/2025,North East,T18-19DT,M,110,Sleeves,Total,Full Power,National
-Harry Corner,310,22/02/2026,Hereford Qualifier,T18-19DT,M,125,Sleeves,S,Full Power,National
-Harry Corner,162.5,22/02/2026,Hereford Qualifier,T18-19DT,M,125,Sleeves,B,Full Power,National
-Harry Corner,320,22/02/2026,Hereford Qualifier,T18-19DT,M,125,Sleeves,D,Full Power,National
-Harry Corner,792.5,22/02/2026,Hereford Qualifier,T18-19DT,M,125,Sleeves,Total,Full Power,National
+Harry Corner,310,22/02/2026,West Midlands,T18-19DT,M,125,Sleeves,S,Full Power,National
+Harry Corner,162.5,22/02/2026,West Midlands,T18-19DT,M,125,Sleeves,B,Full Power,National
+Harry Corner,320,22/02/2026,West Midlands,T18-19DT,M,125,Sleeves,D,Full Power,National
+Harry Corner,792.5,22/02/2026,West Midlands,T18-19DT,M,125,Sleeves,Total,Full Power,National
 Standard,222.5,,,T18-19DT,M,140,Sleeves,S,Full Power,National
 Standard,125,,,T18-19DT,M,140,Sleeves,B,Full Power,National
 Standard,235,,,T18-19DT,M,140,Sleeves,D,Full Power,National
@@ -1756,7 +1756,7 @@ Shelby Culff,172.5,02/11/2025,Nottingham,Open,F,75,Sleeves,S,Full Power,National
 Adele Fleetwood,107.5,02/11/2025,Nottingham,Open,F,75,Sleeves,B,Full Power,National
 Adele Fleetwood,190,02/11/2025,Nottingham,Open,F,75,Sleeves,D,Full Power,National
 Adele Fleetwood,467.5,02/11/2025,Nottingham,Open,F,75,Sleeves,Total,Full Power,National
-Katie Carder,175,22/02/2026,Hereford Qualifier,Open,F,82.5,Sleeves,S,Full Power,National
+Katie Carder,175,22/02/2026,West Midlands,Open,F,82.5,Sleeves,S,Full Power,National
 Kristina Dunkhase,110,02/11/2025,Nottingham,Open,F,82.5,Sleeves,B,Full Power,National
 Kristina Dunkhase,200,02/11/2025,Nottingham,Open,F,82.5,Sleeves,D,Full Power,National
 Kristina Dunkhase,460,02/11/2025,Nottingham,Open,F,82.5,Sleeves,Total,Full Power,National
@@ -1904,7 +1904,7 @@ Standard,85,,,T14-15DT,F,82.5,Sleeves,S,Full Power,National
 Standard,50,,,T14-15DT,F,82.5,Sleeves,B,Full Power,National
 Standard,90,,,T14-15DT,F,82.5,Sleeves,D,Full Power,National
 Standard,217.5,,,T14-15DT,F,82.5,Sleeves,Total,Full Power,National
-Standard,100,,Hereford Qualifier,T14-15DT,F,90,Sleeves,S,Full Power,National
+Standard,100,,West Midlands,T14-15DT,F,90,Sleeves,S,Full Power,National
 Standard,52.5,,,T14-15DT,F,90,Sleeves,B,Full Power,National
 Standard,97.5,,,T14-15DT,F,90,Sleeves,D,Full Power,National
 Standard,232.5,,,T14-15DT,F,90,Sleeves,Total,Full Power,National
@@ -3014,8 +3014,8 @@ Standard,307.5,,,Junior,M,110,Wraps,D,Full Power,National
 Standard,750,,,Junior,M,110,Wraps,Total,Full Power,National
 Standard,305,,,Junior,M,125,Wraps,S,Full Power,National
 Standard,177.5,,,Junior,M,125,Wraps,B,Full Power,National
-Todor Borisov,345,22/02/2026,Hereford Qualifier,Junior,M,125,Wraps,D,Full Power,National
-Todor Borisov,790,22/02/2026,Hereford Qualifier,Junior,M,125,Wraps,Total,Full Power,National
+Todor Borisov,345,22/02/2026,West Midlands,Junior,M,125,Wraps,D,Full Power,National
+Todor Borisov,790,22/02/2026,West Midlands,Junior,M,125,Wraps,Total,Full Power,National
 Standard,317.5,,,Junior,M,140,Wraps,S,Full Power,National
 Standard,185,,,Junior,M,140,Wraps,B,Full Power,National
 Standard,335,,,Junior,M,140,Wraps,D,Full Power,National
@@ -3629,9 +3629,9 @@ Standard,57.5,,,T14-15DT,F,82.5,Wraps,B,Full Power,National
 Standard,102.5,,,T14-15DT,F,82.5,Wraps,D,Full Power,National
 Standard,247.5,,,T14-15DT,F,82.5,Wraps,Total,Full Power,National
 Standard,100,,,T14-15DT,F,90,Wraps,S,Full Power,National
-Sasha Sutton,130,22/02/2026,Hereford Qualifier,T14-15DT,F,90,Wraps,B,Full Power,National
-Sasha Sutton,200,22/02/2026,Hereford Qualifier,T14-15DT,F,90,Wraps,D,Full Power,National
-Sasha Sutton,530,22/02/2026,Hereford Qualifier,T14-15DT,F,90,Wraps,Total,Full Power,National
+Sasha Sutton,130,22/02/2026,West Midlands,T14-15DT,F,90,Wraps,B,Full Power,National
+Sasha Sutton,200,22/02/2026,West Midlands,T14-15DT,F,90,Wraps,D,Full Power,National
+Sasha Sutton,530,22/02/2026,West Midlands,T14-15DT,F,90,Wraps,Total,Full Power,National
 Standard,105,,,T14-15DT,F,100,Wraps,S,Full Power,National
 Standard,60,,,T14-15DT,F,100,Wraps,B,Full Power,National
 Standard,110,,,T14-15DT,F,100,Wraps,D,Full Power,National
