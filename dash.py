@@ -3,9 +3,6 @@ import streamlit as st
 from pathlib import Path
 from datetime import datetime
 
-# ------------------------------------------------------------------
-# Constants
-# ------------------------------------------------------------------
 CSV_PATH = Path(__file__).with_name("Records Master Sheet.csv")
 LOGO_PATH = Path(__file__).with_name("wrpf_logo.png")
 
@@ -36,9 +33,6 @@ VENUE_MAP = {
     "Specialist Event": "DOTD, Strength Wars etc"
 }
 
-# ------------------------------------------------------------------
-# Load data
-# ------------------------------------------------------------------
 @st.cache_data
 def load_data(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
@@ -124,9 +118,6 @@ def render_filters(df: pd.DataFrame):
 
     return filtered, sel
 
-# ------------------------------------------------------------------
-# Best records by class/lift
-# ------------------------------------------------------------------
 def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
     return (
         df.sort_values("Weight", ascending=False)
@@ -139,9 +130,6 @@ def best_per_class_and_lift(df: pd.DataFrame) -> pd.DataFrame:
           .drop(columns=["_class_num", "_lift_order"])
     )
 
-# ------------------------------------------------------------------
-# Table Renderer
-# ------------------------------------------------------------------
 def render_table(filtered, sel, key=""):
     show_all = bool(sel["search"])
     data_source = filtered
@@ -220,9 +208,6 @@ def render_table(filtered, sel, key=""):
     html_table = display_df.to_html(index=False, border=0, classes="records-table")
     st.markdown(html_table, unsafe_allow_html=True)
 
-# ------------------------------------------------------------------
-# Main App
-# ------------------------------------------------------------------
 def main():
     st.set_page_config("WRPF UK Records", layout="wide")
 
@@ -324,6 +309,7 @@ To claim this record, you must break it by 0.5kg at any WRPF UK event.
 
 if __name__ == "__main__":
     main()
+
 
 
 
