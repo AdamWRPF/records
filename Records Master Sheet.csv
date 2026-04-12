@@ -1806,8 +1806,8 @@ Joginte Gudaitiene,190,09/03/2025,East Coast,OpenDT,F,75,Sleeves,D,Full Power,Na
 Sarah Higgins,447.5,02/11/2025,Nottingham,OpenDT,F,75,Sleeves,Total,Full Power,National
 Caoimhe Ryan Ireland,162.5,02/11/2025,Nottingham,OpenDT,F,82.5,Sleeves,S,Full Power,National
 Caoimhe Ryan Ireland,97.5,02/11/2025,Nottingham,OpenDT,F,82.5,Sleeves,B,Full Power,National
-Amelia Maycock,185,27/07/2025,East Midlands,OpenDT,F,82.5,Sleeves,D,Full Power,National
-Caoimhe Ryan Ireland,427.5,02/11/2025,Nottingham,OpenDT,F,82.5,Sleeves,Total,Full Power,National
+Amelia Maycock,185.5,12/04/2026,East Midlands,OpenDT,F,82.5,Sleeves,D,Full Power,National
+Amelia Maycock,428,12/04/2026,East Midlands,OpenDT,F,82.5,Sleeves,Total,Full Power,National
 Karolina Piwonska,200,02/11/2025,Nottingham,OpenDT,F,90,Sleeves,S,Full Power,National
 Karolina Piwonska,110,02/11/2025,Nottingham,OpenDT,F,90,Sleeves,B,Full Power,National
 Karolina Piwonska,197.5,02/11/2025,Nottingham,OpenDT,F,90,Sleeves,D,Full Power,National
@@ -2093,7 +2093,7 @@ Standard,57.5,,,T18-19DT,F,75,Sleeves,B,Full Power,National
 Standard,120,,,T18-19DT,F,75,Sleeves,D,Full Power,National
 Standard,282.5,,,T18-19DT,F,75,Sleeves,Total,Full Power,National
 Davina Foh-Amoaning,115.5,05/05/2024,Nottingham,T18-19DT,F,82.5,Sleeves,S,Full Power,National
-Davina Foh-Amoaning,60.5,05/05/2024,Nottingham,T18-19DT,F,82.5,Sleeves,B,Full Power,National
+Daniella Pirks,62.5,12/04/2026,East Midlands,T18-19DT,F,82.5,Sleeves,B,Full Power,National
 Davina Foh-Amoaning,132.5,05/05/2024,Nottingham,T18-19DT,F,82.5,Sleeves,D,Full Power,National
 Davina Foh-Amoaning,308.5,05/05/2024,Nottingham,T18-19DT,F,82.5,Sleeves,Total,Full Power,National
 Standard,122.5,,,T18-19DT,F,90,Sleeves,S,Full Power,National
@@ -2220,10 +2220,10 @@ Standard,95,,,M40-49,F,52,Sleeves,S,Full Power,National
 Standard,50,,,M40-49,F,52,Sleeves,B,Full Power,National
 Standard,100,,,M40-49,F,52,Sleeves,D,Full Power,National
 Standard,242.5,,,M40-49,F,52,Sleeves,Total,Full Power,National
-Standard,105,,,M40-49,F,56,Sleeves,S,Full Power,National
-Standard,55,,,M40-49,F,56,Sleeves,B,Full Power,National
-Standard,110,,,M40-49,F,56,Sleeves,D,Full Power,National
-Standard,267.5,,,M40-49,F,56,Sleeves,Total,Full Power,National
+Katie Fordham,105,12/04/2026,East Midlands,M40-49,F,56,Sleeves,S,Full Power,National
+Katie Fordham,56,12/04/2026,East Midlands,M40-49,F,56,Sleeves,B,Full Power,National
+Katie Fordham,117.5,12/04/2026,East Midlands,M40-49,F,56,Sleeves,D,Full Power,National
+Katie Fordham,278.5,12/04/2026,East Midlands,M40-49,F,56,Sleeves,Total,Full Power,National
 Standard,117.5,,,M40-49,F,60,Sleeves,S,Full Power,National
 Standard,60,,,M40-49,F,60,Sleeves,B,Full Power,National
 Standard,122.5,,,M40-49,F,60,Sleeves,D,Full Power,National
@@ -2489,7 +2489,7 @@ Standard,67.5,,,M60-69DT,F,100,Sleeves,B,Full Power,National
 Standard,142.5,,,M60-69DT,F,100,Sleeves,D,Full Power,National
 Standard,330,,,M60-69DT,F,100,Sleeves,Total,Full Power,National
 Standard,125,,,M60-69DT,F,110,Sleeves,S,Full Power,National
-Standard,67.5,,,M60-69DT,F,110,Sleeves,B,Full Power,National
+Karen Towersey,71.5,12/04/2026,East Midlands,M60-69DT,F,110,Sleeves,B,Full Power,National
 Standard,147.5,,,M60-69DT,F,110,Sleeves,D,Full Power,National
 Standard,337.5,,,M60-69DT,F,110,Sleeves,Total,Full Power,National
 Standard,130,,,M60-69DT,F,110+,Sleeves,S,Full Power,National
@@ -5012,8 +5012,8 @@ Standard,272.5,,,JuniorDT,M,110,Single-ply,S,Full Power,National
 Standard,170,,,JuniorDT,M,110,Single-ply,B,Full Power,National
 Standard,237.5,,,JuniorDT,M,110,Single-ply,D,Full Power,National
 Standard,672.5,,,JuniorDT,M,110,Single-ply,Total,Full Power,National
-Standard,170,,,JuniorDT,M,110,Single-ply,B,Single Lift,National
-Standard,237.5,,,JuniorDT,M,110,Single-ply,D,Single Lift,National
+James Lovell,190,12/04/2026,East Midlands,JuniorDT,M,110,Single-ply,B,Single Lift,National
+James Lovell,250,12/04/2026,East Midlands,JuniorDT,M,110,Single-ply,D,Single Lift,National
 Standard,277.5,,,JuniorDT,M,125,Single-ply,S,Full Power,National
 Standard,175,,,JuniorDT,M,125,Single-ply,B,Full Power,National
 Standard,242.5,,,JuniorDT,M,125,Single-ply,D,Full Power,National
@@ -5279,9 +5279,9 @@ Standard,600,,,M40-49DT,M,75,Single-ply,Total,Full Power,National
 Standard,150,,,M40-49DT,M,75,Single-ply,B,Single Lift,National
 Standard,212.5,,,M40-49DT,M,75,Single-ply,D,Single Lift,National
 Standard,290,,,M40-49DT,M,82.5,Single-ply,S,Full Power,National
-Standard,172.5,,,M40-49DT,M,82.5,Single-ply,B,Full Power,National
-Standard,230,,,M40-49DT,M,82.5,Single-ply,D,Full Power,National
-Standard,690,,,M40-49DT,M,82.5,Single-ply,Total,Full Power,National
+Paul Campbell,175,12/04/2026,East Midlands,M40-49DT,M,82.5,Single-ply,B,Full Power,National
+Paul Campbell,255,12/04/2026,East Midlands,M40-49DT,M,82.5,Single-ply,D,Full Power,National
+Paul Campbell,710,12/04/2026,East Midlands,M40-49DT,M,82.5,Single-ply,Total,Full Power,National
 Standard,157.5,,,M40-49DT,M,82.5,Single-ply,B,Single Lift,National
 Standard,222.5,,,M40-49DT,M,82.5,Single-ply,D,Single Lift,National
 Standard,260,,,M40-49DT,M,90,Single-ply,S,Full Power,National
@@ -5374,10 +5374,10 @@ Standard,215,,,M50-59DT,M,110,Single-ply,D,Full Power,National
 Standard,607.5,,,M50-59DT,M,110,Single-ply,Total,Full Power,National
 Standard,152.5,,,M50-59DT,M,110,Single-ply,B,Single Lift,National
 Standard,215,,,M50-59DT,M,110,Single-ply,D,Single Lift,National
-Standard,250,,,M50-59DT,M,125,Single-ply,S,Full Power,National
-Standard,157.5,,,M50-59DT,M,125,Single-ply,B,Full Power,National
-Standard,220,,,M50-59DT,M,125,Single-ply,D,Full Power,National
-Standard,622.5,,,M50-59DT,M,125,Single-ply,Total,Full Power,National
+Ian Ryan,307.5,12/04/2026,East Midlands,M50-59DT,M,125,Single-ply,S,Full Power,National
+Ian Ryan,185,12/04/2026,East Midlands,M50-59DT,M,125,Single-ply,B,Full Power,National
+Ian Ryan,240,12/04/2026,East Midlands,M50-59DT,M,125,Single-ply,D,Full Power,National
+Ian Ryan,732.5,12/04/2026,East Midlands,M50-59DT,M,125,Single-ply,Total,Full Power,National
 Standard,157.5,,,M50-59DT,M,125,Single-ply,B,Single Lift,National
 Standard,220,,,M50-59DT,M,125,Single-ply,D,Single Lift,National
 Standard,257.5,,,M50-59DT,M,140,Single-ply,S,Full Power,National
@@ -5429,7 +5429,7 @@ Standard,482.5,,,M60-69DT,M,82.5,Single-ply,Total,Full Power,National
 Standard,122.5,,,M60-69DT,M,82.5,Single-ply,B,Single Lift,National
 Standard,172.5,,,M60-69DT,M,82.5,Single-ply,D,Single Lift,National
 Standard,200,,,M60-69DT,M,90,Single-ply,S,Full Power,National
-Kevin Barrs,155,05/10/2025,South West,M60-69DT,M,90,Single-ply,B,Full Power,National
+Kevin Barrs,160,12/04/2026,East Midlands,M60-69DT,M,90,Single-ply,B,Full Power,National
 Standard,177.5,,,M60-69DT,M,90,Single-ply,D,Full Power,National
 Standard,497.5,,,M60-69DT,M,90,Single-ply,Total,Full Power,National
 Kevin Barrs,157.5,18/01/2026,Lincoln,M60-69DT,M,90,Single-ply,B,Single Lift,National
@@ -5700,7 +5700,7 @@ Standard,80,,,OpenDT,F,52,Single-ply,B,Single Lift,National
 Standard,137.5,,,OpenDT,F,52,Single-ply,D,Single Lift,National
 Standard,162.5,,,OpenDT,F,56,Single-ply,S,Full Power,National
 Standard,82.5,,,OpenDT,F,56,Single-ply,B,Full Power,National
-Linzi Waite,145,27/07/2025,East Midlands,OpenDT,F,56,Single-ply,D,Full Power,National
+Linzi Waite,147.5,12/04/2026,East Midlands,OpenDT,F,56,Single-ply,D,Full Power,National
 Standard,405,,,OpenDT,F,56,Single-ply,Total,Full Power,National
 Linzi Waite,82.5,07/12/2025,National Championships,OpenDT,F,56,Single-ply,B,Single Lift,National
 Linzi Waite,142.5,07/12/2025,National Championships,OpenDT,F,56,Single-ply,D,Single Lift,National
