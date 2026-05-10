@@ -21,7 +21,7 @@ Alasdair MacLeod,185,23/11/2025,Welwyn Garden City,Open,M,125,Bare,B,Single Lift
 Luke Tolman,357.5,30/11/2025,South West,Open,M,125,Bare,D,Single Lift,National
 Max Searby,260,18/01/2026,Lincoln,Open,M,140,Bare,B,Single Lift,National
 Standard,370,,,Open,M,140,Bare,D,Single Lift,National
-Scott Munroe,210,17/08/2025,North West,Open,M,140+,Bare,B,Single Lift,National
+Scott Munroe,220,10/05/2026,Lincoln Single Lifts,Open,M,140+,Bare,B,Single Lift,National
 Standard,382.5,,,Open,M,140+,Bare,D,Single Lift,National
 Standard,90,,,OpenDT,M,52,Bare,B,Single Lift,National
 Standard,165,,,OpenDT,M,52,Bare,D,Single Lift,National
@@ -37,7 +37,7 @@ Standard,150,,,OpenDT,M,82.5,Bare,B,Single Lift,National
 Standard,280,,,OpenDT,M,82.5,Bare,D,Single Lift,National
 Standard,155,,,OpenDT,M,90,Bare,B,Single Lift,National
 Standard,287.5,,,OpenDT,M,90,Bare,D,Single Lift,National
-Standard,160,,,OpenDT,M,100,Bare,B,Single Lift,National
+Samuel Colley,160,10/05/2026,Lincoln Single Lifts,OpenDT,M,100,Bare,B,Single Lift,National
 Standard,297.5,,,OpenDT,M,100,Bare,D,Single Lift,National
 Adam Pelling-Pharro,175,29/03/2026,South West,OpenDT,M,110,Bare,B,Single Lift,National
 Standard,305,,,OpenDT,M,110,Bare,D,Single Lift,National
@@ -79,12 +79,12 @@ Standard,60,,,T14-15DT,M,60,Bare,B,Single Lift,National
 Standard,110,,,T14-15DT,M,60,Bare,D,Single Lift,National
 Bentley Harvey,85,06/12/2025,National Championships,T14-15DT,M,67.5,Bare,B,Single Lift,National
 Bentley Harvey,172.5,06/12/2025,National Championships,T14-15DT,M,67.5,Bare,D,Single Lift,National
-Josh Everett,100,03/08/2025,Welwyn Garden City,T14-15DT,M,75,Bare,B,Single Lift,National
-Standard,140,,,T14-15DT,M,75,Bare,D,Single Lift,National
+Bentley Harvey,100.5,10/05/2026,Lincoln Single Lifts,T14-15DT,M,75,Bare,B,Single Lift,National
+Bentley Harvey,180,10/05/2026,Lincoln Single Lifts,T14-15DT,M,75,Bare,D,Single Lift,National
 Standard,80,,,T14-15DT,M,82.5,Bare,B,Single Lift,National
 Standard,150,,,T14-15DT,M,82.5,Bare,D,Single Lift,National
 Standard,82.5,,,T14-15DT,M,90,Bare,B,Single Lift,National
-Standard,152.5,,,T14-15DT,M,90,Bare,D,Single Lift,National
+Dogu Yildirim,170,10/05/2026,Lincoln Single Lifts,T14-15DT,M,90,Bare,D,Single Lift,National
 Standard,85,,,T14-15DT,M,100,Bare,B,Single Lift,National
 Standard,157.5,,,T14-15DT,M,100,Bare,D,Single Lift,National
 Standard,87.5,,,T14-15DT,M,110,Bare,B,Single Lift,National
@@ -227,7 +227,7 @@ Standard,120,,,JuniorDT,M,75,Bare,B,Single Lift,National
 Standard,225,,,JuniorDT,M,75,Bare,D,Single Lift,National
 Standard,130,,,JuniorDT,M,82.5,Bare,B,Single Lift,National
 Standard,240,,,JuniorDT,M,82.5,Bare,D,Single Lift,National
-Standard,132.5,,,JuniorDT,M,90,Bare,B,Single Lift,National
+Sonny Towle,152.5,10/05/2026,Lincoln Single Lifts,JuniorDT,M,90,Bare,B,Single Lift,National
 Standard,245,,,JuniorDT,M,90,Bare,D,Single Lift,National
 Standard,135,,,JuniorDT,M,100,Bare,B,Single Lift,National
 Standard,252.5,,,JuniorDT,M,100,Bare,D,Single Lift,National
@@ -281,7 +281,7 @@ Standard,125,,,M50-59,M,100,Bare,B,Single Lift,National
 Les Attewell,300,07/09/2025,Lincoln,M50-59,M,100,Bare,D,Single Lift,National
 Piotr Strzala,192.5,05/12/2025,National Championships,M50-59,M,110,Bare,B,Single Lift,National
 Standard,245,,,M50-59,M,110,Bare,D,Single Lift,National
-Simon French,172.5,08/02/2026,Peterborough,M50-59,M,125,Bare,B,Single Lift,National
+Simon French,180,10/05/2026,Lincoln Single Lifts,M50-59,M,125,Bare,B,Single Lift,National
 Standard,260,,,M50-59,M,125,Bare,D,Single Lift,National
 Standard,152.5,,,M50-59,M,140,Bare,B,Single Lift,National
 Standard,285,,,M50-59,M,140,Bare,D,Single Lift,National
@@ -299,7 +299,7 @@ Standard,90,,,M60-69,M,75,Bare,B,Single Lift,National
 Standard,167.5,,,M60-69,M,75,Bare,D,Single Lift,National
 Standard,102.5,,,M60-69,M,82.5,Bare,B,Single Lift,National
 Kevin Payne,212.5,11/05/2025,Nottingham,M60-69,M,82.5,Bare,D,Single Lift,National
-Mike Eve,110,07/09/2025,Lincoln,M60-69,M,90,Bare,B,Single Lift,National
+Mike Eve,112.5,10/05/2026,Lincoln Single Lifts,M60-69,M,90,Bare,B,Single Lift,National
 Standard,197.5,,,M60-69,M,90,Bare,D,Single Lift,National
 Standard,110,,,M60-69,M,100,Bare,B,Single Lift,National
 Standard,205,,,M60-69,M,100,Bare,D,Single Lift,National
@@ -325,8 +325,8 @@ Standard,132.5,,,M40-49DT,M,82.5,Bare,B,Single Lift,National
 Standard,245,,,M40-49DT,M,82.5,Bare,D,Single Lift,National
 Standard,135,,,M40-49DT,M,90,Bare,B,Single Lift,National
 Standard,252.5,,,M40-49DT,M,90,Bare,D,Single Lift,National
-Jacek Szast,145,03/08/2025,Welwyn Garden City,M40-49DT,M,100,Bare,B,Single Lift,National
-Standard,260,,,M40-49DT,M,100,Bare,D,Single Lift,National
+Jacek Szast,150,10/05/2026,Lincoln Single Lifts,M40-49DT,M,100,Bare,B,Single Lift,National
+Jacek Szast,260.5,10/05/2026,Lincoln Single Lifts,M40-49DT,M,100,Bare,D,Single Lift,National
 Sergej Naumenko,160,08/02/2026,Peterborough,M40-49DT,M,110,Bare,B,Single Lift,National
 Standard,267.5,,,M40-49DT,M,110,Bare,D,Single Lift,National
 Sergej Naumenko,165,06/12/2025,National Championships,M40-49DT,M,125,Bare,B,Single Lift,National
@@ -350,7 +350,7 @@ Standard,215,,,M50-59DT,M,82.5,Bare,D,Single Lift,National
 Standard,120,,,M50-59DT,M,90,Bare,B,Single Lift,National
 Standard,222.5,,,M50-59DT,M,90,Bare,D,Single Lift,National
 John MacDonald,145,07/09/2025,Lincoln,M50-59DT,M,100,Bare,B,Single Lift,National
-Standard,227.5,,,M50-59DT,M,100,Bare,D,Single Lift,National
+Sean McCarthy,252.5,10/05/2026,Lincoln Single Lifts,M50-59DT,M,100,Bare,D,Single Lift,National
 Standard,125,,,M50-59DT,M,110,Bare,B,Single Lift,National
 Standard,235,,,M50-59DT,M,110,Bare,D,Single Lift,National
 Standard,130,,,M50-59DT,M,125,Bare,B,Single Lift,National
@@ -413,7 +413,7 @@ Standard,102.5,,,M70-79DT,M,52,Bare,D,Single Lift,National
 Standard,62.5,,,M70-79DT,M,56,Bare,B,Single Lift,National
 Standard,115,,,M70-79DT,M,56,Bare,D,Single Lift,National
 Standard,67.5,,,M70-79DT,M,60,Bare,B,Single Lift,National
-Standard,127.5,,,M70-79DT,M,60,Bare,D,Single Lift,National
+Ted Byrne,180,10/05/2026,Lincoln Single Lifts,M70-79DT,M,60,Bare,D,Single Lift,National
 Standard,80,,,M70-79DT,M,67.5,Bare,B,Single Lift,National
 Standard,145,,,M70-79DT,M,67.5,Bare,D,Single Lift,National
 Standard,87.5,,,M70-79DT,M,75,Bare,B,Single Lift,National
@@ -467,7 +467,7 @@ Standard,130,,,OpenDT,F,56,Bare,D,Single Lift,National
 Standard,67.5,,,OpenDT,F,60,Bare,B,Single Lift,National
 Sarah Ellis,145,02/11/2024,Specialist Event,OpenDT,F,60,Bare,D,Single Lift,National
 Alice Swain,75,30/11/2025,South West,OpenDT,F,67.5,Bare,B,Single Lift,National
-Mya Webb,160,18/01/2026,Lincoln,OpenDT,F,67.5,Bare,D,Single Lift,National
+Mya Webb,168,10/05/2026,Lincoln Single Lifts,OpenDT,F,67.5,Bare,D,Single Lift,National
 Standard,77.5,,,OpenDT,F,75,Bare,B,Single Lift,National
 Standard,165,,,OpenDT,F,75,Bare,D,Single Lift,National
 Standard,82.5,,,OpenDT,F,82.5,Bare,B,Single Lift,National
@@ -758,8 +758,8 @@ Standard,67.5,,,M40-49DT,F,67.5,Bare,B,Single Lift,National
 Lindsay McGuire,140.5,03/08/2025,Welwyn Garden City,M40-49DT,F,67.5,Bare,D,Single Lift,National
 Standard,70,,,M40-49DT,F,75,Bare,B,Single Lift,National
 Standard,145,,,M40-49DT,F,75,Bare,D,Single Lift,National
-Standard,72.5,,,M40-49DT,F,82.5,Bare,B,Single Lift,National
-Standard,152.5,,,M40-49DT,F,82.5,Bare,D,Single Lift,National
+Kelly Farrer,80,10/05/2026,Lincoln Single Lifts,M40-49DT,F,82.5,Bare,B,Single Lift,National
+Kelly Farrer,152.5,10/05/2026,Lincoln Single Lifts,M40-49DT,F,82.5,Bare,D,Single Lift,National
 Orla Mahon,90,27/07/2025,East Midlands,M40-49DT,F,90,Bare,B,Single Lift,National
 Standard,162.5,,,M40-49DT,F,90,Bare,D,Single Lift,National
 Standard,82.5,,,M40-49DT,F,100,Bare,B,Single Lift,National
