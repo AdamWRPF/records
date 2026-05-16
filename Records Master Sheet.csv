@@ -11,7 +11,7 @@ Standard,132.5,,,Open,M,75,Bare,B,Single Lift,National
 Standard,247.5,,,Open,M,75,Bare,D,Single Lift,National
 Michael Bond,192.5,22/03/2026,International,Open,M,82.5,Bare,B,Single Lift,National
 Standard,277.5,,,Open,M,82.5,Bare,D,Single Lift,National
-Dean Pearson,163,08/02/2026,Peterborough,Open,M,90,Bare,B,Single Lift,National
+Dean Pearson,163.5,16/05/2026,World Cup UK,Open,M,90,Bare,B,Single Lift,National
 Standard,292.5,,,Open,M,90,Bare,D,Single Lift,National
 John Walsh,190,02/06/2024,Specialist Event,Open,M,100,Bare,B,Single Lift,National
 Sonny Barrah,345,01/03/2026,Welwyn Garden City,Open,M,100,Bare,D,Single Lift,National
@@ -253,7 +253,7 @@ Standard,132.5,,,M40-49,M,82.5,Bare,B,Single Lift,National
 Standard,245,,,M40-49,M,82.5,Bare,D,Single Lift,National
 Steven Dale,170,12/04/2026,East Midlands,M40-49,M,90,Bare,B,Single Lift,National
 Standard,257.5,,,M40-49,M,90,Bare,D,Single Lift,National
-Steven Dale,180,16/04/2026,International Event,M40-49,M,100,Bare,B,Single Lift,National
+Steven Dale,181,16/05/2026,World Cup UK,M40-49,M,100,Bare,B,Single Lift,National
 Steven Dale,280,18/01/2026,Lincoln,M40-49,M,100,Bare,D,Single Lift,National
 Steven Dale,185,26/10/2025,International Event,M40-49,M,110,Bare,B,Single Lift,National
 Steven Dale,285,05/12/2025,National Championships,M40-49,M,110,Bare,D,Single Lift,National
@@ -349,7 +349,7 @@ Neil Jones,135,27/07/2025,East Midlands,M50-59DT,M,82.5,Bare,B,Single Lift,Natio
 Standard,215,,,M50-59DT,M,82.5,Bare,D,Single Lift,National
 Standard,120,,,M50-59DT,M,90,Bare,B,Single Lift,National
 Standard,222.5,,,M50-59DT,M,90,Bare,D,Single Lift,National
-John MacDonald,145,07/09/2025,Lincoln,M50-59DT,M,100,Bare,B,Single Lift,National
+John MacDonald,145.5,16/05/2026,World Cup UK,M50-59DT,M,100,Bare,B,Single Lift,National
 Sean McCarthy,252.5,10/05/2026,Lincoln Single Lifts,M50-59DT,M,100,Bare,D,Single Lift,National
 Standard,125,,,M50-59DT,M,110,Bare,B,Single Lift,National
 Standard,235,,,M50-59DT,M,110,Bare,D,Single Lift,National
@@ -949,9 +949,9 @@ Stephen Manuel,192.5,04/05/2025,North West,OpenDT,M,110,Sleeves,B,Full Power,Nat
 Jamie Jonathan Foord,350,02/11/2025,Nottingham,OpenDT,M,110,Sleeves,D,Full Power,National
 Jamie Jonathan Foord,832.5,02/11/2025,Nottingham,OpenDT,M,110,Sleeves,Total,Full Power,National
 Lukas Jusko,320,02/11/2025,Nottingham,OpenDT,M,125,Sleeves,S,Full Power,National
-Levi Hartshorne,197.5,06/12/2025,National Championships,OpenDT,M,125,Sleeves,B,Full Power,National
+Levi Hartshorne,202.5,16/05/2026,World Cup UK,OpenDT,M,125,Sleeves,B,Full Power,National
 Levi Hartshorne,330,06/12/2025,National Championships,OpenDT,M,125,Sleeves,D,Full Power,National
-Levi Hartshorne,827.5,06/12/2025,National Championships,OpenDT,M,125,Sleeves,Total,Full Power,National
+Levi Hartshorne,830,16/05/2026,World Cup UK,OpenDT,M,125,Sleeves,Total,Full Power,National
 Standard,305,,,OpenDT,M,140,Sleeves,S,Full Power,National
 Standard,172.5,,,OpenDT,M,140,Sleeves,B,Full Power,National
 Standard,320,,,OpenDT,M,140,Sleeves,D,Full Power,National
@@ -1169,9 +1169,9 @@ Standard,82.5,,,T18-19,M,67.5,Sleeves,B,Full Power,National
 Standard,155,,,T18-19,M,67.5,Sleeves,D,Full Power,National
 Standard,375,,,T18-19,M,67.5,Sleeves,Total,Full Power,National
 Standard,170,,,T18-19,M,75,Sleeves,S,Full Power,National
-Standard,97.5,,,T18-19,M,75,Sleeves,B,Full Power,National
-Standard,180,,,T18-19,M,75,Sleeves,D,Full Power,National
-Standard,435,,,T18-19,M,75,Sleeves,Total,Full Power,National
+Liam Backhurst,115,16/05/2026,World Cup UK,T18-19,M,75,Sleeves,B,Full Power,National
+Liam Backhurst,195,16/05/2026,World Cup UK,T18-19,M,75,Sleeves,D,Full Power,National
+Liam Backhurst,467.5,16/05/2026,World Cup UK,T18-19,M,75,Sleeves,Total,Full Power,National
 Standard,192.5,,,T18-19,M,82.5,Sleeves,S,Full Power,National
 Standard,110,,,T18-19,M,82.5,Sleeves,B,Full Power,National
 Standard,202.5,,,T18-19,M,82.5,Sleeves,D,Full Power,National
@@ -1220,10 +1220,10 @@ Standard,182.5,,,T18-19DT,M,75,Sleeves,S,Full Power,National
 Damian Thorpe,125,17/11/2024,South Midlands,T18-19DT,M,75,Sleeves,B,Full Power,National
 Damian Thorpe,200,17/11/2024,South Midlands,T18-19DT,M,75,Sleeves,D,Full Power,National
 Damian Thorpe,505,17/11/2024,South Midlands,T18-19DT,M,75,Sleeves,Total,Full Power,National
-James Porritt,205,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,S,Full Power,National
-James Porritt,142.5,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,B,Full Power,National
+Damian Thorpe,227.5,16/05/2026,World Cup UK,T18-19DT,M,82.5,Sleeves,S,Full Power,National
+Damian Thorpe,157.5,16/05/2026,World Cup UK,T18-19DT,M,82.5,Sleeves,B,Full Power,National
 James Porritt,270,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,D,Full Power,National
-James Porritt,617.5,05/05/2024,Nottingham,T18-19DT,M,82.5,Sleeves,Total,Full Power,National
+Damian Thorpe,645,16/05/2026,World Cup UK,T18-19DT,M,82.5,Sleeves,Total,Full Power,National
 Kye Myers,216,28/09/2025,South Midlands,T18-19DT,M,90,Sleeves,S,Full Power,National
 Henry Hemming,115,18/08/2024,South West,T18-19DT,M,90,Sleeves,B,Full Power,National
 Kye Myers,280,28/09/2025,South Midlands,T18-19DT,M,90,Sleeves,D,Full Power,National
@@ -1517,9 +1517,9 @@ Standard,135,,,M40-49DT,M,90,Sleeves,B,Full Power,National
 Standard,252.5,,,M40-49DT,M,90,Sleeves,D,Full Power,National
 Standard,612.5,,,M40-49DT,M,90,Sleeves,Total,Full Power,National
 Standard,247.5,,,M40-49DT,M,100,Sleeves,S,Full Power,National
-Daniel Northover,152.5,29/03/2026,South West,M40-49DT,M,100,Sleeves,B,Full Power,National
-Jacek Szast,265,01/03/2026,Welwyn Garden City,M40-49DT,M,100,Sleeves,D,Full Power,National
-Jacek Szast,630,01/03/2026,Welwyn Garden City,M40-49DT,M,100,Sleeves,Total,Full Power,National
+Chris Brown,157.5,16/05/2026,World Cup UK,M40-49DT,M,100,Sleeves,B,Full Power,National
+Chris Brown,272.5,16/05/2026,World Cup UK,M40-49DT,M,100,Sleeves,D,Full Power,National
+Chris Brown,652.5,16/05/2026,World Cup UK,M40-49DT,M,100,Sleeves,Total,Full Power,National
 Standard,255,,,M40-49DT,M,110,Sleeves,S,Full Power,National
 Chris Brown,172.5,17/08/2025,North West,M40-49DT,M,110,Sleeves,B,Full Power,National
 Chris Brown,285,17/08/2025,North West,M40-49DT,M,110,Sleeves,D,Full Power,National
@@ -2856,10 +2856,10 @@ Standard,177.5,,,T16-17DT,M,82.5,Wraps,S,Full Power,National
 Standard,102.5,,,T16-17DT,M,82.5,Wraps,B,Full Power,National
 Standard,187.5,,,T16-17DT,M,82.5,Wraps,D,Full Power,National
 Standard,452.5,,,T16-17DT,M,82.5,Wraps,Total,Full Power,National
-Standard,177.5,,,T16-17DT,M,90,Wraps,S,Full Power,National
-Standard,102.5,,,T16-17DT,M,90,Wraps,B,Full Power,National
-Standard,187.5,,,T16-17DT,M,90,Wraps,D,Full Power,National
-Standard,455,,,T16-17DT,M,90,Wraps,Total,Full Power,National
+Sasha Sutton,200,16/05/2026,World Cup UK,T16-17DT,M,90,Wraps,S,Full Power,National
+Sasha Sutton,140,16/05/2026,World Cup UK,T16-17DT,M,90,Wraps,B,Full Power,National
+Sasha Sutton,210,16/05/2026,World Cup UK,T16-17DT,M,90,Wraps,D,Full Power,National
+Sasha Sutton,550,16/05/2026,World Cup UK,T16-17DT,M,90,Wraps,Total,Full Power,National
 George Lee,190,10/08/2025,South West,T16-17DT,M,100,Wraps,S,Full Power,National
 George Lee,130,10/08/2025,South West,T16-17DT,M,100,Wraps,B,Full Power,National
 George Lee,210,10/08/2025,South West,T16-17DT,M,100,Wraps,D,Full Power,National
@@ -2900,10 +2900,10 @@ Standard,205,,,T18-19,M,75,Wraps,S,Full Power,National
 Standard,120,,,T18-19,M,75,Wraps,B,Full Power,National
 Standard,217.5,,,T18-19,M,75,Wraps,D,Full Power,National
 Standard,525,,,T18-19,M,75,Wraps,Total,Full Power,National
-Gregory Pearson,267.5,08/12/2024,Nottingham,T18-19,M,82.5,Wraps,S,Full Power,National
-Gregory Pearson,162.5,08/12/2024,Nottingham,T18-19,M,82.5,Wraps,B,Full Power,National
-Gregory Pearson,302.5,08/12/2024,Nottingham,T18-19,M,82.5,Wraps,D,Full Power,National
-Gregory Pearson,732.5,08/12/2024,Nottingham,T18-19,M,82.5,Wraps,Total,Full Power,National
+Gregory Pearson,319,16/05/2026,World Cup UK,T18-19,M,82.5,Wraps,S,Full Power,National
+Gregory Pearson,182.5,16/05/2026,World Cup UK,T18-19,M,82.5,Wraps,B,Full Power,National
+Gregory Pearson,330,16/05/2026,World Cup UK,T18-19,M,82.5,Wraps,D,Full Power,National
+Gregory Pearson,831.5,16/05/2026,World Cup UK,T18-19,M,82.5,Wraps,Total,Full Power,National
 Standard,227.5,,,T18-19,M,90,Wraps,S,Full Power,National
 Standard,132.5,,,T18-19,M,90,Wraps,B,Full Power,National
 Standard,240,,,T18-19,M,90,Wraps,D,Full Power,National
@@ -3148,9 +3148,9 @@ Standard,240,,,M50-59,M,90,Wraps,S,Full Power,National
 Standard,140,,,M50-59,M,90,Wraps,B,Full Power,National
 Standard,252.5,,,M50-59,M,90,Wraps,D,Full Power,National
 Standard,612.5,,,M50-59,M,90,Wraps,Total,Full Power,National
-Paul Wain,270,05/12/2025,National Championships,M50-59,M,100,Wraps,S,Full Power,National
+Paul Wain,270.5,16/05/2026,World Cup UK,M50-59,M,100,Wraps,S,Full Power,National
 Paul Wain,155,05/12/2025,National Championships,M50-59,M,100,Wraps,B,Full Power,National
-Paul Wain,302.5,05/12/2025,National Championships,M50-59,M,100,Wraps,D,Full Power,National
+Paul Wain,305,16/05/2026,World Cup UK,M50-59,M,100,Wraps,D,Full Power,National
 Paul Wain,727.5,05/12/2025,National Championships,M50-59,M,100,Wraps,Total,Full Power,National
 Standard,265,,,M50-59,M,110,Wraps,S,Full Power,National
 Standard,152.5,,,M50-59,M,110,Wraps,B,Full Power,National
