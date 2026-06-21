@@ -1176,10 +1176,10 @@ Standard,192.5,,,T18-19,M,82.5,Sleeves,S,Full Power,National
 Standard,110,,,T18-19,M,82.5,Sleeves,B,Full Power,National
 Standard,202.5,,,T18-19,M,82.5,Sleeves,D,Full Power,National
 Standard,490,,,T18-19,M,82.5,Sleeves,Total,Full Power,National
-Standard,202.5,,,T18-19,M,90,Sleeves,S,Full Power,National
-Standard,115,,,T18-19,M,90,Sleeves,B,Full Power,National
-Standard,212.5,,,T18-19,M,90,Sleeves,D,Full Power,National
-Standard,515,,,T18-19,M,90,Sleeves,Total,Full Power,National
+Gregory Pearson,315.5,21/06/2026,Viking Strength Showdown,T18-19,M,90,Sleeves,S,Full Power,National
+Gregory Pearson,205,21/06/2026,Viking Strength Showdown,T18-19,M,90,Sleeves,B,Full Power,National
+Gregory Pearson,300,21/06/2026,Viking Strength Showdown,T18-19,M,90,Sleeves,D,Full Power,National
+Gregory Pearson,820.5,21/06/2026,Viking Strength Showdown,T18-19,M,90,Sleeves,Total,Full Power,National
 Standard,210,,,T18-19,M,100,Sleeves,S,Full Power,National
 Standard,120,,,T18-19,M,100,Sleeves,B,Full Power,National
 Standard,222.5,,,T18-19,M,100,Sleeves,D,Full Power,National
@@ -1318,7 +1318,7 @@ Geovani Negri,225,10/08/2025,South West,JuniorDT,M,75,Sleeves,D,Full Power,Natio
 Geovani Negri,557.5,10/08/2025,South West,JuniorDT,M,75,Sleeves,Total,Full Power,National
 Zach Smith,232.5,09/03/2025,East Coast,JuniorDT,M,82.5,Sleeves,S,Full Power,National
 Zach Smith,145,02/11/2025,Nottingham,JuniorDT,M,82.5,Sleeves,B,Full Power,National
-Zach Smith,285,02/11/2025,Nottingham,JuniorDT,M,82.5,Sleeves,D,Full Power,National
+Kai Richardson,290,21/06/2026,Viking Strength Showdown,JuniorDT,M,82.5,Sleeves,D,Full Power,National
 Zach Smith,657.5,02/11/2025,Nottingham,JuniorDT,M,82.5,Sleeves,Total,Full Power,National
 Jai Richardson,235,04/05/2025,North West,JuniorDT,M,90,Sleeves,S,Full Power,National
 Jai Richardson,152.5,04/05/2025,North West,JuniorDT,M,90,Sleeves,B,Full Power,National
@@ -1413,9 +1413,9 @@ Standard,102.5,,,M50-59,M,75,Sleeves,B,Full Power,National
 Standard,190,,,M50-59,M,75,Sleeves,D,Full Power,National
 Standard,460,,,M50-59,M,75,Sleeves,Total,Full Power,National
 Standard,205,,,M50-59,M,82.5,Sleeves,S,Full Power,National
-Standard,115,,,M50-59,M,82.5,Sleeves,B,Full Power,National
-Standard,215,,,M50-59,M,82.5,Sleeves,D,Full Power,National
-Standard,520,,,M50-59,M,82.5,Sleeves,Total,Full Power,National
+Joseph Kean,140,21/06/2026,Viking Strength Showdown,M50-59,M,82.5,Sleeves,B,Full Power,National
+Joseph Kean,215.5,21/06/2026,Viking Strength Showdown,M50-59,M,82.5,Sleeves,D,Full Power,National
+Joseph Kean,525.5,21/06/2026,Viking Strength Showdown,M50-59,M,82.5,Sleeves,Total,Full Power,National
 Les Attewell,220,05/12/2025,National Championships,M50-59,M,90,Sleeves,S,Full Power,National
 Les Attewell,140,05/12/2025,National Championships,M50-59,M,90,Sleeves,B,Full Power,National
 Les Attewell,275,05/12/2025,National Championships,M50-59,M,90,Sleeves,D,Full Power,National
@@ -1744,10 +1744,10 @@ Rachael Purves,155,02/11/2025,Nottingham,Open,F,56,Sleeves,S,Full Power,National
 Rachael Purves,95,02/11/2025,Nottingham,Open,F,56,Sleeves,B,Full Power,National
 Rachael Purves,175,02/11/2025,Nottingham,Open,F,56,Sleeves,D,Full Power,National
 Rachael Purves,425,02/11/2025,Nottingham,Open,F,56,Sleeves,Total,Full Power,National
-Standard,132.5,,,Open,F,60,Sleeves,S,Full Power,National
-Standard,67.5,,,Open,F,60,Sleeves,B,Full Power,National
-Standard,137.5,,,Open,F,60,Sleeves,D,Full Power,National
-Standard,335,,,Open,F,60,Sleeves,Total,Full Power,National
+Briony Duerden,160,21/06/2026,Viking Strength Showdown,Open,F,60,Sleeves,S,Full Power,National
+Briony Duerden,96,21/06/2026,Viking Strength Showdown,Open,F,60,Sleeves,B,Full Power,National
+Briony Duerden,200,21/06/2026,Viking Strength Showdown,Open,F,60,Sleeves,D,Full Power,National
+Briony Duerden,456,21/06/2026,Viking Strength Showdown,Open,F,60,Sleeves,Total,Full Power,National
 Sharon Eggleton,205,02/11/2025,Nottingham,Open,F,67.5,Sleeves,S,Full Power,National
 Sharon Eggleton,135,02/11/2025,Nottingham,Open,F,67.5,Sleeves,B,Full Power,National
 Sharon Eggleton,250,02/11/2025,Nottingham,Open,F,67.5,Sleeves,D,Full Power,National
@@ -5157,7 +5157,7 @@ Standard,170,,,M50-59,M,110,Single-ply,B,Full Power,National
 Standard,237.5,,,M50-59,M,110,Single-ply,D,Full Power,National
 Standard,675,,,M50-59,M,110,Single-ply,Total,Full Power,National
 Standard,170,,,M50-59,M,110,Single-ply,B,Single Lift,National
-Standard,237.5,,,M50-59,M,110,Single-ply,D,Single Lift,National
+Paul Reynolds,250,21/06/2026,Viking Strength Showdown,M50-59,M,110,Single-ply,D,Single Lift,National
 Standard,282.5,,,M50-59,M,125,Single-ply,S,Full Power,National
 Standard,177.5,,,M50-59,M,125,Single-ply,B,Full Power,National
 Standard,247.5,,,M50-59,M,125,Single-ply,D,Full Power,National
@@ -7745,7 +7745,7 @@ Standard,177.5,,,M50-59,M,110,Multi-ply,B,Full Power,National
 Standard,250,,,M50-59,M,110,Multi-ply,D,Full Power,National
 Standard,710,,,M50-59,M,110,Multi-ply,Total,Full Power,National
 Standard,177.5,,,M50-59,M,110,Multi-ply,B,Single Lift,National
-Standard,250,,,M50-59,M,110,Multi-ply,D,Single Lift,National
+Brian Reynolds,302.5,21/06/2026,Viking Strength Showdown,M50-59,M,110,Multi-ply,D,Single Lift,National
 Standard,295,,,M50-59,M,125,Multi-ply,S,Full Power,National
 Standard,185,,,M50-59,M,125,Multi-ply,B,Full Power,National
 Standard,260,,,M50-59,M,125,Multi-ply,D,Full Power,National
