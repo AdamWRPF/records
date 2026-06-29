@@ -379,9 +379,6 @@ def _display_curl_leaderboard_table(df: pd.DataFrame, title: str, key: str) -> N
             "Equipment",
             "BodyweightKg",
             "WeightClassKg",
-            "Curl1KG",
-            "Curl2KG",
-            "Curl3KG",
             "Best3CurlKG",
             "Points",
         ]
@@ -392,14 +389,11 @@ def _display_curl_leaderboard_table(df: pd.DataFrame, title: str, key: str) -> N
             "Division_base": "Division",
             "BodyweightKg": "Bodyweight",
             "WeightClassKg": "Class",
-            "Curl1KG": "Curl 1",
-            "Curl2KG": "Curl 2",
-            "Curl3KG": "Curl 3",
-            "Best3CurlKG": "Best Curl",
+            "Best3CurlKG": "Best Weight",
         }
     )
 
-    for column in ["Bodyweight", "Curl 1", "Curl 2", "Curl 3", "Best Curl", "Points"]:
+    for column in ["Bodyweight", "Best Weight", "Points"]:
         display_df[column] = display_df[column].apply(_clean_attempt)
 
     display_df = display_df.fillna("")
@@ -419,7 +413,11 @@ def _display_curl_leaderboard_table(df: pd.DataFrame, title: str, key: str) -> N
 
 def render_curl_leaderboard(curl_leaderboard_df: pd.DataFrame) -> None:
     st.markdown("## Strict Curl Leaderboard")
-    st.caption("Leaderboard is ranked by Points, with Best Curl used as the tie-breaker.")
+    st.caption("Version: combined Men/Women leaderboard, DT and Untested shown in one Testing column.")
+    st.caption(
+        "Leaderboard is ranked by Points, with Best Weight used as the tie-breaker. "
+        "Drug Tested and Untested athletes are shown together and identified in the Testing column."
+    )
 
     if curl_leaderboard_df.empty:
         st.warning(
@@ -466,30 +464,10 @@ def render_curl_leaderboard(curl_leaderboard_df: pd.DataFrame) -> None:
     women_df = curl_leaderboard_df[curl_leaderboard_df["Sex"] == "F"].copy()
 
     st.markdown("---")
-    st.markdown("# Men")
-    _display_curl_leaderboard_table(
-        men_df[men_df["Testing"] == "Drug Tested"],
-        "Men - Drug Tested",
-        "men_drug_tested",
-    )
-    _display_curl_leaderboard_table(
-        men_df[men_df["Testing"] == "Untested"],
-        "Men - Untested",
-        "men_untested",
-    )
+    _display_curl_leaderboard_table(men_df, "Men", "men")
 
     st.markdown("---")
-    st.markdown("# Women")
-    _display_curl_leaderboard_table(
-        women_df[women_df["Testing"] == "Drug Tested"],
-        "Women - Drug Tested",
-        "women_drug_tested",
-    )
-    _display_curl_leaderboard_table(
-        women_df[women_df["Testing"] == "Untested"],
-        "Women - Untested",
-        "women_untested",
-    )
+    _display_curl_leaderboard_table(women_df, "Women", "women")
 
 
 def render_table(filtered: pd.DataFrame, sel: dict, key: str = "") -> None:
