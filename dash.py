@@ -413,7 +413,6 @@ def _display_curl_leaderboard_table(df: pd.DataFrame, title: str, key: str) -> N
 
 def render_curl_leaderboard(curl_leaderboard_df: pd.DataFrame) -> None:
     st.markdown("## Strict Curl Leaderboard")
-    st.caption("Version: combined Men/Women leaderboard, DT and Untested shown in one Testing column.")
     st.caption(
         "Leaderboard is ranked by Points, with Best Weight used as the tie-breaker. "
         "Drug Tested and Untested athletes are shown together and identified in the Testing column."
