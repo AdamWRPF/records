@@ -127,8 +127,8 @@ Standard,70,,,T16-17DT,M,60,Bare,B,Single Lift,National
 Standard,127.5,,,T16-17DT,M,60,Bare,D,Single Lift,National
 Ryan Ktorides,92.5,12/01/2025,North East,T16-17DT,M,67.5,Bare,B,Single Lift,National
 Standard,147.5,,,T16-17DT,M,67.5,Bare,D,Single Lift,National
-Josh Everett,110,06/12/2025,National Championships,T16-17DT,M,75,Bare,B,Single Lift,National
-Enzo Wharton,172.5,07/06/2026,ZeroW Summer Showdown,T16-17DT,M,75,Bare,D,Single Lift,National
+Josh Everett,125,12/07/2026,The Great East Coast,T16-17DT,M,75,Bare,B,Single Lift,National
+Josh Everett,195,12/07/2026,The Great East Coast,T16-17DT,M,75,Bare,D,Single Lift,National
 Standard,95,,,T16-17DT,M,82.5,Bare,B,Single Lift,National
 Standard,175,,,T16-17DT,M,82.5,Bare,D,Single Lift,National
 Standard,97.5,,,T16-17DT,M,90,Bare,B,Single Lift,National
@@ -273,7 +273,7 @@ Standard,87.5,,,M50-59,M,67.5,Bare,B,Single Lift,National
 Standard,165,,,M50-59,M,67.5,Bare,D,Single Lift,National
 Standard,102.5,,,M50-59,M,75,Bare,B,Single Lift,National
 Standard,190,,,M50-59,M,75,Bare,D,Single Lift,National
-Standard,115,,,M50-59,M,82.5,Bare,B,Single Lift,National
+Richard Lambert,122.5,12/07/2026,The Great East Coast,M50-59,M,82.5,Bare,B,Single Lift,National
 Standard,215,,,M50-59,M,82.5,Bare,D,Single Lift,National
 Standard,120,,,M50-59,M,90,Bare,B,Single Lift,National
 Standard,225,,,M50-59,M,90,Bare,D,Single Lift,National
@@ -1117,9 +1117,9 @@ Standard,70,,,T16-17DT,M,60,Sleeves,B,Full Power,National
 Standard,127.5,,,T16-17DT,M,60,Sleeves,D,Full Power,National
 Standard,310,,,T16-17DT,M,60,Sleeves,Total,Full Power,National
 Steffan Edwards,160,11/05/2025,Nottingham,T16-17DT,M,67.5,Sleeves,S,Full Power,National
-Aariyan Dhiri,82.5,11/05/2025,Nottingham,T16-17DT,M,67.5,Sleeves,B,Full Power,National
-Steffan Edwards,182.5,11/05/2025,Nottingham,T16-17DT,M,67.5,Sleeves,D,Full Power,National
-Steffan Edwards,425,11/05/2025,Nottingham,T16-17DT,M,67.5,Sleeves,Total,Full Power,National
+Riley Stevens,105,12/07/2026,The Great East Coast,T16-17DT,M,67.5,Sleeves,B,Full Power,National
+Riley Stevens,212.5,12/07/2026,The Great East Coast,T16-17DT,M,67.5,Sleeves,D,Full Power,National
+Riley Stevens,457.5,12/07/2026,The Great East Coast,T16-17DT,M,67.5,Sleeves,Total,Full Power,National
 Charlie Morgan,190,01/03/2026,Welwyn Garden City,T16-17DT,M,75,Sleeves,S,Full Power,National
 Charlie Morgan,142.5,01/03/2026,Welwyn Garden City,T16-17DT,M,75,Sleeves,B,Full Power,National
 Charlie Morgan,205,01/03/2026,Welwyn Garden City,T16-17DT,M,75,Sleeves,D,Full Power,National
@@ -1754,7 +1754,7 @@ Sharon Eggleton,250,02/11/2025,Nottingham,Open,F,67.5,Sleeves,D,Full Power,Natio
 Sharon Eggleton,590,02/11/2025,Nottingham,Open,F,67.5,Sleeves,Total,Full Power,National
 Shelby Culff,172.5,02/11/2025,Nottingham,Open,F,75,Sleeves,S,Full Power,National
 Adele Fleetwood,107.5,02/11/2025,Nottingham,Open,F,75,Sleeves,B,Full Power,National
-Adele Fleetwood,190,02/11/2025,Nottingham,Open,F,75,Sleeves,D,Full Power,National
+Sandra Vilkiene,195,12/07/2026,The Great East Coast,Open,F,75,Sleeves,D,Full Power,National
 Adele Fleetwood,467.5,02/11/2025,Nottingham,Open,F,75,Sleeves,Total,Full Power,National
 Katie Carder,175,22/02/2026,West Midlands,Open,F,82.5,Sleeves,S,Full Power,National
 Kristina Dunkhase,110,02/11/2025,Nottingham,Open,F,82.5,Sleeves,B,Full Power,National
@@ -2434,7 +2434,7 @@ Paulette Boniface,165,07/12/2025,National Championships,M50-59DT,F,82.5,Sleeves,
 Paulette Boniface,345,07/12/2025,National Championships,M50-59DT,F,82.5,Sleeves,Total,Full Power,National
 Sarah Hulin,143,17/05/2026,World Cup UK,M50-59DT,F,90,Sleeves,S,Full Power,National
 Sarah Hulin,82.5,29/03/2026,South West,M50-59DT,F,90,Sleeves,B,Full Power,National
-Sarah Hulin,160,17/05/2026,World Cup UK,M50-59DT,F,90,Sleeves,D,Full Power,National
+Debbie Leach,161,12/07/2026,The Great East Coast,M50-59DT,F,90,Sleeves,D,Full Power,National
 Sarah Hulin,383,17/05/2026,World Cup UK,M50-59DT,F,90,Sleeves,Total,Full Power,National
 Sarah Hulin,147.5,07/12/2025,National Championships,M50-59DT,F,100,Sleeves,S,Full Power,National
 Sarah Hulin,77.5,07/12/2025,National Championships,M50-59DT,F,100,Sleeves,B,Full Power,National
@@ -3096,10 +3096,10 @@ Standard,267.5,,,M40-49,M,82.5,Wraps,S,Full Power,National
 Standard,155,,,M40-49,M,82.5,Wraps,B,Full Power,National
 Standard,280,,,M40-49,M,82.5,Wraps,D,Full Power,National
 Standard,680,,,M40-49,M,82.5,Wraps,Total,Full Power,National
-Standard,275,,,M40-49,M,90,Wraps,S,Full Power,National
-Standard,157.5,,,M40-49,M,90,Wraps,B,Full Power,National
-Standard,287.5,,,M40-49,M,90,Wraps,D,Full Power,National
-Standard,700,,,M40-49,M,90,Wraps,Total,Full Power,National
+Fatah Toubal,330,12/07/2026,The Great East Coast,M40-49,M,90,Wraps,S,Full Power,National
+Fatah Toubal,187.5,12/07/2026,The Great East Coast,M40-49,M,90,Wraps,B,Full Power,National
+Fatah Toubal,290,12/07/2026,The Great East Coast,M40-49,M,90,Wraps,D,Full Power,National
+Fatah Toubal,807.5,12/07/2026,The Great East Coast,M40-49,M,90,Wraps,Total,Full Power,National
 Standard,285,,,M40-49,M,100,Wraps,S,Full Power,National
 Standard,165,,,M40-49,M,100,Wraps,B,Full Power,National
 Gavin Prosser,300,07/06/2026,ZeroW Summer Showdown,M40-49,M,100,Wraps,D,Full Power,National
